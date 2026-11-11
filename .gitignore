@@ -1,0 +1,6 @@
+jsrelease
+jsrelease.exe
+dist/
+*.tmp
+config.yaml
+jsrelease.yaml

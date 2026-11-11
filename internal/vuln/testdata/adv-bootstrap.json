@@ -1,0 +1,2311 @@
+[
+  {
+    "ghsa_id": "GHSA-q58r-hwc8-rm9j",
+    "cve_id": "CVE-2025-1647",
+    "url": "https://api.github.com/advisories/GHSA-q58r-hwc8-rm9j",
+    "html_url": "https://github.com/advisories/GHSA-q58r-hwc8-rm9j",
+    "summary": "Bootstrap Vulnerable to Cross-Site Scripting in its Popover and Tooltip Components",
+    "description": "Improper Neutralization of Input During Web Page Generation (XSS or 'Cross-site Scripting') vulnerability in Bootstrap allows Cross-Site Scripting (XSS). This issue affects Bootstrap version 3.4.1. At time of publication, there is no publicly available patched version.",
+    "type": "reviewed",
+    "severity": "medium",
+    "repository_advisory_url": null,
+    "source_code_location": "https://github.com/twbs/bootstrap",
+    "identifiers": [
+      {
+        "value": "GHSA-q58r-hwc8-rm9j",
+        "type": "GHSA"
+      },
+      {
+        "value": "CVE-2025-1647",
+        "type": "CVE"
+      }
+    ],
+    "references": [
+      "https://nvd.nist.gov/vuln/detail/CVE-2025-1647",
+      "https://www.herodevs.com/vulnerability-directory/cve-2025-1647",
+      "https://lists.debian.org/debian-lts-announce/2025/06/msg00001.html",
+      "https://lists.debian.org/debian-lts-announce/2026/10/msg00023.html",
+      "https://github.com/advisories/GHSA-q58r-hwc8-rm9j"
+    ],
+    "published_at": "2025-05-15T18:31:47Z",
+    "updated_at": "2026-10-09T12:32:17Z",
+    "github_reviewed_at": "2025-09-18T17:14:56Z",
+    "nvd_published_at": "2025-05-15T17:15:47Z",
+    "withdrawn_at": null,
+    "vulnerabilities": [
+      {
+        "package": {
+          "ecosystem": "npm",
+          "name": "bootstrap"
+        },
+        "vulnerable_version_range": "= 3.4.1",
+        "first_patched_version": null,
+        "vulnerable_functions": [
+
+        ]
+      }
+    ],
+    "cvss_severities": {
+      "cvss_v3": {
+        "vector_string": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:L/I:L/A:L",
+        "score": 5.6
+      },
+      "cvss_v4": {
+        "vector_string": null,
+        "score": 0.0
+      }
+    },
+    "cwes": [
+      {
+        "cwe_id": "CWE-79",
+        "name": "Improper Neutralization of Input During Web Page Generation"
+      }
+    ],
+    "credits": [
+      {
+        "user": {
+          "login": "levpachmanov",
+          "id": 31389480,
+          "node_id": "MDQ6VXNlcjMxMzg5NDgw",
+          "avatar_url": "https://avatars.githubusercontent.com/u/31389480?v=4",
+          "gravatar_id": "",
+          "url": "https://api.github.com/users/levpachmanov",
+          "html_url": "https://github.com/levpachmanov",
+          "followers_url": "https://api.github.com/users/levpachmanov/followers",
+          "following_url": "https://api.github.com/users/levpachmanov/following{/other_user}",
+          "gists_url": "https://api.github.com/users/levpachmanov/gists{/gist_id}",
+          "starred_url": "https://api.github.com/users/levpachmanov/starred{/owner}{/repo}",
+          "subscriptions_url": "https://api.github.com/users/levpachmanov/subscriptions",
+          "organizations_url": "https://api.github.com/users/levpachmanov/orgs",
+          "repos_url": "https://api.github.com/users/levpachmanov/repos",
+          "events_url": "https://api.github.com/users/levpachmanov/events{/privacy}",
+          "received_events_url": "https://api.github.com/users/levpachmanov/received_events",
+          "type": "User",
+          "user_view_type": "public",
+          "site_admin": false
+        },
+        "type": "analyst"
+      }
+    ],
+    "comments": 0,
+    "cvss": {
+      "vector_string": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:L/I:L/A:L",
+      "score": 5.6
+    },
+    "epss": {
+      "percentage": 0.00432,
+      "percentile": 0.37528
+    }
+  },
+  {
+    "ghsa_id": "GHSA-vc8w-jr9v-vj7f",
+    "cve_id": "CVE-2024-6531",
+    "url": "https://api.github.com/advisories/GHSA-vc8w-jr9v-vj7f",
+    "html_url": "https://github.com/advisories/GHSA-vc8w-jr9v-vj7f",
+    "summary": "Withdrawn Advisory: Bootstrap Cross-Site Scripting (XSS) vulnerability",
+    "description": "## Withdrawn Advisory\nThis advisory is withdrawn because it was not a security issue in Bootstrap. Bootstrap’s JavaScript is not intended to sanitize unsafe or intentionally dangerous HTML. As such, the reported behavior fell outside the scope of Bootstrap’s security model, and the associated CVE has been rescinded.\n\n## Original Descripton\n\nA vulnerability has been identified in Bootstrap that exposes users to Cross-Site Scripting (XSS) attacks. The issue is present in the carousel component, where the data-slide and data-slide-to attributes can be exploited through the href attribute of an <a> tag due to inadequate sanitization. This vulnerability could potentially enable attackers to execute arbitrary JavaScript within the victim's browser.",
+    "type": "reviewed",
+    "severity": "medium",
+    "repository_advisory_url": null,
+    "source_code_location": "https://github.com/twbs/bootstrap",
+    "identifiers": [
+      {
+        "value": "GHSA-vc8w-jr9v-vj7f",
+        "type": "GHSA"
+      },
+      {
+        "value": "CVE-2024-6531",
+        "type": "CVE"
+      }
+    ],
+    "references": [
+      "https://nvd.nist.gov/vuln/detail/CVE-2024-6531",
+      "https://www.herodevs.com/vulnerability-directory/cve-2024-6531",
+      "https://github.com/rubysec/ruby-advisory-db/blob/master/gems/bootstrap/CVE-2024-6531.yml",
+      "https://lists.debian.org/debian-lts-announce/2025/04/msg00021.html",
+      "https://github.com/advisories/GHSA-vc8w-jr9v-vj7f"
+    ],
+    "published_at": "2024-07-11T18:31:14Z",
+    "updated_at": "2025-10-09T20:55:09Z",
+    "github_reviewed_at": "2024-08-01T21:29:23Z",
+    "nvd_published_at": "2024-07-11T18:15:06Z",
+    "withdrawn_at": "2025-10-09T20:55:06Z",
+    "vulnerabilities": [
+      {
+        "package": {
+          "ecosystem": "npm",
+          "name": "bootstrap"
+        },
+        "vulnerable_version_range": ">= 4.0.0, <= 4.6.2",
+        "first_patched_version": "5.0.0",
+        "vulnerable_functions": [
+
+        ]
+      },
+      {
+        "package": {
+          "ecosystem": "rubygems",
+          "name": "bootstrap"
+        },
+        "vulnerable_version_range": ">= 4.0.0, <= 4.6.2",
+        "first_patched_version": "5.0.0",
+        "vulnerable_functions": [
+
+        ]
+      },
+      {
+        "package": {
+          "ecosystem": "nuget",
+          "name": "bootstrap"
+        },
+        "vulnerable_version_range": ">= 4.0.0, <= 4.6.2",
+        "first_patched_version": "5.0.0",
+        "vulnerable_functions": [
+
+        ]
+      },
+      {
+        "package": {
+          "ecosystem": "nuget",
+          "name": "bootstrap.sass"
+        },
+        "vulnerable_version_range": ">= 4.0.0, <= 4.6.2",
+        "first_patched_version": "5.0.0",
+        "vulnerable_functions": [
+
+        ]
+      },
+      {
+        "package": {
+          "ecosystem": "composer",
+          "name": "twbs/bootstrap"
+        },
+        "vulnerable_version_range": ">= 4.0.0, <= 4.6.2",
+        "first_patched_version": "5.0.0",
+        "vulnerable_functions": [
+
+        ]
+      },
+      {
+        "package": {
+          "ecosystem": "maven",
+          "name": "org.webjars:bootstrap"
+        },
+        "vulnerable_version_range": ">= 4.0.0, <= 4.6.2",
+        "first_patched_version": "5.0.0",
+        "vulnerable_functions": [
+
+        ]
+      },
+      {
+        "package": {
+          "ecosystem": "maven",
+          "name": "org.webjars.npm:bootstrap"
+        },
+        "vulnerable_version_range": ">= 4.0.0, <= 4.6.2",
+        "first_patched_version": "5.0.0",
+        "vulnerable_functions": [
+
+        ]
+      }
+    ],
+    "cvss_severities": {
+      "cvss_v3": {
+        "vector_string": "CVSS:3.1/AV:N/AC:H/PR:N/UI:R/S:U/C:H/I:L/A:L",
+        "score": 6.4
+      },
+      "cvss_v4": {
+        "vector_string": "CVSS:4.0/AV:N/AC:L/AT:P/PR:N/UI:P/VC:N/VI:N/VA:N/SC:H/SI:L/SA:L",
+        "score": 5.3
+      }
+    },
+    "cwes": [
+      {
+        "cwe_id": "CWE-79",
+        "name": "Improper Neutralization of Input During Web Page Generation"
+      }
+    ],
+    "credits": [
+      {
+        "user": {
+          "login": "alexeyNeklesa-idt",
+          "id": 132651330,
+          "node_id": "U_kgDOB-gZQg",
+          "avatar_url": "https://avatars.githubusercontent.com/u/132651330?v=4",
+          "gravatar_id": "",
+          "url": "https://api.github.com/users/alexeyNeklesa-idt",
+          "html_url": "https://github.com/alexeyNeklesa-idt",
+          "followers_url": "https://api.github.com/users/alexeyNeklesa-idt/followers",
+          "following_url": "https://api.github.com/users/alexeyNeklesa-idt/following{/other_user}",
+          "gists_url": "https://api.github.com/users/alexeyNeklesa-idt/gists{/gist_id}",
+          "starred_url": "https://api.github.com/users/alexeyNeklesa-idt/starred{/owner}{/repo}",
+          "subscriptions_url": "https://api.github.com/users/alexeyNeklesa-idt/subscriptions",
+          "organizations_url": "https://api.github.com/users/alexeyNeklesa-idt/orgs",
+          "repos_url": "https://api.github.com/users/alexeyNeklesa-idt/repos",
+          "events_url": "https://api.github.com/users/alexeyNeklesa-idt/events{/privacy}",
+          "received_events_url": "https://api.github.com/users/alexeyNeklesa-idt/received_events",
+          "type": "User",
+          "user_view_type": "public",
+          "site_admin": false
+        },
+        "type": "analyst"
+      },
+      {
+        "user": {
+          "login": "metametadata",
+          "id": 4689913,
+          "node_id": "MDQ6VXNlcjQ2ODk5MTM=",
+          "avatar_url": "https://avatars.githubusercontent.com/u/4689913?v=4",
+          "gravatar_id": "",
+          "url": "https://api.github.com/users/metametadata",
+          "html_url": "https://github.com/metametadata",
+          "followers_url": "https://api.github.com/users/metametadata/followers",
+          "following_url": "https://api.github.com/users/metametadata/following{/other_user}",
+          "gists_url": "https://api.github.com/users/metametadata/gists{/gist_id}",
+          "starred_url": "https://api.github.com/users/metametadata/starred{/owner}{/repo}",
+          "subscriptions_url": "https://api.github.com/users/metametadata/subscriptions",
+          "organizations_url": "https://api.github.com/users/metametadata/orgs",
+          "repos_url": "https://api.github.com/users/metametadata/repos",
+          "events_url": "https://api.github.com/users/metametadata/events{/privacy}",
+          "received_events_url": "https://api.github.com/users/metametadata/received_events",
+          "type": "User",
+          "user_view_type": "public",
+          "site_admin": false
+        },
+        "type": "analyst"
+      },
+      {
+        "user": {
+          "login": "eoftedal",
+          "id": 238804,
+          "node_id": "MDQ6VXNlcjIzODgwNA==",
+          "avatar_url": "https://avatars.githubusercontent.com/u/238804?v=4",
+          "gravatar_id": "",
+          "url": "https://api.github.com/users/eoftedal",
+          "html_url": "https://github.com/eoftedal",
+          "followers_url": "https://api.github.com/users/eoftedal/followers",
+          "following_url": "https://api.github.com/users/eoftedal/following{/other_user}",
+          "gists_url": "https://api.github.com/users/eoftedal/gists{/gist_id}",
+          "starred_url": "https://api.github.com/users/eoftedal/starred{/owner}{/repo}",
+          "subscriptions_url": "https://api.github.com/users/eoftedal/subscriptions",
+          "organizations_url": "https://api.github.com/users/eoftedal/orgs",
+          "repos_url": "https://api.github.com/users/eoftedal/repos",
+          "events_url": "https://api.github.com/users/eoftedal/events{/privacy}",
+          "received_events_url": "https://api.github.com/users/eoftedal/received_events",
+          "type": "User",
+          "user_view_type": "public",
+          "site_admin": false
+        },
+        "type": "analyst"
+      }
+    ],
+    "comments": 0,
+    "cvss": {
+      "vector_string": "CVSS:3.1/AV:N/AC:H/PR:N/UI:R/S:U/C:H/I:L/A:L",
+      "score": 6.4
+    },
+    "epss": {
+      "percentage": 0.00072,
+      "percentile": 0.22588
+    }
+  },
+  {
+    "ghsa_id": "GHSA-vxmc-5x29-h64v",
+    "cve_id": "CVE-2024-6485",
+    "url": "https://api.github.com/advisories/GHSA-vxmc-5x29-h64v",
+    "html_url": "https://github.com/advisories/GHSA-vxmc-5x29-h64v",
+    "summary": "Bootstrap Cross-Site Scripting (XSS) vulnerability for data-* attributes",
+    "description": "A security vulnerability has been discovered in bootstrap that could enable Cross-Site Scripting (XSS) attacks. The vulnerability is associated with the data-loading-text attribute within the button plugin. This vulnerability can be exploited by injecting malicious JavaScript code into the attribute, which would then be executed when the button's loading state is triggered.",
+    "type": "reviewed",
+    "severity": "medium",
+    "repository_advisory_url": null,
+    "source_code_location": "https://github.com/twbs/bootstrap",
+    "identifiers": [
+      {
+        "value": "GHSA-vxmc-5x29-h64v",
+        "type": "GHSA"
+      },
+      {
+        "value": "CVE-2024-6485",
+        "type": "CVE"
+      }
+    ],
+    "references": [
+      "https://nvd.nist.gov/vuln/detail/CVE-2024-6485",
+      "https://www.herodevs.com/vulnerability-directory/cve-2024-6485",
+      "https://lists.debian.org/debian-lts-announce/2025/04/msg00020.html",
+      "https://github.com/advisories/GHSA-vxmc-5x29-h64v"
+    ],
+    "published_at": "2024-07-11T18:31:14Z",
+    "updated_at": "2025-11-03T21:31:11Z",
+    "github_reviewed_at": "2024-11-18T23:46:00Z",
+    "nvd_published_at": "2024-07-11T17:15:17Z",
+    "withdrawn_at": null,
+    "vulnerabilities": [
+      {
+        "package": {
+          "ecosystem": "npm",
+          "name": "bootstrap"
+        },
+        "vulnerable_version_range": ">= 1.4.0, <= 3.4.1",
+        "first_patched_version": null,
+        "vulnerable_functions": [
+
+        ]
+      }
+    ],
+    "cvss_severities": {
+      "cvss_v3": {
+        "vector_string": "CVSS:3.1/AV:N/AC:H/PR:N/UI:R/S:U/C:H/I:L/A:L",
+        "score": 6.4
+      },
+      "cvss_v4": {
+        "vector_string": null,
+        "score": 0.0
+      }
+    },
+    "cwes": [
+      {
+        "cwe_id": "CWE-79",
+        "name": "Improper Neutralization of Input During Web Page Generation"
+      }
+    ],
+    "credits": [
+      {
+        "user": {
+          "login": "hdtmccallie",
+          "id": 162155285,
+          "node_id": "U_kgDOCapLFQ",
+          "avatar_url": "https://avatars.githubusercontent.com/u/162155285?v=4",
+          "gravatar_id": "",
+          "url": "https://api.github.com/users/hdtmccallie",
+          "html_url": "https://github.com/hdtmccallie",
+          "followers_url": "https://api.github.com/users/hdtmccallie/followers",
+          "following_url": "https://api.github.com/users/hdtmccallie/following{/other_user}",
+          "gists_url": "https://api.github.com/users/hdtmccallie/gists{/gist_id}",
+          "starred_url": "https://api.github.com/users/hdtmccallie/starred{/owner}{/repo}",
+          "subscriptions_url": "https://api.github.com/users/hdtmccallie/subscriptions",
+          "organizations_url": "https://api.github.com/users/hdtmccallie/orgs",
+          "repos_url": "https://api.github.com/users/hdtmccallie/repos",
+          "events_url": "https://api.github.com/users/hdtmccallie/events{/privacy}",
+          "received_events_url": "https://api.github.com/users/hdtmccallie/received_events",
+          "type": "User",
+          "user_view_type": "public",
+          "site_admin": false
+        },
+        "type": "analyst"
+      }
+    ],
+    "comments": 0,
+    "cvss": {
+      "vector_string": "CVSS:3.1/AV:N/AC:H/PR:N/UI:R/S:U/C:H/I:L/A:L",
+      "score": 6.4
+    },
+    "epss": {
+      "percentage": 0.00494,
+      "percentile": 0.42534
+    }
+  },
+  {
+    "ghsa_id": "GHSA-9mvj-f7w8-pvh2",
+    "cve_id": "CVE-2024-6484",
+    "url": "https://api.github.com/advisories/GHSA-9mvj-f7w8-pvh2",
+    "html_url": "https://github.com/advisories/GHSA-9mvj-f7w8-pvh2",
+    "summary": "Withdrawn Advisory: Bootstrap Cross-Site Scripting (XSS) vulnerability",
+    "description": "## Withdrawn Advisory\nThis advisory has been withdrawn because it was determined to not be a vulnerability in Bootstrap. From the CVE:\n\n> This was not a security issue in Bootstrap. Bootstrap’s JavaScript is not intended to sanitize unsafe or intentionally dangerous HTML. As such, the reported behavior fell outside the scope of Bootstrap’s security model, and the associated CVE has been rescinded.\n\n## Original Description\nA vulnerability has been identified in Bootstrap that exposes users to Cross-Site Scripting (XSS) attacks. The issue is present in the carousel component, where the `data-slide` and `data-slide-to` attributes can be exploited through the href attribute of an `<a>` tag due to inadequate sanitization. This vulnerability could potentially enable attackers to execute arbitrary JavaScript within the victim's browser.",
+    "type": "reviewed",
+    "severity": "medium",
+    "repository_advisory_url": null,
+    "source_code_location": "https://github.com/twbs/bootstrap",
+    "identifiers": [
+      {
+        "value": "GHSA-9mvj-f7w8-pvh2",
+        "type": "GHSA"
+      },
+      {
+        "value": "CVE-2024-6484",
+        "type": "CVE"
+      }
+    ],
+    "references": [
+      "https://nvd.nist.gov/vuln/detail/CVE-2024-6484",
+      "https://www.herodevs.com/vulnerability-directory/cve-2024-6484",
+      "https://github.com/rubysec/ruby-advisory-db/blob/master/gems/bootstrap-sass/CVE-2024-6484.yml",
+      "https://github.com/rubysec/ruby-advisory-db/blob/master/gems/bootstrap/CVE-2024-6484.yml",
+      "https://github.com/advisories/GHSA-9mvj-f7w8-pvh2"
+    ],
+    "published_at": "2024-07-11T18:31:14Z",
+    "updated_at": "2025-09-11T16:19:47Z",
+    "github_reviewed_at": "2024-08-01T21:28:38Z",
+    "nvd_published_at": "2024-07-11T17:15:17Z",
+    "withdrawn_at": "2025-09-11T16:19:47Z",
+    "vulnerabilities": [
+      {
+        "package": {
+          "ecosystem": "npm",
+          "name": "bootstrap"
+        },
+        "vulnerable_version_range": ">= 2.0.0, <= 3.4.1",
+        "first_patched_version": null,
+        "vulnerable_functions": [
+
+        ]
+      },
+      {
+        "package": {
+          "ecosystem": "rubygems",
+          "name": "bootstrap"
+        },
+        "vulnerable_version_range": ">= 2.0.0, <= 3.4.1",
+        "first_patched_version": null,
+        "vulnerable_functions": [
+
+        ]
+      },
+      {
+        "package": {
+          "ecosystem": "nuget",
+          "name": "bootstrap"
+        },
+        "vulnerable_version_range": ">= 2.0.0, <= 3.4.1",
+        "first_patched_version": null,
+        "vulnerable_functions": [
+
+        ]
+      },
+      {
+        "package": {
+          "ecosystem": "rubygems",
+          "name": "bootstrap-sass"
+        },
+        "vulnerable_version_range": ">= 2.0.0, <= 3.4.1",
+        "first_patched_version": null,
+        "vulnerable_functions": [
+
+        ]
+      },
+      {
+        "package": {
+          "ecosystem": "nuget",
+          "name": "bootstrap.sass"
+        },
+        "vulnerable_version_range": ">= 2.0.0, <= 3.4.1",
+        "first_patched_version": null,
+        "vulnerable_functions": [
+
+        ]
+      },
+      {
+        "package": {
+          "ecosystem": "composer",
+          "name": "twbs/bootstrap"
+        },
+        "vulnerable_version_range": ">= 2.0.0, <= 3.4.1",
+        "first_patched_version": null,
+        "vulnerable_functions": [
+
+        ]
+      },
+      {
+        "package": {
+          "ecosystem": "maven",
+          "name": "org.webjars:bootstrap"
+        },
+        "vulnerable_version_range": ">= 2.0.0, <= 3.4.1",
+        "first_patched_version": null,
+        "vulnerable_functions": [
+
+        ]
+      },
+      {
+        "package": {
+          "ecosystem": "maven",
+          "name": "org.webjars.npm:bootstrap"
+        },
+        "vulnerable_version_range": ">= 2.0.0, <= 3.4.1",
+        "first_patched_version": null,
+        "vulnerable_functions": [
+
+        ]
+      },
+      {
+        "package": {
+          "ecosystem": "npm",
+          "name": "bootstrap-sass"
+        },
+        "vulnerable_version_range": ">= 2.0.0, <= 3.4.3",
+        "first_patched_version": null,
+        "vulnerable_functions": [
+
+        ]
+      }
+    ],
+    "cvss_severities": {
+      "cvss_v3": {
+        "vector_string": "CVSS:3.1/AV:N/AC:H/PR:N/UI:R/S:U/C:H/I:L/A:L",
+        "score": 6.4
+      },
+      "cvss_v4": {
+        "vector_string": "CVSS:4.0/AV:N/AC:L/AT:P/PR:N/UI:P/VC:N/VI:N/VA:N/SC:H/SI:L/SA:L",
+        "score": 5.3
+      }
+    },
+    "cwes": [
+      {
+        "cwe_id": "CWE-79",
+        "name": "Improper Neutralization of Input During Web Page Generation"
+      }
+    ],
+    "credits": [
+      {
+        "user": {
+          "login": "metametadata",
+          "id": 4689913,
+          "node_id": "MDQ6VXNlcjQ2ODk5MTM=",
+          "avatar_url": "https://avatars.githubusercontent.com/u/4689913?v=4",
+          "gravatar_id": "",
+          "url": "https://api.github.com/users/metametadata",
+          "html_url": "https://github.com/metametadata",
+          "followers_url": "https://api.github.com/users/metametadata/followers",
+          "following_url": "https://api.github.com/users/metametadata/following{/other_user}",
+          "gists_url": "https://api.github.com/users/metametadata/gists{/gist_id}",
+          "starred_url": "https://api.github.com/users/metametadata/starred{/owner}{/repo}",
+          "subscriptions_url": "https://api.github.com/users/metametadata/subscriptions",
+          "organizations_url": "https://api.github.com/users/metametadata/orgs",
+          "repos_url": "https://api.github.com/users/metametadata/repos",
+          "events_url": "https://api.github.com/users/metametadata/events{/privacy}",
+          "received_events_url": "https://api.github.com/users/metametadata/received_events",
+          "type": "User",
+          "user_view_type": "public",
+          "site_admin": false
+        },
+        "type": "analyst"
+      }
+    ],
+    "comments": 0,
+    "cvss": {
+      "vector_string": "CVSS:3.1/AV:N/AC:H/PR:N/UI:R/S:U/C:H/I:L/A:L",
+      "score": 6.4
+    },
+    "epss": {
+      "percentage": 0.00049,
+      "percentile": 0.15167
+    }
+  },
+  {
+    "ghsa_id": "GHSA-3wqf-4x89-9g79",
+    "cve_id": "CVE-2018-14040",
+    "url": "https://api.github.com/advisories/GHSA-3wqf-4x89-9g79",
+    "html_url": "https://github.com/advisories/GHSA-3wqf-4x89-9g79",
+    "summary": "Bootstrap vulnerable to Cross-Site Scripting (XSS)",
+    "description": "In Bootstrap starting in version 2.3.0 and prior to 3.4.0, as well as 4.x before 4.1.2, XSS is possible in the collapse data-parent attribute.",
+    "type": "reviewed",
+    "severity": "medium",
+    "repository_advisory_url": null,
+    "source_code_location": "",
+    "identifiers": [
+      {
+        "value": "GHSA-3wqf-4x89-9g79",
+        "type": "GHSA"
+      },
+      {
+        "value": "CVE-2018-14040",
+        "type": "CVE"
+      }
+    ],
+    "references": [
+      "https://nvd.nist.gov/vuln/detail/CVE-2018-14040",
+      "https://github.com/twbs/bootstrap/issues/26423",
+      "https://github.com/twbs/bootstrap/issues/26625",
+      "https://github.com/twbs/bootstrap/pull/26630",
+      "https://lists.apache.org/thread.html/519eb0fd45642dcecd9ff74cb3e71c20a4753f7d82e2f07864b5108f@%3Cdev.drill.apache.org%3E",
+      "https://lists.apache.org/thread.html/52e0e6b5df827ee7f1e68f7cc3babe61af3b2160f5d74a85469b7b0e@%3Cdev.superset.apache.org%3E",
+      "https://lists.apache.org/thread.html/b0656d359c7d40ec9f39c8cc61bca66802ef9a2a12ee199f5b0c1442@%3Cdev.drill.apache.org%3E",
+      "https://lists.apache.org/thread.html/f9bc3e55f4e28d1dcd1a69aae6d53e609a758e34d2869b4d798e13cc@%3Cissues.drill.apache.org%3E",
+      "https://lists.apache.org/thread.html/r3dc0cac8d856bca02bd6997355d7ff83027dcfc82f8646a29b89b714@%3Cissues.hbase.apache.org%3E",
+      "https://lists.apache.org/thread.html/rd0e44e8ef71eeaaa3cf3d1b8b41eb25894372e2995ec908ce7624d26@%3Ccommits.pulsar.apache.org%3E",
+      "https://lists.debian.org/debian-lts-announce/2018/08/msg00027.html",
+      "https://seclists.org/bugtraq/2019/May/18",
+      "https://www.oracle.com/security-alerts/cpuApr2021.html",
+      "https://www.tenable.com/security/tns-2021-14",
+      "http://packetstormsecurity.com/files/152787/dotCMS-5.1.1-Vulnerable-Dependencies.html",
+      "http://packetstormsecurity.com/files/156743/OctoberCMS-Insecure-Dependencies.html",
+      "http://seclists.org/fulldisclosure/2019/May/10",
+      "http://seclists.org/fulldisclosure/2019/May/11",
+      "http://seclists.org/fulldisclosure/2019/May/13",
+      "https://github.com/twbs/bootstrap/blob/v3.4.1/js/collapse.js#L140",
+      "https://github.com/twbs/bootstrap/blob/v3.4.1/js/scrollspy.js#L56",
+      "https://github.com/twbs/bootstrap/blob/v3.4.1/js/tooltip.js#L352",
+      "https://github.com/twbs/bootstrap-rubygem/commit/f34c43c936ac7d0ebb129289321d8c51cd56aed1#diff-4e736e880b7fc39eb5e85576b629f6e3cd08f02f45104a7b4581f82852e97a81R1306",
+      "https://github.com/twbs/bootstrap/commit/149096016f70fd815540d62c0989fd99cdc809e0",
+      "https://github.com/rubysec/ruby-advisory-db/blob/master/gems/bootstrap/CVE-2018-14040.yml",
+      "https://github.com/twbs/bootstrap/commit/2a5ba23ce8f041f3548317acc992ed8a736b609d",
+      "https://blog.getbootstrap.com/2018/07/12/bootstrap-4-1-2",
+      "https://github.com/rubysec/ruby-advisory-db/blob/master/gems/bootstrap-sass/CVE-2018-14040.yml",
+      "https://github.com/advisories/GHSA-3wqf-4x89-9g79"
+    ],
+    "published_at": "2022-05-13T01:07:54Z",
+    "updated_at": "2024-08-05T16:34:01Z",
+    "github_reviewed_at": "2022-09-15T19:41:21Z",
+    "nvd_published_at": "2018-07-13T14:29:00Z",
+    "withdrawn_at": null,
+    "vulnerabilities": [
+      {
+        "package": {
+          "ecosystem": "npm",
+          "name": "bootstrap"
+        },
+        "vulnerable_version_range": ">= 4.0.0, < 4.1.2",
+        "first_patched_version": "4.1.2",
+        "vulnerable_functions": [
+
+        ]
+      },
+      {
+        "package": {
+          "ecosystem": "rubygems",
+          "name": "bootstrap"
+        },
+        "vulnerable_version_range": ">= 4.0.0, < 4.1.2",
+        "first_patched_version": "4.1.2",
+        "vulnerable_functions": [
+
+        ]
+      },
+      {
+        "package": {
+          "ecosystem": "npm",
+          "name": "bootstrap"
+        },
+        "vulnerable_version_range": ">= 2.3.0, < 3.4.0",
+        "first_patched_version": "3.4.0",
+        "vulnerable_functions": [
+
+        ]
+      },
+      {
+        "package": {
+          "ecosystem": "rubygems",
+          "name": "bootstrap"
+        },
+        "vulnerable_version_range": ">= 2.3.0, < 3.4.0",
+        "first_patched_version": "3.4.0",
+        "vulnerable_functions": [
+
+        ]
+      },
+      {
+        "package": {
+          "ecosystem": "maven",
+          "name": "org.webjars:bootstrap"
+        },
+        "vulnerable_version_range": ">= 4.0.0, < 4.1.2",
+        "first_patched_version": "4.1.2",
+        "vulnerable_functions": [
+
+        ]
+      },
+      {
+        "package": {
+          "ecosystem": "maven",
+          "name": "org.webjars:bootstrap"
+        },
+        "vulnerable_version_range": ">= 2.3.0, < 3.4.0",
+        "first_patched_version": "3.4.0",
+        "vulnerable_functions": [
+
+        ]
+      },
+      {
+        "package": {
+          "ecosystem": "nuget",
+          "name": "bootstrap"
+        },
+        "vulnerable_version_range": ">= 2.3.0, < 3.4.0",
+        "first_patched_version": "3.4.0",
+        "vulnerable_functions": [
+
+        ]
+      },
+      {
+        "package": {
+          "ecosystem": "nuget",
+          "name": "bootstrap"
+        },
+        "vulnerable_version_range": ">= 4.0.0, < 4.1.2",
+        "first_patched_version": "4.1.2",
+        "vulnerable_functions": [
+
+        ]
+      },
+      {
+        "package": {
+          "ecosystem": "nuget",
+          "name": "bootstrap.sass"
+        },
+        "vulnerable_version_range": ">= 4.0.0, < 4.1.2",
+        "first_patched_version": "4.1.2",
+        "vulnerable_functions": [
+
+        ]
+      },
+      {
+        "package": {
+          "ecosystem": "rubygems",
+          "name": "bootstrap-sass"
+        },
+        "vulnerable_version_range": ">= 2.3.0, < 3.4.0",
+        "first_patched_version": "3.4.0",
+        "vulnerable_functions": [
+
+        ]
+      },
+      {
+        "package": {
+          "ecosystem": "composer",
+          "name": "twbs/bootstrap"
+        },
+        "vulnerable_version_range": ">= 2.3.0, < 3.4.0",
+        "first_patched_version": "3.4.0",
+        "vulnerable_functions": [
+
+        ]
+      },
+      {
+        "package": {
+          "ecosystem": "composer",
+          "name": "twbs/bootstrap"
+        },
+        "vulnerable_version_range": ">= 4.0.0, < 4.1.2",
+        "first_patched_version": "4.1.2",
+        "vulnerable_functions": [
+
+        ]
+      }
+    ],
+    "cvss_severities": {
+      "cvss_v3": {
+        "vector_string": "CVSS:3.0/AV:N/AC:L/PR:N/UI:R/S:C/C:L/I:L/A:N",
+        "score": 6.1
+      },
+      "cvss_v4": {
+        "vector_string": null,
+        "score": 0.0
+      }
+    },
+    "cwes": [
+      {
+        "cwe_id": "CWE-79",
+        "name": "Improper Neutralization of Input During Web Page Generation"
+      }
+    ],
+    "credits": [
+      {
+        "user": {
+          "login": "jhutchings1",
+          "id": 12853539,
+          "node_id": "MDQ6VXNlcjEyODUzNTM5",
+          "avatar_url": "https://avatars.githubusercontent.com/u/12853539?v=4",
+          "gravatar_id": "",
+          "url": "https://api.github.com/users/jhutchings1",
+          "html_url": "https://github.com/jhutchings1",
+          "followers_url": "https://api.github.com/users/jhutchings1/followers",
+          "following_url": "https://api.github.com/users/jhutchings1/following{/other_user}",
+          "gists_url": "https://api.github.com/users/jhutchings1/gists{/gist_id}",
+          "starred_url": "https://api.github.com/users/jhutchings1/starred{/owner}{/repo}",
+          "subscriptions_url": "https://api.github.com/users/jhutchings1/subscriptions",
+          "organizations_url": "https://api.github.com/users/jhutchings1/orgs",
+          "repos_url": "https://api.github.com/users/jhutchings1/repos",
+          "events_url": "https://api.github.com/users/jhutchings1/events{/privacy}",
+          "received_events_url": "https://api.github.com/users/jhutchings1/received_events",
+          "type": "User",
+          "user_view_type": "public",
+          "site_admin": false
+        },
+        "type": "analyst"
+      },
+      {
+        "user": {
+          "login": "stof",
+          "id": 439401,
+          "node_id": "MDQ6VXNlcjQzOTQwMQ==",
+          "avatar_url": "https://avatars.githubusercontent.com/u/439401?v=4",
+          "gravatar_id": "",
+          "url": "https://api.github.com/users/stof",
+          "html_url": "https://github.com/stof",
+          "followers_url": "https://api.github.com/users/stof/followers",
+          "following_url": "https://api.github.com/users/stof/following{/other_user}",
+          "gists_url": "https://api.github.com/users/stof/gists{/gist_id}",
+          "starred_url": "https://api.github.com/users/stof/starred{/owner}{/repo}",
+          "subscriptions_url": "https://api.github.com/users/stof/subscriptions",
+          "organizations_url": "https://api.github.com/users/stof/orgs",
+          "repos_url": "https://api.github.com/users/stof/repos",
+          "events_url": "https://api.github.com/users/stof/events{/privacy}",
+          "received_events_url": "https://api.github.com/users/stof/received_events",
+          "type": "User",
+          "user_view_type": "public",
+          "site_admin": false
+        },
+        "type": "analyst"
+      },
+      {
+        "user": {
+          "login": "Churro",
+          "id": 343448,
+          "node_id": "MDQ6VXNlcjM0MzQ0OA==",
+          "avatar_url": "https://avatars.githubusercontent.com/u/343448?v=4",
+          "gravatar_id": "",
+          "url": "https://api.github.com/users/Churro",
+          "html_url": "https://github.com/Churro",
+          "followers_url": "https://api.github.com/users/Churro/followers",
+          "following_url": "https://api.github.com/users/Churro/following{/other_user}",
+          "gists_url": "https://api.github.com/users/Churro/gists{/gist_id}",
+          "starred_url": "https://api.github.com/users/Churro/starred{/owner}{/repo}",
+          "subscriptions_url": "https://api.github.com/users/Churro/subscriptions",
+          "organizations_url": "https://api.github.com/users/Churro/orgs",
+          "repos_url": "https://api.github.com/users/Churro/repos",
+          "events_url": "https://api.github.com/users/Churro/events{/privacy}",
+          "received_events_url": "https://api.github.com/users/Churro/received_events",
+          "type": "User",
+          "user_view_type": "public",
+          "site_admin": false
+        },
+        "type": "analyst"
+      },
+      {
+        "user": {
+          "login": "tdunlap607",
+          "id": 16122665,
+          "node_id": "MDQ6VXNlcjE2MTIyNjY1",
+          "avatar_url": "https://avatars.githubusercontent.com/u/16122665?v=4",
+          "gravatar_id": "",
+          "url": "https://api.github.com/users/tdunlap607",
+          "html_url": "https://github.com/tdunlap607",
+          "followers_url": "https://api.github.com/users/tdunlap607/followers",
+          "following_url": "https://api.github.com/users/tdunlap607/following{/other_user}",
+          "gists_url": "https://api.github.com/users/tdunlap607/gists{/gist_id}",
+          "starred_url": "https://api.github.com/users/tdunlap607/starred{/owner}{/repo}",
+          "subscriptions_url": "https://api.github.com/users/tdunlap607/subscriptions",
+          "organizations_url": "https://api.github.com/users/tdunlap607/orgs",
+          "repos_url": "https://api.github.com/users/tdunlap607/repos",
+          "events_url": "https://api.github.com/users/tdunlap607/events{/privacy}",
+          "received_events_url": "https://api.github.com/users/tdunlap607/received_events",
+          "type": "User",
+          "user_view_type": "public",
+          "site_admin": false
+        },
+        "type": "analyst"
+      },
+      {
+        "user": {
+          "login": "jenhae",
+          "id": 97594165,
+          "node_id": "U_kgDOBdErNQ",
+          "avatar_url": "https://avatars.githubusercontent.com/u/97594165?v=4",
+          "gravatar_id": "",
+          "url": "https://api.github.com/users/jenhae",
+          "html_url": "https://github.com/jenhae",
+          "followers_url": "https://api.github.com/users/jenhae/followers",
+          "following_url": "https://api.github.com/users/jenhae/following{/other_user}",
+          "gists_url": "https://api.github.com/users/jenhae/gists{/gist_id}",
+          "starred_url": "https://api.github.com/users/jenhae/starred{/owner}{/repo}",
+          "subscriptions_url": "https://api.github.com/users/jenhae/subscriptions",
+          "organizations_url": "https://api.github.com/users/jenhae/orgs",
+          "repos_url": "https://api.github.com/users/jenhae/repos",
+          "events_url": "https://api.github.com/users/jenhae/events{/privacy}",
+          "received_events_url": "https://api.github.com/users/jenhae/received_events",
+          "type": "User",
+          "user_view_type": "public",
+          "site_admin": false
+        },
+        "type": "analyst"
+      }
+    ],
+    "comments": 0,
+    "cvss": {
+      "vector_string": "CVSS:3.0/AV:N/AC:L/PR:N/UI:R/S:C/C:L/I:L/A:N",
+      "score": 6.1
+    },
+    "epss": {
+      "percentage": 0.04135,
+      "percentile": 0.90511
+    }
+  },
+  {
+    "ghsa_id": "GHSA-9v3m-8fp8-mj99",
+    "cve_id": "CVE-2019-8331",
+    "url": "https://api.github.com/advisories/GHSA-9v3m-8fp8-mj99",
+    "html_url": "https://github.com/advisories/GHSA-9v3m-8fp8-mj99",
+    "summary": "Bootstrap Vulnerable to Cross-Site Scripting",
+    "description": "Versions of `bootstrap` prior to 3.4.1 for 3.x and 4.3.1 for 4.x are vulnerable to Cross-Site Scripting (XSS). The  `data-template` attribute of the tooltip and popover plugins lacks input sanitization and may allow attacker to execute arbitrary JavaScript.\n\n\n## Recommendation\n\nFor `bootstrap` 4.x upgrade to 4.3.1 or later.\nFor `bootstrap` 3.x upgrade to 3.4.1 or later.",
+    "type": "reviewed",
+    "severity": "medium",
+    "repository_advisory_url": null,
+    "source_code_location": "https://github.com/twbs/bootstrap",
+    "identifiers": [
+      {
+        "value": "GHSA-9v3m-8fp8-mj99",
+        "type": "GHSA"
+      },
+      {
+        "value": "CVE-2019-8331",
+        "type": "CVE"
+      }
+    ],
+    "references": [
+      "https://nvd.nist.gov/vuln/detail/CVE-2019-8331",
+      "https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2019-8331",
+      "https://github.com/twbs/bootstrap/pull/28236",
+      "https://access.redhat.com/errata/RHSA-2019:1456",
+      "https://access.redhat.com/errata/RHSA-2019:3023",
+      "https://access.redhat.com/errata/RHSA-2019:3024",
+      "https://github.com/twbs/bootstrap/releases/tag/v3.4.1",
+      "https://github.com/twbs/bootstrap/releases/tag/v4.3.1",
+      "https://lists.apache.org/thread.html/10f0f3aefd51444d1198c65f44ffdf2d78ca3359423dbc1c168c9731@%3Cdev.flink.apache.org%3E",
+      "https://lists.apache.org/thread.html/17ff53f7999e74fbe3cc0ceb4e1c3b00b180b7c5afec8e978837bc49@%3Cuser.flink.apache.org%3E",
+      "https://lists.apache.org/thread.html/519eb0fd45642dcecd9ff74cb3e71c20a4753f7d82e2f07864b5108f@%3Cdev.drill.apache.org%3E",
+      "https://lists.apache.org/thread.html/52bafac05ad174000ea465fe275fd3cc7bd5c25535a7631c0bc9bfb2@%3Cuser.flink.apache.org%3E",
+      "https://lists.apache.org/thread.html/52e0e6b5df827ee7f1e68f7cc3babe61af3b2160f5d74a85469b7b0e@%3Cdev.superset.apache.org%3E",
+      "https://lists.apache.org/thread.html/54df3aeb4239b64b50b356f0ca6f986e3c4ca5b84c515dce077c7854@%3Cuser.flink.apache.org%3E",
+      "https://lists.apache.org/thread.html/b0656d359c7d40ec9f39c8cc61bca66802ef9a2a12ee199f5b0c1442@%3Cdev.drill.apache.org%3E",
+      "https://lists.apache.org/thread.html/f9bc3e55f4e28d1dcd1a69aae6d53e609a758e34d2869b4d798e13cc@%3Cissues.drill.apache.org%3E",
+      "https://lists.apache.org/thread.html/r3dc0cac8d856bca02bd6997355d7ff83027dcfc82f8646a29b89b714@%3Cissues.hbase.apache.org%3E",
+      "https://lists.apache.org/thread.html/rd0e44e8ef71eeaaa3cf3d1b8b41eb25894372e2995ec908ce7624d26@%3Ccommits.pulsar.apache.org%3E",
+      "https://seclists.org/bugtraq/2019/May/18",
+      "https://support.f5.com/csp/article/K24383845",
+      "https://support.f5.com/csp/article/K24383845?utm_source=f5support&amp;utm_medium=RSS",
+      "https://www.oracle.com/security-alerts/cpuApr2021.html",
+      "http://packetstormsecurity.com/files/156743/OctoberCMS-Insecure-Dependencies.html",
+      "http://seclists.org/fulldisclosure/2019/May/10",
+      "http://seclists.org/fulldisclosure/2019/May/11",
+      "http://seclists.org/fulldisclosure/2019/May/13",
+      "https://www.tenable.com/security/tns-2021-14",
+      "https://web.archive.org/web/20200227083900/http://www.securityfocus.com/bid/107375",
+      "https://github.com/rubysec/ruby-advisory-db/blob/master/gems/bootstrap/CVE-2019-8331.yml",
+      "https://github.com/rubysec/ruby-advisory-db/blob/master/gems/twitter-bootstrap-rails/CVE-2019-8331.yml",
+      "https://github.com/seyhunak/twitter-bootstrap-rails/tree/master/app/assets/javascripts/twitter/bootstrap",
+      "https://lists.apache.org/thread.html/10f0f3aefd51444d1198c65f44ffdf2d78ca3359423dbc1c168c9731%40%3Cdev.flink.apache.org%3E",
+      "https://lists.apache.org/thread.html/17ff53f7999e74fbe3cc0ceb4e1c3b00b180b7c5afec8e978837bc49%40%3Cuser.flink.apache.org%3E",
+      "https://lists.apache.org/thread.html/519eb0fd45642dcecd9ff74cb3e71c20a4753f7d82e2f07864b5108f%40%3Cdev.drill.apache.org%3E",
+      "https://lists.apache.org/thread.html/52bafac05ad174000ea465fe275fd3cc7bd5c25535a7631c0bc9bfb2%40%3Cuser.flink.apache.org%3E",
+      "https://lists.apache.org/thread.html/52e0e6b5df827ee7f1e68f7cc3babe61af3b2160f5d74a85469b7b0e%40%3Cdev.superset.apache.org%3E",
+      "https://lists.apache.org/thread.html/54df3aeb4239b64b50b356f0ca6f986e3c4ca5b84c515dce077c7854%40%3Cuser.flink.apache.org%3E",
+      "https://lists.apache.org/thread.html/b0656d359c7d40ec9f39c8cc61bca66802ef9a2a12ee199f5b0c1442%40%3Cdev.drill.apache.org%3E",
+      "https://lists.apache.org/thread.html/f9bc3e55f4e28d1dcd1a69aae6d53e609a758e34d2869b4d798e13cc%40%3Cissues.drill.apache.org%3E",
+      "https://lists.apache.org/thread.html/r3dc0cac8d856bca02bd6997355d7ff83027dcfc82f8646a29b89b714%40%3Cissues.hbase.apache.org%3E",
+      "https://lists.apache.org/thread.html/rd0e44e8ef71eeaaa3cf3d1b8b41eb25894372e2995ec908ce7624d26%40%3Ccommits.pulsar.apache.org%3E",
+      "https://support.f5.com/csp/article/K24383845?utm_source=f5support&amp%3Butm_medium=RSS",
+      "https://blog.getbootstrap.com/2019/02/13/bootstrap-4-3-1-and-3-4-1",
+      "https://github.com/advisories/GHSA-9v3m-8fp8-mj99"
+    ],
+    "published_at": "2019-02-22T20:54:47Z",
+    "updated_at": "2026-06-02T22:01:58Z",
+    "github_reviewed_at": "2020-06-16T21:29:39Z",
+    "nvd_published_at": "2019-02-20T16:29:00Z",
+    "withdrawn_at": null,
+    "vulnerabilities": [
+      {
+        "package": {
+          "ecosystem": "rubygems",
+          "name": "bootstrap"
+        },
+        "vulnerable_version_range": "< 4.3.1",
+        "first_patched_version": "4.3.1",
+        "vulnerable_functions": [
+
+        ]
+      },
+      {
+        "package": {
+          "ecosystem": "rubygems",
+          "name": "bootstrap-sass"
+        },
+        "vulnerable_version_range": ">= 3.0.0, < 3.4.1",
+        "first_patched_version": "3.4.1",
+        "vulnerable_functions": [
+
+        ]
+      },
+      {
+        "package": {
+          "ecosystem": "nuget",
+          "name": "Bootstrap.Less"
+        },
+        "vulnerable_version_range": ">= 3.0.0, < 3.4.1",
+        "first_patched_version": "3.4.1",
+        "vulnerable_functions": [
+
+        ]
+      },
+      {
+        "package": {
+          "ecosystem": "nuget",
+          "name": "bootstrap"
+        },
+        "vulnerable_version_range": ">= 4.0.0, < 4.3.1",
+        "first_patched_version": "4.3.1",
+        "vulnerable_functions": [
+
+        ]
+      },
+      {
+        "package": {
+          "ecosystem": "nuget",
+          "name": "bootstrap"
+        },
+        "vulnerable_version_range": ">= 3.0.0, < 3.4.1",
+        "first_patched_version": "3.4.1",
+        "vulnerable_functions": [
+
+        ]
+      },
+      {
+        "package": {
+          "ecosystem": "nuget",
+          "name": "bootstrap.sass"
+        },
+        "vulnerable_version_range": "< 4.3.1",
+        "first_patched_version": "4.3.1",
+        "vulnerable_functions": [
+
+        ]
+      },
+      {
+        "package": {
+          "ecosystem": "npm",
+          "name": "bootstrap"
+        },
+        "vulnerable_version_range": ">= 4.0.0, < 4.3.1",
+        "first_patched_version": "4.3.1",
+        "vulnerable_functions": [
+
+        ]
+      },
+      {
+        "package": {
+          "ecosystem": "npm",
+          "name": "bootstrap"
+        },
+        "vulnerable_version_range": ">= 3.0.0, < 3.4.1",
+        "first_patched_version": "3.4.1",
+        "vulnerable_functions": [
+
+        ]
+      },
+      {
+        "package": {
+          "ecosystem": "npm",
+          "name": "bootstrap-sass"
+        },
+        "vulnerable_version_range": ">= 3.0.0, < 3.4.1",
+        "first_patched_version": "3.4.1",
+        "vulnerable_functions": [
+
+        ]
+      },
+      {
+        "package": {
+          "ecosystem": "maven",
+          "name": "org.webjars:bootstrap"
+        },
+        "vulnerable_version_range": ">= 3.0.0, < 3.4.1",
+        "first_patched_version": "3.4.1",
+        "vulnerable_functions": [
+
+        ]
+      },
+      {
+        "package": {
+          "ecosystem": "maven",
+          "name": "org.webjars:bootstrap"
+        },
+        "vulnerable_version_range": ">= 4.0.0, < 4.3.1",
+        "first_patched_version": "4.3.1",
+        "vulnerable_functions": [
+
+        ]
+      },
+      {
+        "package": {
+          "ecosystem": "composer",
+          "name": "twbs/bootstrap"
+        },
+        "vulnerable_version_range": ">= 3.0.0, < 3.4.1",
+        "first_patched_version": "3.4.1",
+        "vulnerable_functions": [
+
+        ]
+      },
+      {
+        "package": {
+          "ecosystem": "composer",
+          "name": "twbs/bootstrap"
+        },
+        "vulnerable_version_range": ">= 4.0.0, < 4.3.1",
+        "first_patched_version": "4.3.1",
+        "vulnerable_functions": [
+
+        ]
+      },
+      {
+        "package": {
+          "ecosystem": "rubygems",
+          "name": "twitter-bootstrap-rails"
+        },
+        "vulnerable_version_range": "< 5.3.0",
+        "first_patched_version": "5.3.0",
+        "vulnerable_functions": [
+
+        ]
+      }
+    ],
+    "cvss_severities": {
+      "cvss_v3": {
+        "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:C/C:L/I:L/A:N",
+        "score": 6.1
+      },
+      "cvss_v4": {
+        "vector_string": null,
+        "score": 0.0
+      }
+    },
+    "cwes": [
+      {
+        "cwe_id": "CWE-79",
+        "name": "Improper Neutralization of Input During Web Page Generation"
+      }
+    ],
+    "credits": [
+      {
+        "user": {
+          "login": "flavorjones",
+          "id": 8207,
+          "node_id": "MDQ6VXNlcjgyMDc=",
+          "avatar_url": "https://avatars.githubusercontent.com/u/8207?v=4",
+          "gravatar_id": "",
+          "url": "https://api.github.com/users/flavorjones",
+          "html_url": "https://github.com/flavorjones",
+          "followers_url": "https://api.github.com/users/flavorjones/followers",
+          "following_url": "https://api.github.com/users/flavorjones/following{/other_user}",
+          "gists_url": "https://api.github.com/users/flavorjones/gists{/gist_id}",
+          "starred_url": "https://api.github.com/users/flavorjones/starred{/owner}{/repo}",
+          "subscriptions_url": "https://api.github.com/users/flavorjones/subscriptions",
+          "organizations_url": "https://api.github.com/users/flavorjones/orgs",
+          "repos_url": "https://api.github.com/users/flavorjones/repos",
+          "events_url": "https://api.github.com/users/flavorjones/events{/privacy}",
+          "received_events_url": "https://api.github.com/users/flavorjones/received_events",
+          "type": "User",
+          "user_view_type": "public",
+          "site_admin": false
+        },
+        "type": "analyst"
+      },
+      {
+        "user": {
+          "login": "jasnow",
+          "id": 43523,
+          "node_id": "MDQ6VXNlcjQzNTIz",
+          "avatar_url": "https://avatars.githubusercontent.com/u/43523?v=4",
+          "gravatar_id": "",
+          "url": "https://api.github.com/users/jasnow",
+          "html_url": "https://github.com/jasnow",
+          "followers_url": "https://api.github.com/users/jasnow/followers",
+          "following_url": "https://api.github.com/users/jasnow/following{/other_user}",
+          "gists_url": "https://api.github.com/users/jasnow/gists{/gist_id}",
+          "starred_url": "https://api.github.com/users/jasnow/starred{/owner}{/repo}",
+          "subscriptions_url": "https://api.github.com/users/jasnow/subscriptions",
+          "organizations_url": "https://api.github.com/users/jasnow/orgs",
+          "repos_url": "https://api.github.com/users/jasnow/repos",
+          "events_url": "https://api.github.com/users/jasnow/events{/privacy}",
+          "received_events_url": "https://api.github.com/users/jasnow/received_events",
+          "type": "User",
+          "user_view_type": "public",
+          "site_admin": false
+        },
+        "type": "analyst"
+      }
+    ],
+    "comments": 0,
+    "cvss": {
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:C/C:L/I:L/A:N",
+      "score": 6.1
+    },
+    "epss": {
+      "percentage": 0.16404,
+      "percentile": 0.96657
+    }
+  },
+  {
+    "ghsa_id": "GHSA-ph58-4vrj-w6hr",
+    "cve_id": "CVE-2018-20677",
+    "url": "https://api.github.com/advisories/GHSA-ph58-4vrj-w6hr",
+    "html_url": "https://github.com/advisories/GHSA-ph58-4vrj-w6hr",
+    "summary": "bootstrap Cross-site Scripting vulnerability",
+    "description": "In Bootstrap before 3.4.0, XSS is possible in the affix configuration target property.",
+    "type": "reviewed",
+    "severity": "medium",
+    "repository_advisory_url": null,
+    "source_code_location": "https://github.com/twbs/bootstrap",
+    "identifiers": [
+      {
+        "value": "GHSA-ph58-4vrj-w6hr",
+        "type": "GHSA"
+      },
+      {
+        "value": "CVE-2018-20677",
+        "type": "CVE"
+      }
+    ],
+    "references": [
+      "https://nvd.nist.gov/vuln/detail/CVE-2018-20677",
+      "https://github.com/twbs/bootstrap/issues/27045",
+      "https://github.com/twbs/bootstrap/issues/27915#issuecomment-452140906",
+      "https://github.com/twbs/bootstrap/issues/27915#issuecomment-452196628",
+      "https://github.com/twbs/bootstrap/pull/27047",
+      "https://access.redhat.com/errata/RHBA-2019:1076",
+      "https://access.redhat.com/errata/RHBA-2019:1570",
+      "https://access.redhat.com/errata/RHSA-2019:1456",
+      "https://access.redhat.com/errata/RHSA-2019:3023",
+      "https://access.redhat.com/errata/RHSA-2020:0132",
+      "https://access.redhat.com/errata/RHSA-2020:0133",
+      "https://lists.apache.org/thread.html/52e0e6b5df827ee7f1e68f7cc3babe61af3b2160f5d74a85469b7b0e@%3Cdev.superset.apache.org%3E",
+      "https://lists.apache.org/thread.html/rd0e44e8ef71eeaaa3cf3d1b8b41eb25894372e2995ec908ce7624d26@%3Ccommits.pulsar.apache.org%3E",
+      "https://github.com/twbs/bootstrap/commit/2a5ba23ce8f041f3548317acc992ed8a736b609d",
+      "https://blog.getbootstrap.com/2018/12/13/bootstrap-3-4-0",
+      "https://github.com/rubysec/ruby-advisory-db/blob/master/gems/bootstrap/CVE-2018-20677.yml",
+      "https://github.com/rubysec/ruby-advisory-db/blob/master/gems/bootstrap-sass/CVE-2018-20677.yml",
+      "https://github.com/advisories/GHSA-ph58-4vrj-w6hr"
+    ],
+    "published_at": "2019-01-17T13:57:56Z",
+    "updated_at": "2024-08-05T16:30:12Z",
+    "github_reviewed_at": "2020-06-16T21:49:11Z",
+    "nvd_published_at": "2019-01-09T05:29:00Z",
+    "withdrawn_at": null,
+    "vulnerabilities": [
+      {
+        "package": {
+          "ecosystem": "npm",
+          "name": "bootstrap"
+        },
+        "vulnerable_version_range": "< 3.4.0",
+        "first_patched_version": "3.4.0",
+        "vulnerable_functions": [
+
+        ]
+      },
+      {
+        "package": {
+          "ecosystem": "npm",
+          "name": "bootstrap-sass"
+        },
+        "vulnerable_version_range": "< 3.4.0",
+        "first_patched_version": "3.4.0",
+        "vulnerable_functions": [
+
+        ]
+      },
+      {
+        "package": {
+          "ecosystem": "composer",
+          "name": "twbs/bootstrap"
+        },
+        "vulnerable_version_range": "< 3.4.0",
+        "first_patched_version": "3.4.0",
+        "vulnerable_functions": [
+
+        ]
+      },
+      {
+        "package": {
+          "ecosystem": "maven",
+          "name": "org.webjars:bootstrap"
+        },
+        "vulnerable_version_range": "< 3.4.0",
+        "first_patched_version": "3.4.0",
+        "vulnerable_functions": [
+
+        ]
+      },
+      {
+        "package": {
+          "ecosystem": "rubygems",
+          "name": "bootstrap"
+        },
+        "vulnerable_version_range": "< 3.4.0",
+        "first_patched_version": "3.4.0",
+        "vulnerable_functions": [
+
+        ]
+      },
+      {
+        "package": {
+          "ecosystem": "rubygems",
+          "name": "bootstrap-sass"
+        },
+        "vulnerable_version_range": "< 3.4.0",
+        "first_patched_version": "3.4.0",
+        "vulnerable_functions": [
+
+        ]
+      },
+      {
+        "package": {
+          "ecosystem": "nuget",
+          "name": "bootstrap"
+        },
+        "vulnerable_version_range": "< 3.4.0",
+        "first_patched_version": "3.4.0",
+        "vulnerable_functions": [
+
+        ]
+      }
+    ],
+    "cvss_severities": {
+      "cvss_v3": {
+        "vector_string": "CVSS:3.0/AV:N/AC:L/PR:N/UI:R/S:C/C:L/I:L/A:N",
+        "score": 6.1
+      },
+      "cvss_v4": {
+        "vector_string": null,
+        "score": 0.0
+      }
+    },
+    "cwes": [
+      {
+        "cwe_id": "CWE-79",
+        "name": "Improper Neutralization of Input During Web Page Generation"
+      }
+    ],
+    "credits": [
+      {
+        "user": {
+          "login": "tdunlap607",
+          "id": 16122665,
+          "node_id": "MDQ6VXNlcjE2MTIyNjY1",
+          "avatar_url": "https://avatars.githubusercontent.com/u/16122665?v=4",
+          "gravatar_id": "",
+          "url": "https://api.github.com/users/tdunlap607",
+          "html_url": "https://github.com/tdunlap607",
+          "followers_url": "https://api.github.com/users/tdunlap607/followers",
+          "following_url": "https://api.github.com/users/tdunlap607/following{/other_user}",
+          "gists_url": "https://api.github.com/users/tdunlap607/gists{/gist_id}",
+          "starred_url": "https://api.github.com/users/tdunlap607/starred{/owner}{/repo}",
+          "subscriptions_url": "https://api.github.com/users/tdunlap607/subscriptions",
+          "organizations_url": "https://api.github.com/users/tdunlap607/orgs",
+          "repos_url": "https://api.github.com/users/tdunlap607/repos",
+          "events_url": "https://api.github.com/users/tdunlap607/events{/privacy}",
+          "received_events_url": "https://api.github.com/users/tdunlap607/received_events",
+          "type": "User",
+          "user_view_type": "public",
+          "site_admin": false
+        },
+        "type": "analyst"
+      }
+    ],
+    "comments": 0,
+    "cvss": {
+      "vector_string": "CVSS:3.0/AV:N/AC:L/PR:N/UI:R/S:C/C:L/I:L/A:N",
+      "score": 6.1
+    },
+    "epss": {
+      "percentage": 0.03984,
+      "percentile": 0.9051
+    }
+  },
+  {
+    "ghsa_id": "GHSA-3mgp-fx93-9xv5",
+    "cve_id": "CVE-2018-20676",
+    "url": "https://api.github.com/advisories/GHSA-3mgp-fx93-9xv5",
+    "html_url": "https://github.com/advisories/GHSA-3mgp-fx93-9xv5",
+    "summary": "XSS vulnerability that affects bootstrap",
+    "description": "In Bootstrap before 3.4.0, XSS is possible in the tooltip data-viewport attribute.",
+    "type": "reviewed",
+    "severity": "medium",
+    "repository_advisory_url": null,
+    "source_code_location": "https://github.com/twbs/bootstrap",
+    "identifiers": [
+      {
+        "value": "GHSA-3mgp-fx93-9xv5",
+        "type": "GHSA"
+      },
+      {
+        "value": "CVE-2018-20676",
+        "type": "CVE"
+      }
+    ],
+    "references": [
+      "https://nvd.nist.gov/vuln/detail/CVE-2018-20676",
+      "https://github.com/twbs/bootstrap/issues/27044",
+      "https://github.com/twbs/bootstrap/issues/27915#issuecomment-452140906",
+      "https://github.com/twbs/bootstrap/issues/27915#issuecomment-452196628",
+      "https://github.com/twbs/bootstrap/pull/27047",
+      "https://access.redhat.com/errata/RHBA-2019:1076",
+      "https://access.redhat.com/errata/RHBA-2019:1570",
+      "https://access.redhat.com/errata/RHSA-2019:1456",
+      "https://access.redhat.com/errata/RHSA-2019:3023",
+      "https://access.redhat.com/errata/RHSA-2020:0132",
+      "https://access.redhat.com/errata/RHSA-2020:0133",
+      "https://lists.apache.org/thread.html/rd0e44e8ef71eeaaa3cf3d1b8b41eb25894372e2995ec908ce7624d26@%3Ccommits.pulsar.apache.org%3E",
+      "https://github.com/twbs/bootstrap/commit/2a5ba23ce8f041f3548317acc992ed8a736b609d",
+      "https://blog.getbootstrap.com/2018/12/13/bootstrap-3-4-0",
+      "https://github.com/rubysec/ruby-advisory-db/blob/master/gems/bootstrap/CVE-2018-20676.yml",
+      "https://github.com/rubysec/ruby-advisory-db/blob/master/gems/bootstrap-sass/CVE-2018-20676.yml",
+      "https://github.com/advisories/GHSA-3mgp-fx93-9xv5"
+    ],
+    "published_at": "2019-01-17T13:57:34Z",
+    "updated_at": "2024-08-05T16:28:42Z",
+    "github_reviewed_at": "2020-06-16T20:55:33Z",
+    "nvd_published_at": "2019-01-09T05:29:00Z",
+    "withdrawn_at": null,
+    "vulnerabilities": [
+      {
+        "package": {
+          "ecosystem": "npm",
+          "name": "bootstrap"
+        },
+        "vulnerable_version_range": "< 3.4.0",
+        "first_patched_version": "3.4.0",
+        "vulnerable_functions": [
+
+        ]
+      },
+      {
+        "package": {
+          "ecosystem": "npm",
+          "name": "bootstrap-sass"
+        },
+        "vulnerable_version_range": "< 3.4.0",
+        "first_patched_version": "3.4.0",
+        "vulnerable_functions": [
+
+        ]
+      },
+      {
+        "package": {
+          "ecosystem": "composer",
+          "name": "twbs/bootstrap"
+        },
+        "vulnerable_version_range": "< 3.4.0",
+        "first_patched_version": "3.4.0",
+        "vulnerable_functions": [
+
+        ]
+      },
+      {
+        "package": {
+          "ecosystem": "maven",
+          "name": "org.webjars:bootstrap"
+        },
+        "vulnerable_version_range": "< 3.4.0",
+        "first_patched_version": "3.4.0",
+        "vulnerable_functions": [
+
+        ]
+      },
+      {
+        "package": {
+          "ecosystem": "rubygems",
+          "name": "bootstrap"
+        },
+        "vulnerable_version_range": "< 3.4.0",
+        "first_patched_version": "3.4.0",
+        "vulnerable_functions": [
+
+        ]
+      },
+      {
+        "package": {
+          "ecosystem": "rubygems",
+          "name": "bootstrap-sass"
+        },
+        "vulnerable_version_range": "< 3.4.0",
+        "first_patched_version": "3.4.0",
+        "vulnerable_functions": [
+
+        ]
+      },
+      {
+        "package": {
+          "ecosystem": "nuget",
+          "name": "bootstrap"
+        },
+        "vulnerable_version_range": "< 3.4.0",
+        "first_patched_version": "3.4.0",
+        "vulnerable_functions": [
+
+        ]
+      }
+    ],
+    "cvss_severities": {
+      "cvss_v3": {
+        "vector_string": "CVSS:3.0/AV:N/AC:L/PR:N/UI:R/S:C/C:L/I:L/A:N",
+        "score": 6.1
+      },
+      "cvss_v4": {
+        "vector_string": null,
+        "score": 0.0
+      }
+    },
+    "cwes": [
+      {
+        "cwe_id": "CWE-79",
+        "name": "Improper Neutralization of Input During Web Page Generation"
+      }
+    ],
+    "credits": [
+      {
+        "user": {
+          "login": "tdunlap607",
+          "id": 16122665,
+          "node_id": "MDQ6VXNlcjE2MTIyNjY1",
+          "avatar_url": "https://avatars.githubusercontent.com/u/16122665?v=4",
+          "gravatar_id": "",
+          "url": "https://api.github.com/users/tdunlap607",
+          "html_url": "https://github.com/tdunlap607",
+          "followers_url": "https://api.github.com/users/tdunlap607/followers",
+          "following_url": "https://api.github.com/users/tdunlap607/following{/other_user}",
+          "gists_url": "https://api.github.com/users/tdunlap607/gists{/gist_id}",
+          "starred_url": "https://api.github.com/users/tdunlap607/starred{/owner}{/repo}",
+          "subscriptions_url": "https://api.github.com/users/tdunlap607/subscriptions",
+          "organizations_url": "https://api.github.com/users/tdunlap607/orgs",
+          "repos_url": "https://api.github.com/users/tdunlap607/repos",
+          "events_url": "https://api.github.com/users/tdunlap607/events{/privacy}",
+          "received_events_url": "https://api.github.com/users/tdunlap607/received_events",
+          "type": "User",
+          "user_view_type": "public",
+          "site_admin": false
+        },
+        "type": "analyst"
+      }
+    ],
+    "comments": 0,
+    "cvss": {
+      "vector_string": "CVSS:3.0/AV:N/AC:L/PR:N/UI:R/S:C/C:L/I:L/A:N",
+      "score": 6.1
+    },
+    "epss": {
+      "percentage": 0.03835,
+      "percentile": 0.89637
+    }
+  },
+  {
+    "ghsa_id": "GHSA-4p24-vmcr-4gqj",
+    "cve_id": "CVE-2016-10735",
+    "url": "https://api.github.com/advisories/GHSA-4p24-vmcr-4gqj",
+    "html_url": "https://github.com/advisories/GHSA-4p24-vmcr-4gqj",
+    "summary": "Bootstrap Cross-site Scripting vulnerability",
+    "description": "In Bootstrap 2.x from 2.0.4, 3.x before 3.4.0 and 4.x-beta before 4.0.0-beta.2, XSS is possible in the data-target attribute. Note that this is a different vulnerability than CVE-2018-14041.\n\nSee https://blog.getbootstrap.com/2018/12/13/bootstrap-3-4-0/ for more info.",
+    "type": "reviewed",
+    "severity": "medium",
+    "repository_advisory_url": null,
+    "source_code_location": "https://github.com/twbs/bootstrap",
+    "identifiers": [
+      {
+        "value": "GHSA-4p24-vmcr-4gqj",
+        "type": "GHSA"
+      },
+      {
+        "value": "CVE-2016-10735",
+        "type": "CVE"
+      }
+    ],
+    "references": [
+      "https://nvd.nist.gov/vuln/detail/CVE-2016-10735",
+      "https://github.com/twbs/bootstrap/issues/20184",
+      "https://github.com/twbs/bootstrap/issues/27915#issuecomment-452140906",
+      "https://github.com/twbs/bootstrap/pull/23679",
+      "https://github.com/twbs/bootstrap/pull/23687",
+      "https://github.com/twbs/bootstrap/pull/26460",
+      "https://access.redhat.com/errata/RHBA-2019:1076",
+      "https://access.redhat.com/errata/RHBA-2019:1570",
+      "https://access.redhat.com/errata/RHSA-2019:1456",
+      "https://access.redhat.com/errata/RHSA-2019:3023",
+      "https://access.redhat.com/errata/RHSA-2020:0132",
+      "https://access.redhat.com/errata/RHSA-2020:0133",
+      "https://github.com/rubysec/ruby-advisory-db/blob/master/gems/bootstrap-sass/CVE-2016-10735.yml",
+      "https://github.com/github/advisory-database/pull/3281",
+      "https://blog.getbootstrap.com/2018/12/13/bootstrap-3-4-0",
+      "https://blog.getbootstrap.com/2018/07/12/bootstrap-4-1-2",
+      "https://github.com/rubysec/ruby-advisory-db/blob/master/gems/bootstrap/CVE-2016-10735.yml",
+      "https://github.com/advisories/GHSA-4p24-vmcr-4gqj"
+    ],
+    "published_at": "2019-01-17T13:57:27Z",
+    "updated_at": "2024-08-05T16:29:12Z",
+    "github_reviewed_at": "2020-06-16T20:58:39Z",
+    "nvd_published_at": "2019-01-09T05:29:00Z",
+    "withdrawn_at": null,
+    "vulnerabilities": [
+      {
+        "package": {
+          "ecosystem": "npm",
+          "name": "bootstrap"
+        },
+        "vulnerable_version_range": ">= 4.0.0-beta, < 4.0.0-beta.2",
+        "first_patched_version": "4.0.0-beta.2",
+        "vulnerable_functions": [
+
+        ]
+      },
+      {
+        "package": {
+          "ecosystem": "npm",
+          "name": "bootstrap"
+        },
+        "vulnerable_version_range": ">= 2.0.4, < 3.4.0",
+        "first_patched_version": "3.4.0",
+        "vulnerable_functions": [
+
+        ]
+      },
+      {
+        "package": {
+          "ecosystem": "maven",
+          "name": "org.webjars:bootstrap"
+        },
+        "vulnerable_version_range": ">= 2.0.4, < 3.4.0",
+        "first_patched_version": "3.4.0",
+        "vulnerable_functions": [
+
+        ]
+      },
+      {
+        "package": {
+          "ecosystem": "maven",
+          "name": "org.webjars:bootstrap"
+        },
+        "vulnerable_version_range": ">= 4.0.0-beta, < 4.0.0-beta.2",
+        "first_patched_version": "4.0.0-beta.2",
+        "vulnerable_functions": [
+
+        ]
+      },
+      {
+        "package": {
+          "ecosystem": "rubygems",
+          "name": "bootstrap"
+        },
+        "vulnerable_version_range": "< 4.0.0-beta.2",
+        "first_patched_version": "4.0.0-beta.2",
+        "vulnerable_functions": [
+
+        ]
+      },
+      {
+        "package": {
+          "ecosystem": "composer",
+          "name": "twbs/bootstrap"
+        },
+        "vulnerable_version_range": ">= 2.0.4, < 3.4.0",
+        "first_patched_version": "3.4.0",
+        "vulnerable_functions": [
+
+        ]
+      },
+      {
+        "package": {
+          "ecosystem": "composer",
+          "name": "twbs/bootstrap"
+        },
+        "vulnerable_version_range": ">= 4.0.0-beta, < 4.0.0-beta.2",
+        "first_patched_version": "4.0.0-beta.2",
+        "vulnerable_functions": [
+
+        ]
+      },
+      {
+        "package": {
+          "ecosystem": "nuget",
+          "name": "bootstrap"
+        },
+        "vulnerable_version_range": ">= 2.0.4, < 3.4.0",
+        "first_patched_version": "3.4.0",
+        "vulnerable_functions": [
+
+        ]
+      },
+      {
+        "package": {
+          "ecosystem": "nuget",
+          "name": "bootstrap"
+        },
+        "vulnerable_version_range": ">= 4.0.0-beta, < 4.0.0-beta.2",
+        "first_patched_version": "4.0.0-beta.2",
+        "vulnerable_functions": [
+
+        ]
+      },
+      {
+        "package": {
+          "ecosystem": "npm",
+          "name": "bootstrap-sass"
+        },
+        "vulnerable_version_range": ">= 2.0.4, < 3.4.0",
+        "first_patched_version": "3.4.0",
+        "vulnerable_functions": [
+
+        ]
+      },
+      {
+        "package": {
+          "ecosystem": "rubygems",
+          "name": "bootstrap-sass"
+        },
+        "vulnerable_version_range": ">= 2.0.4, < 3.4.0",
+        "first_patched_version": "3.4.0",
+        "vulnerable_functions": [
+
+        ]
+      },
+      {
+        "package": {
+          "ecosystem": "nuget",
+          "name": "bootstrap.sass"
+        },
+        "vulnerable_version_range": ">= 4.0.0-beta, < 4.0.0-beta.2",
+        "first_patched_version": "4.0.0-beta.2",
+        "vulnerable_functions": [
+
+        ]
+      }
+    ],
+    "cvss_severities": {
+      "cvss_v3": {
+        "vector_string": "CVSS:3.0/AV:N/AC:L/PR:N/UI:R/S:C/C:L/I:L/A:N",
+        "score": 6.1
+      },
+      "cvss_v4": {
+        "vector_string": null,
+        "score": 0.0
+      }
+    },
+    "cwes": [
+      {
+        "cwe_id": "CWE-79",
+        "name": "Improper Neutralization of Input During Web Page Generation"
+      }
+    ],
+    "credits": [
+      {
+        "user": {
+          "login": "roka-actico",
+          "id": 135135754,
+          "node_id": "U_kgDOCA4CCg",
+          "avatar_url": "https://avatars.githubusercontent.com/u/135135754?v=4",
+          "gravatar_id": "",
+          "url": "https://api.github.com/users/roka-actico",
+          "html_url": "https://github.com/roka-actico",
+          "followers_url": "https://api.github.com/users/roka-actico/followers",
+          "following_url": "https://api.github.com/users/roka-actico/following{/other_user}",
+          "gists_url": "https://api.github.com/users/roka-actico/gists{/gist_id}",
+          "starred_url": "https://api.github.com/users/roka-actico/starred{/owner}{/repo}",
+          "subscriptions_url": "https://api.github.com/users/roka-actico/subscriptions",
+          "organizations_url": "https://api.github.com/users/roka-actico/orgs",
+          "repos_url": "https://api.github.com/users/roka-actico/repos",
+          "events_url": "https://api.github.com/users/roka-actico/events{/privacy}",
+          "received_events_url": "https://api.github.com/users/roka-actico/received_events",
+          "type": "User",
+          "user_view_type": "public",
+          "site_admin": false
+        },
+        "type": "analyst"
+      }
+    ],
+    "comments": 0,
+    "cvss": {
+      "vector_string": "CVSS:3.0/AV:N/AC:L/PR:N/UI:R/S:C/C:L/I:L/A:N",
+      "score": 6.1
+    },
+    "epss": {
+      "percentage": 0.0404,
+      "percentile": 0.90508
+    }
+  },
+  {
+    "ghsa_id": "GHSA-7mvr-5x2g-wfc8",
+    "cve_id": "CVE-2018-14042",
+    "url": "https://api.github.com/advisories/GHSA-7mvr-5x2g-wfc8",
+    "html_url": "https://github.com/advisories/GHSA-7mvr-5x2g-wfc8",
+    "summary": "Bootstrap Cross-site Scripting vulnerability",
+    "description": "In Bootstrap starting in version 2.3.0 and prior to versions 3.4.0 and 4.1.2, XSS is possible in the data-container property of tooltip.  This is similar to CVE-2018-14041.",
+    "type": "reviewed",
+    "severity": "medium",
+    "repository_advisory_url": null,
+    "source_code_location": "https://github.com/twbs/bootstrap",
+    "identifiers": [
+      {
+        "value": "GHSA-7mvr-5x2g-wfc8",
+        "type": "GHSA"
+      },
+      {
+        "value": "CVE-2018-14042",
+        "type": "CVE"
+      }
+    ],
+    "references": [
+      "https://nvd.nist.gov/vuln/detail/CVE-2018-14042",
+      "https://github.com/twbs/bootstrap/issues/26423",
+      "https://github.com/twbs/bootstrap/issues/26628",
+      "https://github.com/twbs/bootstrap/pull/26630",
+      "https://lists.apache.org/thread.html/519eb0fd45642dcecd9ff74cb3e71c20a4753f7d82e2f07864b5108f@%3Cdev.drill.apache.org%3E",
+      "https://lists.apache.org/thread.html/52e0e6b5df827ee7f1e68f7cc3babe61af3b2160f5d74a85469b7b0e@%3Cdev.superset.apache.org%3E",
+      "https://lists.apache.org/thread.html/b0656d359c7d40ec9f39c8cc61bca66802ef9a2a12ee199f5b0c1442@%3Cdev.drill.apache.org%3E",
+      "https://lists.apache.org/thread.html/f9bc3e55f4e28d1dcd1a69aae6d53e609a758e34d2869b4d798e13cc@%3Cissues.drill.apache.org%3E",
+      "https://lists.apache.org/thread.html/r3dc0cac8d856bca02bd6997355d7ff83027dcfc82f8646a29b89b714@%3Cissues.hbase.apache.org%3E",
+      "https://lists.apache.org/thread.html/rd0e44e8ef71eeaaa3cf3d1b8b41eb25894372e2995ec908ce7624d26@%3Ccommits.pulsar.apache.org%3E",
+      "https://seclists.org/bugtraq/2019/May/18",
+      "https://www.oracle.com/security-alerts/cpuApr2021.html",
+      "http://packetstormsecurity.com/files/156743/OctoberCMS-Insecure-Dependencies.html",
+      "http://seclists.org/fulldisclosure/2019/May/10",
+      "http://seclists.org/fulldisclosure/2019/May/11",
+      "http://seclists.org/fulldisclosure/2019/May/13",
+      "https://github.com/twbs/bootstrap/issues/26428",
+      "https://github.com/twbs/bootstrap/commit/2d90d369bbc2bd2647620246c55cec8c4705e3d0",
+      "https://github.com/rubysec/ruby-advisory-db/blob/master/gems/bootstrap/CVE-2018-14042.yml",
+      "https://www.tenable.com/security/tns-2021-14",
+      "https://github.com/twbs/bootstrap/commit/2a5ba23ce8f041f3548317acc992ed8a736b609d",
+      "https://blog.getbootstrap.com/2018/07/12/bootstrap-4-1-2",
+      "https://github.com/rubysec/ruby-advisory-db/blob/master/gems/bootstrap-sass/CVE-2018-14042.yml",
+      "https://github.com/advisories/GHSA-7mvr-5x2g-wfc8"
+    ],
+    "published_at": "2018-09-13T15:50:32Z",
+    "updated_at": "2026-06-08T23:16:19Z",
+    "github_reviewed_at": "2020-06-16T21:23:00Z",
+    "nvd_published_at": "2018-07-13T14:29:00Z",
+    "withdrawn_at": null,
+    "vulnerabilities": [
+      {
+        "package": {
+          "ecosystem": "rubygems",
+          "name": "bootstrap"
+        },
+        "vulnerable_version_range": ">= 4.0.0, < 4.1.2",
+        "first_patched_version": "4.1.2",
+        "vulnerable_functions": [
+
+        ]
+      },
+      {
+        "package": {
+          "ecosystem": "rubygems",
+          "name": "bootstrap"
+        },
+        "vulnerable_version_range": ">= 2.3.0, < 3.4.0",
+        "first_patched_version": "3.4.0",
+        "vulnerable_functions": [
+
+        ]
+      },
+      {
+        "package": {
+          "ecosystem": "npm",
+          "name": "bootstrap"
+        },
+        "vulnerable_version_range": ">= 4.0.0, < 4.1.2",
+        "first_patched_version": "4.1.2",
+        "vulnerable_functions": [
+
+        ]
+      },
+      {
+        "package": {
+          "ecosystem": "npm",
+          "name": "bootstrap"
+        },
+        "vulnerable_version_range": ">= 2.3.0, < 3.4.0",
+        "first_patched_version": "3.4.0",
+        "vulnerable_functions": [
+
+        ]
+      },
+      {
+        "package": {
+          "ecosystem": "maven",
+          "name": "org.webjars:bootstrap"
+        },
+        "vulnerable_version_range": ">= 4.0.0, < 4.1.2",
+        "first_patched_version": "4.1.2",
+        "vulnerable_functions": [
+
+        ]
+      },
+      {
+        "package": {
+          "ecosystem": "maven",
+          "name": "org.webjars:bootstrap"
+        },
+        "vulnerable_version_range": ">= 2.3.0, < 3.4.0",
+        "first_patched_version": "3.4.0",
+        "vulnerable_functions": [
+
+        ]
+      },
+      {
+        "package": {
+          "ecosystem": "composer",
+          "name": "twbs/bootstrap"
+        },
+        "vulnerable_version_range": ">= 4.0.0, < 4.1.2",
+        "first_patched_version": "4.1.2",
+        "vulnerable_functions": [
+
+        ]
+      },
+      {
+        "package": {
+          "ecosystem": "composer",
+          "name": "twbs/bootstrap"
+        },
+        "vulnerable_version_range": ">= 2.3.0, < 3.4.0",
+        "first_patched_version": "3.4.0",
+        "vulnerable_functions": [
+
+        ]
+      },
+      {
+        "package": {
+          "ecosystem": "nuget",
+          "name": "bootstrap"
+        },
+        "vulnerable_version_range": ">= 4.0.0, < 4.1.2",
+        "first_patched_version": "4.1.2",
+        "vulnerable_functions": [
+
+        ]
+      },
+      {
+        "package": {
+          "ecosystem": "nuget",
+          "name": "bootstrap"
+        },
+        "vulnerable_version_range": ">= 2.3.0, < 3.4.0",
+        "first_patched_version": "3.4.0",
+        "vulnerable_functions": [
+
+        ]
+      },
+      {
+        "package": {
+          "ecosystem": "rubygems",
+          "name": "bootstrap-sass"
+        },
+        "vulnerable_version_range": ">= 2.3.0, < 3.4.0",
+        "first_patched_version": "3.4.0",
+        "vulnerable_functions": [
+
+        ]
+      },
+      {
+        "package": {
+          "ecosystem": "npm",
+          "name": "bootstrap-sass"
+        },
+        "vulnerable_version_range": ">= 2.0.4, < 3.4.0",
+        "first_patched_version": "3.4.0",
+        "vulnerable_functions": [
+
+        ]
+      },
+      {
+        "package": {
+          "ecosystem": "nuget",
+          "name": "bootstrap.sass"
+        },
+        "vulnerable_version_range": ">= 4.0.0, < 4.1.2",
+        "first_patched_version": "4.1.2",
+        "vulnerable_functions": [
+
+        ]
+      }
+    ],
+    "cvss_severities": {
+      "cvss_v3": {
+        "vector_string": "CVSS:3.0/AV:N/AC:L/PR:N/UI:R/S:C/C:L/I:L/A:N",
+        "score": 6.1
+      },
+      "cvss_v4": {
+        "vector_string": null,
+        "score": 0.0
+      }
+    },
+    "cwes": [
+      {
+        "cwe_id": "CWE-79",
+        "name": "Improper Neutralization of Input During Web Page Generation"
+      }
+    ],
+    "credits": [
+      {
+        "user": {
+          "login": "tdunlap607",
+          "id": 16122665,
+          "node_id": "MDQ6VXNlcjE2MTIyNjY1",
+          "avatar_url": "https://avatars.githubusercontent.com/u/16122665?v=4",
+          "gravatar_id": "",
+          "url": "https://api.github.com/users/tdunlap607",
+          "html_url": "https://github.com/tdunlap607",
+          "followers_url": "https://api.github.com/users/tdunlap607/followers",
+          "following_url": "https://api.github.com/users/tdunlap607/following{/other_user}",
+          "gists_url": "https://api.github.com/users/tdunlap607/gists{/gist_id}",
+          "starred_url": "https://api.github.com/users/tdunlap607/starred{/owner}{/repo}",
+          "subscriptions_url": "https://api.github.com/users/tdunlap607/subscriptions",
+          "organizations_url": "https://api.github.com/users/tdunlap607/orgs",
+          "repos_url": "https://api.github.com/users/tdunlap607/repos",
+          "events_url": "https://api.github.com/users/tdunlap607/events{/privacy}",
+          "received_events_url": "https://api.github.com/users/tdunlap607/received_events",
+          "type": "User",
+          "user_view_type": "public",
+          "site_admin": false
+        },
+        "type": "analyst"
+      },
+      {
+        "user": {
+          "login": "1Jesper1",
+          "id": 4539406,
+          "node_id": "MDQ6VXNlcjQ1Mzk0MDY=",
+          "avatar_url": "https://avatars.githubusercontent.com/u/4539406?v=4",
+          "gravatar_id": "",
+          "url": "https://api.github.com/users/1Jesper1",
+          "html_url": "https://github.com/1Jesper1",
+          "followers_url": "https://api.github.com/users/1Jesper1/followers",
+          "following_url": "https://api.github.com/users/1Jesper1/following{/other_user}",
+          "gists_url": "https://api.github.com/users/1Jesper1/gists{/gist_id}",
+          "starred_url": "https://api.github.com/users/1Jesper1/starred{/owner}{/repo}",
+          "subscriptions_url": "https://api.github.com/users/1Jesper1/subscriptions",
+          "organizations_url": "https://api.github.com/users/1Jesper1/orgs",
+          "repos_url": "https://api.github.com/users/1Jesper1/repos",
+          "events_url": "https://api.github.com/users/1Jesper1/events{/privacy}",
+          "received_events_url": "https://api.github.com/users/1Jesper1/received_events",
+          "type": "User",
+          "user_view_type": "public",
+          "site_admin": false
+        },
+        "type": "analyst"
+      }
+    ],
+    "comments": 0,
+    "cvss": {
+      "vector_string": "CVSS:3.0/AV:N/AC:L/PR:N/UI:R/S:C/C:L/I:L/A:N",
+      "score": 6.1
+    },
+    "epss": {
+      "percentage": 0.04009,
+      "percentile": 0.90513
+    }
+  },
+  {
+    "ghsa_id": "GHSA-pj7m-g53m-7638",
+    "cve_id": "CVE-2018-14041",
+    "url": "https://api.github.com/advisories/GHSA-pj7m-g53m-7638",
+    "html_url": "https://github.com/advisories/GHSA-pj7m-g53m-7638",
+    "summary": "Bootstrap Cross-site Scripting vulnerability",
+    "description": "In Bootstrap 4.x before 4.1.2, XSS is possible in the data-target property of scrollspy. This is similar to CVE-2018-14042.",
+    "type": "reviewed",
+    "severity": "medium",
+    "repository_advisory_url": null,
+    "source_code_location": "https://github.com/twbs/bootstrap",
+    "identifiers": [
+      {
+        "value": "GHSA-pj7m-g53m-7638",
+        "type": "GHSA"
+      },
+      {
+        "value": "CVE-2018-14041",
+        "type": "CVE"
+      }
+    ],
+    "references": [
+      "https://nvd.nist.gov/vuln/detail/CVE-2018-14041",
+      "https://github.com/twbs/bootstrap/issues/26423",
+      "https://github.com/twbs/bootstrap/issues/26627",
+      "https://github.com/twbs/bootstrap/pull/26630",
+      "https://access.redhat.com/errata/RHSA-2019:1456",
+      "https://lists.apache.org/thread.html/519eb0fd45642dcecd9ff74cb3e71c20a4753f7d82e2f07864b5108f@%3Cdev.drill.apache.org%3E",
+      "https://lists.apache.org/thread.html/52e0e6b5df827ee7f1e68f7cc3babe61af3b2160f5d74a85469b7b0e@%3Cdev.superset.apache.org%3E",
+      "https://lists.apache.org/thread.html/b0656d359c7d40ec9f39c8cc61bca66802ef9a2a12ee199f5b0c1442@%3Cdev.drill.apache.org%3E",
+      "https://lists.apache.org/thread.html/f9bc3e55f4e28d1dcd1a69aae6d53e609a758e34d2869b4d798e13cc@%3Cissues.drill.apache.org%3E",
+      "https://lists.apache.org/thread.html/r3dc0cac8d856bca02bd6997355d7ff83027dcfc82f8646a29b89b714@%3Cissues.hbase.apache.org%3E",
+      "https://seclists.org/bugtraq/2019/May/18",
+      "https://www.oracle.com/security-alerts/cpuApr2021.html",
+      "http://packetstormsecurity.com/files/152787/dotCMS-5.1.1-Vulnerable-Dependencies.html",
+      "http://packetstormsecurity.com/files/156743/OctoberCMS-Insecure-Dependencies.html",
+      "http://seclists.org/fulldisclosure/2019/May/10",
+      "http://seclists.org/fulldisclosure/2019/May/11",
+      "http://seclists.org/fulldisclosure/2019/May/13",
+      "https://github.com/FriendsOfPHP/security-advisories/blob/master/typo3/cms-core/CVE-2018-14041.yaml",
+      "https://github.com/FriendsOfPHP/security-advisories/blob/master/typo3/cms/CVE-2018-14041.yaml",
+      "https://typo3.org/security/advisory/typo3-core-sa-2019-006",
+      "https://blog.getbootstrap.com/2018/07/12/bootstrap-4-1-2",
+      "https://github.com/rubysec/ruby-advisory-db/blob/master/gems/bootstrap/CVE-2018-14041.yml",
+      "https://github.com/advisories/GHSA-pj7m-g53m-7638"
+    ],
+    "published_at": "2018-09-13T15:49:56Z",
+    "updated_at": "2025-11-19T14:25:36Z",
+    "github_reviewed_at": "2020-06-16T21:49:18Z",
+    "nvd_published_at": "2018-07-13T14:29:00Z",
+    "withdrawn_at": null,
+    "vulnerabilities": [
+      {
+        "package": {
+          "ecosystem": "npm",
+          "name": "bootstrap"
+        },
+        "vulnerable_version_range": ">= 4.0.0, < 4.1.2",
+        "first_patched_version": "4.1.2",
+        "vulnerable_functions": [
+
+        ]
+      },
+      {
+        "package": {
+          "ecosystem": "composer",
+          "name": "typo3/cms-core"
+        },
+        "vulnerable_version_range": ">= 8.0.0, < 8.7.23",
+        "first_patched_version": "8.7.23",
+        "vulnerable_functions": [
+
+        ]
+      },
+      {
+        "package": {
+          "ecosystem": "composer",
+          "name": "typo3/cms-core"
+        },
+        "vulnerable_version_range": ">= 9.0.0, < 9.5.4",
+        "first_patched_version": "9.5.4",
+        "vulnerable_functions": [
+
+        ]
+      },
+      {
+        "package": {
+          "ecosystem": "composer",
+          "name": "typo3/cms"
+        },
+        "vulnerable_version_range": ">= 8.0.0, < 8.7.23",
+        "first_patched_version": "8.7.23",
+        "vulnerable_functions": [
+
+        ]
+      },
+      {
+        "package": {
+          "ecosystem": "composer",
+          "name": "typo3/cms"
+        },
+        "vulnerable_version_range": ">= 9.0.0, < 9.5.4",
+        "first_patched_version": "9.5.4",
+        "vulnerable_functions": [
+
+        ]
+      },
+      {
+        "package": {
+          "ecosystem": "rubygems",
+          "name": "bootstrap"
+        },
+        "vulnerable_version_range": ">= 4.0.0, < 4.1.2",
+        "first_patched_version": "4.1.2",
+        "vulnerable_functions": [
+
+        ]
+      },
+      {
+        "package": {
+          "ecosystem": "composer",
+          "name": "twbs/bootstrap"
+        },
+        "vulnerable_version_range": ">= 4.0.0, < 4.1.2",
+        "first_patched_version": "4.1.2",
+        "vulnerable_functions": [
+
+        ]
+      },
+      {
+        "package": {
+          "ecosystem": "nuget",
+          "name": "bootstrap"
+        },
+        "vulnerable_version_range": ">= 4.0.0, < 4.1.2",
+        "first_patched_version": "4.1.2",
+        "vulnerable_functions": [
+
+        ]
+      },
+      {
+        "package": {
+          "ecosystem": "nuget",
+          "name": "bootstrap.sass"
+        },
+        "vulnerable_version_range": ">= 4.0.0, < 4.1.2",
+        "first_patched_version": "4.1.2",
+        "vulnerable_functions": [
+
+        ]
+      },
+      {
+        "package": {
+          "ecosystem": "maven",
+          "name": "org.webjars:bootstrap"
+        },
+        "vulnerable_version_range": ">= 4.0.0, < 4.1.2",
+        "first_patched_version": "4.1.2",
+        "vulnerable_functions": [
+
+        ]
+      }
+    ],
+    "cvss_severities": {
+      "cvss_v3": {
+        "vector_string": "CVSS:3.0/AV:N/AC:L/PR:N/UI:R/S:C/C:L/I:L/A:N",
+        "score": 6.1
+      },
+      "cvss_v4": {
+        "vector_string": null,
+        "score": 0.0
+      }
+    },
+    "cwes": [
+      {
+        "cwe_id": "CWE-79",
+        "name": "Improper Neutralization of Input During Web Page Generation"
+      }
+    ],
+    "credits": [
+      {
+        "user": {
+          "login": "jenhae",
+          "id": 97594165,
+          "node_id": "U_kgDOBdErNQ",
+          "avatar_url": "https://avatars.githubusercontent.com/u/97594165?v=4",
+          "gravatar_id": "",
+          "url": "https://api.github.com/users/jenhae",
+          "html_url": "https://github.com/jenhae",
+          "followers_url": "https://api.github.com/users/jenhae/followers",
+          "following_url": "https://api.github.com/users/jenhae/following{/other_user}",
+          "gists_url": "https://api.github.com/users/jenhae/gists{/gist_id}",
+          "starred_url": "https://api.github.com/users/jenhae/starred{/owner}{/repo}",
+          "subscriptions_url": "https://api.github.com/users/jenhae/subscriptions",
+          "organizations_url": "https://api.github.com/users/jenhae/orgs",
+          "repos_url": "https://api.github.com/users/jenhae/repos",
+          "events_url": "https://api.github.com/users/jenhae/events{/privacy}",
+          "received_events_url": "https://api.github.com/users/jenhae/received_events",
+          "type": "User",
+          "user_view_type": "public",
+          "site_admin": false
+        },
+        "type": "analyst"
+      }
+    ],
+    "comments": 0,
+    "cvss": {
+      "vector_string": "CVSS:3.0/AV:N/AC:L/PR:N/UI:R/S:C/C:L/I:L/A:N",
+      "score": 6.1
+    },
+    "epss": {
+      "percentage": 0.04312,
+      "percentile": 0.9072
+    }
+  }
+]

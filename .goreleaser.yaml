@@ -1,0 +1,43 @@
+version: 2
+
+project_name: jsrelease
+
+before:
+  hooks:
+    - go test ./...
+
+builds:
+  - id: jsrelease
+    main: .
+    binary: jsrelease
+    env:
+      - CGO_ENABLED=0
+    flags:
+      - -trimpath
+    ldflags:
+      - -s -w -X main.version={{.Version}}
+    goos: [linux, windows, darwin]
+    goarch: [amd64, arm64]
+
+archives:
+  - id: default
+    formats: [tar.gz]
+    format_overrides:
+      - goos: windows
+        formats: [zip]
+    name_template: "{{ .ProjectName }}_{{ .Version }}_{{ .Os }}_{{ .Arch }}"
+    files:
+      - README.md
+      - docs/GUIDE.md
+      - LICENSE
+
+checksum:
+  name_template: "checksums.txt"
+
+# The release is created in the web UI; keep its title and notes and only
+# add the files.
+release:
+  mode: keep-existing
+
+changelog:
+  disable: true

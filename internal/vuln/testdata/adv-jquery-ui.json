@@ -1,0 +1,1145 @@
+[
+  {
+    "ghsa_id": "GHSA-h6gj-6jjq-h8g9",
+    "cve_id": "CVE-2022-31160",
+    "url": "https://api.github.com/advisories/GHSA-h6gj-6jjq-h8g9",
+    "html_url": "https://github.com/advisories/GHSA-h6gj-6jjq-h8g9",
+    "summary": "jQuery UI vulnerable to XSS when refreshing a checkboxradio with an HTML-like initial text label",
+    "description": "### Impact\nInitializing a checkboxradio widget on an input enclosed within a label makes that parent label contents considered as the input label. If you call `.checkboxradio( \"refresh\" )` on such a widget and the initial HTML contained encoded HTML entities, they will erroneously get decoded. This can lead to potentially executing JavaScript code.\n\nFor example, starting with the following initial secure HTML:\n```html\n<label>\n\t<input id=\"test-input\">\n\t&lt;img src=x onerror=\"alert(1)\"&gt;\n</label>\n```\nand calling:\n```js\n$( \"#test-input\" ).checkboxradio();\n$( \"#test-input\" ).checkboxradio( \"refresh\" );\n```\nwill turn the initial HTML into:\n```html\n<label>\n\t<!-- some jQuery UI elements -->\n\t<input id=\"test-input\">\n\t<img src=x onerror=\"alert(1)\">\n</label>\n```\nand the alert will get executed.\n\n### Patches\nThe bug has been patched in jQuery UI 1.13.2.\n\n### Workarounds\nTo remediate the issue, if you can change the initial HTML, you can wrap all the non-input contents of the `label` in a `span`:\n```html\n<label>\n\t<input id=\"test-input\">\n\t<span>&lt;img src=x onerror=\"alert(1)\"&gt;</span>\n</label>\n```\n\n### References\nhttps://blog.jqueryui.com/2022/07/jquery-ui-1-13-2-released/\n\n### For more information\nIf you have any questions or comments about this advisory, search for a relevant issue in [the jQuery UI repo](https://github.com/jquery/jquery-ui/issues?q=is%3Aissue+is%3Aopen+sort%3Aupdated-desc). If you don't find an answer, open a new issue.",
+    "type": "reviewed",
+    "severity": "medium",
+    "repository_advisory_url": "https://api.github.com/repos/jquery/jquery-ui/security-advisories/GHSA-h6gj-6jjq-h8g9",
+    "source_code_location": "https://github.com/jquery/jquery-ui",
+    "identifiers": [
+      {
+        "value": "GHSA-h6gj-6jjq-h8g9",
+        "type": "GHSA"
+      },
+      {
+        "value": "CVE-2022-31160",
+        "type": "CVE"
+      }
+    ],
+    "references": [
+      "https://github.com/jquery/jquery-ui/security/advisories/GHSA-h6gj-6jjq-h8g9",
+      "https://nvd.nist.gov/vuln/detail/CVE-2022-31160",
+      "https://github.com/jquery/jquery-ui/commit/8cc5bae1caa1fcf96bf5862c5646c787020ba3f9",
+      "https://www.drupal.org/sa-contrib-2022-052",
+      "https://lists.debian.org/debian-lts-announce/2022/12/msg00015.html",
+      "https://blog.jqueryui.com/2022/07/jquery-ui-1-13-2-released",
+      "https://github.com/jquery-ui-rails/jquery-ui-rails/blob/master/VERSIONS.md",
+      "https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org/message/6XBR3G3JR5ZIOJDO4224M3INXDS2VFDD",
+      "https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org/message/J5LGNTICB5BRFAG3DHVVELS6H3CZSQMO",
+      "https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org/message/QB2FJQXCNHO32VGVOC6DY6IPGVE4VDU6",
+      "https://security.netapp.com/advisory/ntap-20220909-0007",
+      "https://github.com/jquery-ui-rails/jquery-ui-rails/releases/tag/v8.0.0-release",
+      "https://github.com/rubysec/ruby-advisory-db/blob/master/gems/jquery-ui-rails/CVE-2022-31160.yml",
+      "https://github.com/advisories/GHSA-h6gj-6jjq-h8g9"
+    ],
+    "published_at": "2022-07-18T17:07:36Z",
+    "updated_at": "2025-07-21T18:33:50Z",
+    "github_reviewed_at": "2022-07-18T17:07:36Z",
+    "nvd_published_at": "2022-07-20T20:15:00Z",
+    "withdrawn_at": null,
+    "vulnerabilities": [
+      {
+        "package": {
+          "ecosystem": "npm",
+          "name": "jquery-ui"
+        },
+        "vulnerable_version_range": "< 1.13.2",
+        "first_patched_version": "1.13.2",
+        "vulnerable_functions": [
+
+        ]
+      },
+      {
+        "package": {
+          "ecosystem": "maven",
+          "name": "org.webjars.npm:jquery-ui"
+        },
+        "vulnerable_version_range": "< 1.13.2",
+        "first_patched_version": "1.13.2",
+        "vulnerable_functions": [
+
+        ]
+      },
+      {
+        "package": {
+          "ecosystem": "nuget",
+          "name": "jQuery.UI.Combined"
+        },
+        "vulnerable_version_range": "< 1.13.2",
+        "first_patched_version": "1.13.2",
+        "vulnerable_functions": [
+
+        ]
+      },
+      {
+        "package": {
+          "ecosystem": "rubygems",
+          "name": "jquery-ui-rails"
+        },
+        "vulnerable_version_range": "< 8.0.0",
+        "first_patched_version": "8.0.0",
+        "vulnerable_functions": [
+
+        ]
+      }
+    ],
+    "cvss_severities": {
+      "cvss_v3": {
+        "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:C/C:L/I:L/A:N",
+        "score": 6.1
+      },
+      "cvss_v4": {
+        "vector_string": null,
+        "score": 0.0
+      }
+    },
+    "cwes": [
+      {
+        "cwe_id": "CWE-79",
+        "name": "Improper Neutralization of Input During Web Page Generation"
+      }
+    ],
+    "credits": [
+      {
+        "user": {
+          "login": "Elkano",
+          "id": 965706,
+          "node_id": "MDQ6VXNlcjk2NTcwNg==",
+          "avatar_url": "https://avatars.githubusercontent.com/u/965706?v=4",
+          "gravatar_id": "",
+          "url": "https://api.github.com/users/Elkano",
+          "html_url": "https://github.com/Elkano",
+          "followers_url": "https://api.github.com/users/Elkano/followers",
+          "following_url": "https://api.github.com/users/Elkano/following{/other_user}",
+          "gists_url": "https://api.github.com/users/Elkano/gists{/gist_id}",
+          "starred_url": "https://api.github.com/users/Elkano/starred{/owner}{/repo}",
+          "subscriptions_url": "https://api.github.com/users/Elkano/subscriptions",
+          "organizations_url": "https://api.github.com/users/Elkano/orgs",
+          "repos_url": "https://api.github.com/users/Elkano/repos",
+          "events_url": "https://api.github.com/users/Elkano/events{/privacy}",
+          "received_events_url": "https://api.github.com/users/Elkano/received_events",
+          "type": "User",
+          "user_view_type": "public",
+          "site_admin": false
+        },
+        "type": "analyst"
+      },
+      {
+        "user": {
+          "login": "c960657",
+          "id": 111346,
+          "node_id": "MDQ6VXNlcjExMTM0Ng==",
+          "avatar_url": "https://avatars.githubusercontent.com/u/111346?v=4",
+          "gravatar_id": "",
+          "url": "https://api.github.com/users/c960657",
+          "html_url": "https://github.com/c960657",
+          "followers_url": "https://api.github.com/users/c960657/followers",
+          "following_url": "https://api.github.com/users/c960657/following{/other_user}",
+          "gists_url": "https://api.github.com/users/c960657/gists{/gist_id}",
+          "starred_url": "https://api.github.com/users/c960657/starred{/owner}{/repo}",
+          "subscriptions_url": "https://api.github.com/users/c960657/subscriptions",
+          "organizations_url": "https://api.github.com/users/c960657/orgs",
+          "repos_url": "https://api.github.com/users/c960657/repos",
+          "events_url": "https://api.github.com/users/c960657/events{/privacy}",
+          "received_events_url": "https://api.github.com/users/c960657/received_events",
+          "type": "User",
+          "user_view_type": "public",
+          "site_admin": false
+        },
+        "type": "analyst"
+      },
+      {
+        "user": {
+          "login": "Borzik",
+          "id": 2151808,
+          "node_id": "MDQ6VXNlcjIxNTE4MDg=",
+          "avatar_url": "https://avatars.githubusercontent.com/u/2151808?v=4",
+          "gravatar_id": "",
+          "url": "https://api.github.com/users/Borzik",
+          "html_url": "https://github.com/Borzik",
+          "followers_url": "https://api.github.com/users/Borzik/followers",
+          "following_url": "https://api.github.com/users/Borzik/following{/other_user}",
+          "gists_url": "https://api.github.com/users/Borzik/gists{/gist_id}",
+          "starred_url": "https://api.github.com/users/Borzik/starred{/owner}{/repo}",
+          "subscriptions_url": "https://api.github.com/users/Borzik/subscriptions",
+          "organizations_url": "https://api.github.com/users/Borzik/orgs",
+          "repos_url": "https://api.github.com/users/Borzik/repos",
+          "events_url": "https://api.github.com/users/Borzik/events{/privacy}",
+          "received_events_url": "https://api.github.com/users/Borzik/received_events",
+          "type": "User",
+          "user_view_type": "public",
+          "site_admin": false
+        },
+        "type": "analyst"
+      }
+    ],
+    "comments": 1,
+    "cvss": {
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:C/C:L/I:L/A:N",
+      "score": 6.1
+    },
+    "epss": {
+      "percentage": 0.0269,
+      "percentile": 0.85509
+    }
+  },
+  {
+    "ghsa_id": "GHSA-j7qv-pgf6-hvh4",
+    "cve_id": "CVE-2021-41183",
+    "url": "https://api.github.com/advisories/GHSA-j7qv-pgf6-hvh4",
+    "html_url": "https://github.com/advisories/GHSA-j7qv-pgf6-hvh4",
+    "summary": "XSS in `*Text` options of the Datepicker widget in jquery-ui",
+    "description": "### Impact\nAccepting the value of various `*Text` options of the Datepicker widget from untrusted sources may execute untrusted code. For example, initializing the datepicker in the following way:\n```js\n$( \"#datepicker\" ).datepicker( {\n\tshowButtonPanel: true,\n\tshowOn: \"both\",\n\tcloseText: \"<script>doEvilThing( 'closeText XSS' )</script>\",\n\tcurrentText: \"<script>doEvilThing( 'currentText XSS' )</script>\",\n\tprevText: \"<script>doEvilThing( 'prevText XSS' )</script>\",\n\tnextText: \"<script>doEvilThing( 'nextText XSS' )</script>\",\n\tbuttonText: \"<script>doEvilThing( 'buttonText XSS' )</script>\",\n\tappendText: \"<script>doEvilThing( 'appendText XSS' )</script>\",\n} );\n```\nwill call `doEvilThing` with 6 different parameters coming from all `*Text` options.\n\n### Patches\nThe issue is fixed in jQuery UI 1.13.0. The values passed to various `*Text` options are now always treated as pure text, not HTML.\n\n### Workarounds\nA workaround is to not accept the value of the `*Text` options from untrusted sources.\n\n### For more information\nIf you have any questions or comments about this advisory, search for a relevant issue in [the jQuery UI repo](https://github.com/jquery/jquery-ui/issues). If you don't find an answer, open a new issue.",
+    "type": "reviewed",
+    "severity": "medium",
+    "repository_advisory_url": "https://api.github.com/repos/jquery/jquery-ui/security-advisories/GHSA-j7qv-pgf6-hvh4",
+    "source_code_location": "https://github.com/jquery/jquery-ui",
+    "identifiers": [
+      {
+        "value": "GHSA-j7qv-pgf6-hvh4",
+        "type": "GHSA"
+      },
+      {
+        "value": "CVE-2021-41183",
+        "type": "CVE"
+      }
+    ],
+    "references": [
+      "https://github.com/jquery/jquery-ui/security/advisories/GHSA-j7qv-pgf6-hvh4",
+      "https://nvd.nist.gov/vuln/detail/CVE-2021-41183",
+      "https://github.com/jquery/jquery-ui/pull/1953",
+      "https://blog.jqueryui.com/2021/10/jquery-ui-1-13-0-released/",
+      "https://bugs.jqueryui.com/ticket/15284",
+      "https://security.netapp.com/advisory/ntap-20211118-0004/",
+      "https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org/message/NXIUUBRVLA4E7G7MMIKCEN75YN7UFERW/",
+      "https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org/message/O74SXYY7RGXREQDQUDQD4BPJ4QQTD2XQ/",
+      "https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org/message/SNXA7XRKGINWSUIPIZ6ZBCTV6N3KSHES/",
+      "https://lists.debian.org/debian-lts-announce/2022/01/msg00014.html",
+      "https://www.drupal.org/sa-contrib-2022-004",
+      "https://www.drupal.org/sa-core-2022-001",
+      "https://www.drupal.org/sa-core-2022-002",
+      "https://www.oracle.com/security-alerts/cpuapr2022.html",
+      "https://www.tenable.com/security/tns-2022-09",
+      "https://www.oracle.com/security-alerts/cpujul2022.html",
+      "https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org/message/HVKIOWSXL2RF2ULNAP7PHESYCFSZIJE3/",
+      "https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org/message/SGSY236PYSFYIEBRGDERLA7OSY6D7XL4/",
+      "https://lists.fedoraproject.org/archives/list/package-announce%40lists.fedoraproject.org/message/HVKIOWSXL2RF2ULNAP7PHESYCFSZIJE3/",
+      "https://lists.fedoraproject.org/archives/list/package-announce%40lists.fedoraproject.org/message/NXIUUBRVLA4E7G7MMIKCEN75YN7UFERW/",
+      "https://lists.fedoraproject.org/archives/list/package-announce%40lists.fedoraproject.org/message/O74SXYY7RGXREQDQUDQD4BPJ4QQTD2XQ/",
+      "https://lists.fedoraproject.org/archives/list/package-announce%40lists.fedoraproject.org/message/SGSY236PYSFYIEBRGDERLA7OSY6D7XL4/",
+      "https://lists.fedoraproject.org/archives/list/package-announce%40lists.fedoraproject.org/message/SNXA7XRKGINWSUIPIZ6ZBCTV6N3KSHES/",
+      "https://lists.debian.org/debian-lts-announce/2023/08/msg00040.html",
+      "https://github.com/advisories/GHSA-j7qv-pgf6-hvh4"
+    ],
+    "published_at": "2021-10-26T14:55:21Z",
+    "updated_at": "2023-09-26T18:11:05Z",
+    "github_reviewed_at": "2021-10-25T22:06:45Z",
+    "nvd_published_at": "2021-10-26T15:15:00Z",
+    "withdrawn_at": null,
+    "vulnerabilities": [
+      {
+        "package": {
+          "ecosystem": "npm",
+          "name": "jquery-ui"
+        },
+        "vulnerable_version_range": "< 1.13.0",
+        "first_patched_version": "1.13.0",
+        "vulnerable_functions": [
+
+        ]
+      },
+      {
+        "package": {
+          "ecosystem": "maven",
+          "name": "org.webjars.npm:jquery-ui"
+        },
+        "vulnerable_version_range": "< 1.13.0",
+        "first_patched_version": "1.13.0",
+        "vulnerable_functions": [
+
+        ]
+      },
+      {
+        "package": {
+          "ecosystem": "nuget",
+          "name": "jQuery.UI.Combined"
+        },
+        "vulnerable_version_range": "< 1.13.0",
+        "first_patched_version": "1.13.0",
+        "vulnerable_functions": [
+
+        ]
+      },
+      {
+        "package": {
+          "ecosystem": "rubygems",
+          "name": "jquery-ui-rails"
+        },
+        "vulnerable_version_range": "< 7.0.0",
+        "first_patched_version": "7.0.0",
+        "vulnerable_functions": [
+
+        ]
+      }
+    ],
+    "cvss_severities": {
+      "cvss_v3": {
+        "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:N/I:H/A:N",
+        "score": 6.5
+      },
+      "cvss_v4": {
+        "vector_string": null,
+        "score": 0.0
+      }
+    },
+    "cwes": [
+      {
+        "cwe_id": "CWE-79",
+        "name": "Improper Neutralization of Input During Web Page Generation"
+      }
+    ],
+    "credits": [
+      {
+        "user": {
+          "login": "esbena",
+          "id": 1924993,
+          "node_id": "MDQ6VXNlcjE5MjQ5OTM=",
+          "avatar_url": "https://avatars.githubusercontent.com/u/1924993?v=4",
+          "gravatar_id": "",
+          "url": "https://api.github.com/users/esbena",
+          "html_url": "https://github.com/esbena",
+          "followers_url": "https://api.github.com/users/esbena/followers",
+          "following_url": "https://api.github.com/users/esbena/following{/other_user}",
+          "gists_url": "https://api.github.com/users/esbena/gists{/gist_id}",
+          "starred_url": "https://api.github.com/users/esbena/starred{/owner}{/repo}",
+          "subscriptions_url": "https://api.github.com/users/esbena/subscriptions",
+          "organizations_url": "https://api.github.com/users/esbena/orgs",
+          "repos_url": "https://api.github.com/users/esbena/repos",
+          "events_url": "https://api.github.com/users/esbena/events{/privacy}",
+          "received_events_url": "https://api.github.com/users/esbena/received_events",
+          "type": "User",
+          "user_view_type": "public",
+          "site_admin": true
+        },
+        "type": "analyst"
+      }
+    ],
+    "comments": 2,
+    "cvss": {
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:N/I:H/A:N",
+      "score": 6.5
+    },
+    "epss": {
+      "percentage": 0.08533,
+      "percentile": 0.94605
+    }
+  },
+  {
+    "ghsa_id": "GHSA-gpqq-952q-5327",
+    "cve_id": "CVE-2021-41184",
+    "url": "https://api.github.com/advisories/GHSA-gpqq-952q-5327",
+    "html_url": "https://github.com/advisories/GHSA-gpqq-952q-5327",
+    "summary": "XSS in the `of` option of the `.position()` util in jquery-ui",
+    "description": "### Impact\nAccepting the value of the `of` option of the [`.position()`](https://api.jqueryui.com/position/) util from untrusted sources may execute untrusted code. For example, invoking the following code:\n```js\n$( \"#element\" ).position( {\n\tmy: \"left top\",\n\tat: \"right bottom\",\n\tof: \"<img onerror='doEvilThing()' src='/404' />\",\n\tcollision: \"none\"\n} );\n```\nwill call the `doEvilThing()` function.\n\n### Patches\nThe issue is fixed in jQuery UI 1.13.0. Any string value passed to the `of` option is now treated as a CSS selector.\n\n### Workarounds\nA workaround is to not accept the value of the `of` option from untrusted sources.\n\n### For more information\nIf you have any questions or comments about this advisory, search for a relevant issue in [the jQuery UI repo](https://github.com/jquery/jquery-ui/issues). If you don't find an answer, open a new issue.",
+    "type": "reviewed",
+    "severity": "medium",
+    "repository_advisory_url": "https://api.github.com/repos/jquery/jquery-ui/security-advisories/GHSA-gpqq-952q-5327",
+    "source_code_location": "https://github.com/jquery/jquery-ui",
+    "identifiers": [
+      {
+        "value": "GHSA-gpqq-952q-5327",
+        "type": "GHSA"
+      },
+      {
+        "value": "CVE-2021-41184",
+        "type": "CVE"
+      }
+    ],
+    "references": [
+      "https://github.com/jquery/jquery-ui/security/advisories/GHSA-gpqq-952q-5327",
+      "https://nvd.nist.gov/vuln/detail/CVE-2021-41184",
+      "https://github.com/jquery/jquery-ui/commit/effa323f1505f2ce7a324e4f429fa9032c72f280",
+      "https://www.drupal.org/sa-core-2022-001",
+      "https://www.oracle.com/security-alerts/cpuapr2022.html",
+      "https://www.tenable.com/security/tns-2022-09",
+      "https://www.oracle.com/security-alerts/cpujul2022.html",
+      "https://lists.debian.org/debian-lts-announce/2023/08/msg00040.html",
+      "https://security.netapp.com/advisory/ntap-20211118-0004",
+      "https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org/message/SNXA7XRKGINWSUIPIZ6ZBCTV6N3KSHES",
+      "https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org/message/SGSY236PYSFYIEBRGDERLA7OSY6D7XL4",
+      "https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org/message/O74SXYY7RGXREQDQUDQD4BPJ4QQTD2XQ",
+      "https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org/message/NXIUUBRVLA4E7G7MMIKCEN75YN7UFERW",
+      "https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org/message/HVKIOWSXL2RF2ULNAP7PHESYCFSZIJE3",
+      "https://lists.fedoraproject.org/archives/list/package-announce%40lists.fedoraproject.org/message/SNXA7XRKGINWSUIPIZ6ZBCTV6N3KSHES",
+      "https://lists.fedoraproject.org/archives/list/package-announce%40lists.fedoraproject.org/message/SGSY236PYSFYIEBRGDERLA7OSY6D7XL4",
+      "https://lists.fedoraproject.org/archives/list/package-announce%40lists.fedoraproject.org/message/O74SXYY7RGXREQDQUDQD4BPJ4QQTD2XQ",
+      "https://lists.fedoraproject.org/archives/list/package-announce%40lists.fedoraproject.org/message/NXIUUBRVLA4E7G7MMIKCEN75YN7UFERW",
+      "https://lists.fedoraproject.org/archives/list/package-announce%40lists.fedoraproject.org/message/HVKIOWSXL2RF2ULNAP7PHESYCFSZIJE3",
+      "https://blog.jqueryui.com/2021/10/jquery-ui-1-13-0-released",
+      "http://seclists.org/fulldisclosure/2024/Aug/37",
+      "https://github.com/advisories/GHSA-gpqq-952q-5327"
+    ],
+    "published_at": "2021-10-26T14:55:12Z",
+    "updated_at": "2025-11-04T19:36:07Z",
+    "github_reviewed_at": "2021-10-25T22:06:43Z",
+    "nvd_published_at": "2021-10-26T15:15:00Z",
+    "withdrawn_at": null,
+    "vulnerabilities": [
+      {
+        "package": {
+          "ecosystem": "npm",
+          "name": "jquery-ui"
+        },
+        "vulnerable_version_range": "< 1.13.0",
+        "first_patched_version": "1.13.0",
+        "vulnerable_functions": [
+
+        ]
+      },
+      {
+        "package": {
+          "ecosystem": "maven",
+          "name": "org.webjars.npm:jquery-ui"
+        },
+        "vulnerable_version_range": "< 1.13.0",
+        "first_patched_version": "1.13.0",
+        "vulnerable_functions": [
+
+        ]
+      },
+      {
+        "package": {
+          "ecosystem": "nuget",
+          "name": "jQuery.UI.Combined"
+        },
+        "vulnerable_version_range": "< 1.13.0",
+        "first_patched_version": "1.13.0",
+        "vulnerable_functions": [
+
+        ]
+      },
+      {
+        "package": {
+          "ecosystem": "rubygems",
+          "name": "jquery-ui-rails"
+        },
+        "vulnerable_version_range": "< 7.0.0",
+        "first_patched_version": "7.0.0",
+        "vulnerable_functions": [
+
+        ]
+      }
+    ],
+    "cvss_severities": {
+      "cvss_v3": {
+        "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:N/I:H/A:N",
+        "score": 6.5
+      },
+      "cvss_v4": {
+        "vector_string": null,
+        "score": 0.0
+      }
+    },
+    "cwes": [
+      {
+        "cwe_id": "CWE-79",
+        "name": "Improper Neutralization of Input During Web Page Generation"
+      }
+    ],
+    "credits": [
+      {
+        "user": {
+          "login": "esbena",
+          "id": 1924993,
+          "node_id": "MDQ6VXNlcjE5MjQ5OTM=",
+          "avatar_url": "https://avatars.githubusercontent.com/u/1924993?v=4",
+          "gravatar_id": "",
+          "url": "https://api.github.com/users/esbena",
+          "html_url": "https://github.com/esbena",
+          "followers_url": "https://api.github.com/users/esbena/followers",
+          "following_url": "https://api.github.com/users/esbena/following{/other_user}",
+          "gists_url": "https://api.github.com/users/esbena/gists{/gist_id}",
+          "starred_url": "https://api.github.com/users/esbena/starred{/owner}{/repo}",
+          "subscriptions_url": "https://api.github.com/users/esbena/subscriptions",
+          "organizations_url": "https://api.github.com/users/esbena/orgs",
+          "repos_url": "https://api.github.com/users/esbena/repos",
+          "events_url": "https://api.github.com/users/esbena/events{/privacy}",
+          "received_events_url": "https://api.github.com/users/esbena/received_events",
+          "type": "User",
+          "user_view_type": "public",
+          "site_admin": true
+        },
+        "type": "analyst"
+      },
+      {
+        "user": {
+          "login": "A-Fitz-Nelnet",
+          "id": 86742079,
+          "node_id": "MDQ6VXNlcjg2NzQyMDc5",
+          "avatar_url": "https://avatars.githubusercontent.com/u/86742079?v=4",
+          "gravatar_id": "",
+          "url": "https://api.github.com/users/A-Fitz-Nelnet",
+          "html_url": "https://github.com/A-Fitz-Nelnet",
+          "followers_url": "https://api.github.com/users/A-Fitz-Nelnet/followers",
+          "following_url": "https://api.github.com/users/A-Fitz-Nelnet/following{/other_user}",
+          "gists_url": "https://api.github.com/users/A-Fitz-Nelnet/gists{/gist_id}",
+          "starred_url": "https://api.github.com/users/A-Fitz-Nelnet/starred{/owner}{/repo}",
+          "subscriptions_url": "https://api.github.com/users/A-Fitz-Nelnet/subscriptions",
+          "organizations_url": "https://api.github.com/users/A-Fitz-Nelnet/orgs",
+          "repos_url": "https://api.github.com/users/A-Fitz-Nelnet/repos",
+          "events_url": "https://api.github.com/users/A-Fitz-Nelnet/events{/privacy}",
+          "received_events_url": "https://api.github.com/users/A-Fitz-Nelnet/received_events",
+          "type": "User",
+          "user_view_type": "public",
+          "site_admin": false
+        },
+        "type": "analyst"
+      }
+    ],
+    "comments": 2,
+    "cvss": {
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:N/I:H/A:N",
+      "score": 6.5
+    },
+    "epss": {
+      "percentage": 0.40768,
+      "percentile": 0.9851
+    }
+  },
+  {
+    "ghsa_id": "GHSA-9gj3-hwp5-pmwc",
+    "cve_id": "CVE-2021-41182",
+    "url": "https://api.github.com/advisories/GHSA-9gj3-hwp5-pmwc",
+    "html_url": "https://github.com/advisories/GHSA-9gj3-hwp5-pmwc",
+    "summary": "XSS in the `altField` option of the Datepicker widget in jquery-ui",
+    "description": "### Impact\nAccepting the value of the `altField` option of the Datepicker widget from untrusted sources may execute untrusted code. For example, initializing the datepicker in the following way:\n```js\n$( \"#datepicker\" ).datepicker( {\n\taltField: \"<img onerror='doEvilThing()' src='/404' />\",\n} );\n```\nwill call the `doEvilThing` function.\n\n### Patches\nThe issue is fixed in jQuery UI 1.13.0. Any string value passed to the `altField` option is now treated as a CSS selector.\n\n### Workarounds\nA workaround is to not accept the value of the `altField` option from untrusted sources.\n\n### For more information\nIf you have any questions or comments about this advisory, search for a relevant issue in [the jQuery UI repo](https://github.com/jquery/jquery-ui/issues). If you don't find an answer, open a new issue.",
+    "type": "reviewed",
+    "severity": "medium",
+    "repository_advisory_url": "https://api.github.com/repos/jquery/jquery-ui/security-advisories/GHSA-9gj3-hwp5-pmwc",
+    "source_code_location": "https://github.com/jquery/jquery-ui",
+    "identifiers": [
+      {
+        "value": "GHSA-9gj3-hwp5-pmwc",
+        "type": "GHSA"
+      },
+      {
+        "value": "CVE-2021-41182",
+        "type": "CVE"
+      }
+    ],
+    "references": [
+      "https://github.com/jquery/jquery-ui/security/advisories/GHSA-9gj3-hwp5-pmwc",
+      "https://nvd.nist.gov/vuln/detail/CVE-2021-41182",
+      "https://github.com/jquery/jquery-ui/pull/1954/commits/6809ce843e5ac4128108ea4c15cbc100653c2b63",
+      "https://blog.jqueryui.com/2021/10/jquery-ui-1-13-0-released/",
+      "https://security.netapp.com/advisory/ntap-20211118-0004/",
+      "https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org/message/NXIUUBRVLA4E7G7MMIKCEN75YN7UFERW/",
+      "https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org/message/O74SXYY7RGXREQDQUDQD4BPJ4QQTD2XQ/",
+      "https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org/message/SNXA7XRKGINWSUIPIZ6ZBCTV6N3KSHES/",
+      "https://lists.debian.org/debian-lts-announce/2022/01/msg00014.html",
+      "https://www.drupal.org/sa-contrib-2022-004",
+      "https://www.drupal.org/sa-core-2022-002",
+      "https://www.oracle.com/security-alerts/cpuapr2022.html",
+      "https://www.tenable.com/security/tns-2022-09",
+      "https://www.oracle.com/security-alerts/cpujul2022.html",
+      "https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org/message/HVKIOWSXL2RF2ULNAP7PHESYCFSZIJE3/",
+      "https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org/message/SGSY236PYSFYIEBRGDERLA7OSY6D7XL4/",
+      "https://lists.fedoraproject.org/archives/list/package-announce%40lists.fedoraproject.org/message/HVKIOWSXL2RF2ULNAP7PHESYCFSZIJE3/",
+      "https://lists.fedoraproject.org/archives/list/package-announce%40lists.fedoraproject.org/message/NXIUUBRVLA4E7G7MMIKCEN75YN7UFERW/",
+      "https://lists.fedoraproject.org/archives/list/package-announce%40lists.fedoraproject.org/message/O74SXYY7RGXREQDQUDQD4BPJ4QQTD2XQ/",
+      "https://lists.fedoraproject.org/archives/list/package-announce%40lists.fedoraproject.org/message/SGSY236PYSFYIEBRGDERLA7OSY6D7XL4/",
+      "https://lists.fedoraproject.org/archives/list/package-announce%40lists.fedoraproject.org/message/SNXA7XRKGINWSUIPIZ6ZBCTV6N3KSHES/",
+      "https://lists.debian.org/debian-lts-announce/2023/08/msg00040.html",
+      "https://github.com/rubysec/ruby-advisory-db/blob/master/gems/jquery-ui-rails/CVE-2021-41182.yml",
+      "https://github.com/advisories/GHSA-9gj3-hwp5-pmwc"
+    ],
+    "published_at": "2021-10-26T14:55:02Z",
+    "updated_at": "2023-09-26T21:52:24Z",
+    "github_reviewed_at": "2021-10-25T22:06:41Z",
+    "nvd_published_at": "2021-10-26T15:15:00Z",
+    "withdrawn_at": null,
+    "vulnerabilities": [
+      {
+        "package": {
+          "ecosystem": "npm",
+          "name": "jquery-ui"
+        },
+        "vulnerable_version_range": "< 1.13.0",
+        "first_patched_version": "1.13.0",
+        "vulnerable_functions": [
+
+        ]
+      },
+      {
+        "package": {
+          "ecosystem": "nuget",
+          "name": "jQuery.UI.Combined"
+        },
+        "vulnerable_version_range": "< 1.13.0",
+        "first_patched_version": "1.13.0",
+        "vulnerable_functions": [
+
+        ]
+      },
+      {
+        "package": {
+          "ecosystem": "maven",
+          "name": "org.webjars.npm:jquery-ui"
+        },
+        "vulnerable_version_range": "< 1.13.0",
+        "first_patched_version": "1.13.0",
+        "vulnerable_functions": [
+
+        ]
+      },
+      {
+        "package": {
+          "ecosystem": "rubygems",
+          "name": "jquery-ui-rails"
+        },
+        "vulnerable_version_range": "< 7.0.0",
+        "first_patched_version": "7.0.0",
+        "vulnerable_functions": [
+
+        ]
+      }
+    ],
+    "cvss_severities": {
+      "cvss_v3": {
+        "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:N/I:H/A:N",
+        "score": 6.5
+      },
+      "cvss_v4": {
+        "vector_string": null,
+        "score": 0.0
+      }
+    },
+    "cwes": [
+      {
+        "cwe_id": "CWE-79",
+        "name": "Improper Neutralization of Input During Web Page Generation"
+      }
+    ],
+    "credits": [
+      {
+        "user": {
+          "login": "esbena",
+          "id": 1924993,
+          "node_id": "MDQ6VXNlcjE5MjQ5OTM=",
+          "avatar_url": "https://avatars.githubusercontent.com/u/1924993?v=4",
+          "gravatar_id": "",
+          "url": "https://api.github.com/users/esbena",
+          "html_url": "https://github.com/esbena",
+          "followers_url": "https://api.github.com/users/esbena/followers",
+          "following_url": "https://api.github.com/users/esbena/following{/other_user}",
+          "gists_url": "https://api.github.com/users/esbena/gists{/gist_id}",
+          "starred_url": "https://api.github.com/users/esbena/starred{/owner}{/repo}",
+          "subscriptions_url": "https://api.github.com/users/esbena/subscriptions",
+          "organizations_url": "https://api.github.com/users/esbena/orgs",
+          "repos_url": "https://api.github.com/users/esbena/repos",
+          "events_url": "https://api.github.com/users/esbena/events{/privacy}",
+          "received_events_url": "https://api.github.com/users/esbena/received_events",
+          "type": "User",
+          "user_view_type": "public",
+          "site_admin": true
+        },
+        "type": "analyst"
+      }
+    ],
+    "comments": 4,
+    "cvss": {
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:N/I:H/A:N",
+      "score": 6.5
+    },
+    "epss": {
+      "percentage": 0.39361,
+      "percentile": 0.985
+    }
+  },
+  {
+    "ghsa_id": "GHSA-g8q2-24jh-5hpc",
+    "cve_id": null,
+    "url": "https://api.github.com/advisories/GHSA-g8q2-24jh-5hpc",
+    "html_url": "https://github.com/advisories/GHSA-g8q2-24jh-5hpc",
+    "summary": "High severity vulnerability that affects jquery-ui",
+    "description": "Withdrawn, accidental duplicate publish.\n\nCross-site scripting (XSS) vulnerability in jQuery UI before 1.12.0 might allow remote attackers to inject arbitrary web script or HTML via the closeText parameter of the dialog function.",
+    "type": "reviewed",
+    "severity": "high",
+    "repository_advisory_url": null,
+    "source_code_location": "",
+    "identifiers": [
+      {
+        "value": "GHSA-g8q2-24jh-5hpc",
+        "type": "GHSA"
+      }
+    ],
+    "references": [
+      "https://nvd.nist.gov/vuln/detail/CVE-2016-7103",
+      "https://github.com/advisories/GHSA-g8q2-24jh-5hpc"
+    ],
+    "published_at": "2018-07-27T14:47:52Z",
+    "updated_at": "2023-09-26T18:29:19Z",
+    "github_reviewed_at": "2020-06-16T21:36:34Z",
+    "nvd_published_at": null,
+    "withdrawn_at": "2020-06-16T21:36:34Z",
+    "vulnerabilities": [
+      {
+        "package": {
+          "ecosystem": "npm",
+          "name": "jquery-ui"
+        },
+        "vulnerable_version_range": "< 1.12.0",
+        "first_patched_version": "1.12.0",
+        "vulnerable_functions": [
+
+        ]
+      },
+      {
+        "package": {
+          "ecosystem": "nuget",
+          "name": "jQuery.UI.Combined"
+        },
+        "vulnerable_version_range": "< 1.12.0",
+        "first_patched_version": "1.12.0",
+        "vulnerable_functions": [
+
+        ]
+      },
+      {
+        "package": {
+          "ecosystem": "maven",
+          "name": "org.webjars.npm:jquery-ui"
+        },
+        "vulnerable_version_range": "< 1.12.0",
+        "first_patched_version": "1.12.0",
+        "vulnerable_functions": [
+
+        ]
+      },
+      {
+        "package": {
+          "ecosystem": "rubygems",
+          "name": "jquery-ui-rails"
+        },
+        "vulnerable_version_range": "< 6.0.0",
+        "first_patched_version": "6.0.0",
+        "vulnerable_functions": [
+
+        ]
+      }
+    ],
+    "cvss_severities": {
+      "cvss_v3": {
+        "vector_string": null,
+        "score": 0.0
+      },
+      "cvss_v4": {
+        "vector_string": null,
+        "score": 0.0
+      }
+    },
+    "cwes": [
+
+    ],
+    "credits": [
+
+    ],
+    "comments": 0,
+    "cvss": {
+      "vector_string": null,
+      "score": null
+    }
+  },
+  {
+    "ghsa_id": "GHSA-wcm2-9c89-wmfm",
+    "cve_id": "CVE-2010-5312",
+    "url": "https://api.github.com/advisories/GHSA-wcm2-9c89-wmfm",
+    "html_url": "https://github.com/advisories/GHSA-wcm2-9c89-wmfm",
+    "summary": "Cross-site Scripting in jquery-ui",
+    "description": "Cross-site scripting (XSS) vulnerability in jquery.ui.dialog.js in the Dialog widget in jQuery UI before 1.10.0 allows remote attackers to inject arbitrary web script or HTML via the title option.",
+    "type": "reviewed",
+    "severity": "medium",
+    "repository_advisory_url": null,
+    "source_code_location": "https://github.com/jquery/jquery-ui",
+    "identifiers": [
+      {
+        "value": "GHSA-wcm2-9c89-wmfm",
+        "type": "GHSA"
+      },
+      {
+        "value": "CVE-2010-5312",
+        "type": "CVE"
+      }
+    ],
+    "references": [
+      "https://nvd.nist.gov/vuln/detail/CVE-2010-5312",
+      "https://github.com/jquery/jquery-ui/commit/7e9060c109b928769a664dbcc2c17bd21231b6f3",
+      "https://exchange.xforce.ibmcloud.com/vulnerabilities/98696",
+      "https://lists.apache.org/thread.html/519eb0fd45642dcecd9ff74cb3e71c20a4753f7d82e2f07864b5108f@%3Cdev.drill.apache.org%3E",
+      "https://lists.apache.org/thread.html/b0656d359c7d40ec9f39c8cc61bca66802ef9a2a12ee199f5b0c1442@%3Cdev.drill.apache.org%3E",
+      "http://bugs.jqueryui.com/ticket/6016",
+      "http://rhn.redhat.com/errata/RHSA-2015-0442.html",
+      "http://rhn.redhat.com/errata/RHSA-2015-1462.html",
+      "http://seclists.org/oss-sec/2014/q4/613",
+      "http://seclists.org/oss-sec/2014/q4/616",
+      "http://www.debian.org/security/2015/dsa-3249",
+      "https://lists.apache.org/thread.html/f9bc3e55f4e28d1dcd1a69aae6d53e609a758e34d2869b4d798e13cc@%3Cissues.drill.apache.org%3E",
+      "https://lists.debian.org/debian-lts-announce/2022/01/msg00014.html",
+      "https://www.drupal.org/sa-core-2022-002",
+      "https://lists.apache.org/thread.html/519eb0fd45642dcecd9ff74cb3e71c20a4753f7d82e2f07864b5108f%40%3Cdev.drill.apache.org%3E",
+      "https://lists.apache.org/thread.html/b0656d359c7d40ec9f39c8cc61bca66802ef9a2a12ee199f5b0c1442%40%3Cdev.drill.apache.org%3E",
+      "https://lists.apache.org/thread.html/f9bc3e55f4e28d1dcd1a69aae6d53e609a758e34d2869b4d798e13cc%40%3Cissues.drill.apache.org%3E",
+      "http://www.oracle.com/technetwork/security-advisory/cpuoct2016-2881722.html",
+      "https://web.archive.org/web/20150316023043/http://www.securityfocus.com/bid/71106",
+      "https://web.archive.org/web/20170316161850/http://www.securitytracker.com/id/1037035",
+      "https://github.com/rubysec/ruby-advisory-db/blob/master/gems/jquery-ui-rails/CVE-2010-5312.yml",
+      "https://security.netapp.com/advisory/ntap-20190416-0007",
+      "https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org/message/SGSY236PYSFYIEBRGDERLA7OSY6D7XL4",
+      "https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org/message/HVKIOWSXL2RF2ULNAP7PHESYCFSZIJE3",
+      "https://lists.fedoraproject.org/archives/list/package-announce%40lists.fedoraproject.org/message/SGSY236PYSFYIEBRGDERLA7OSY6D7XL4",
+      "https://lists.fedoraproject.org/archives/list/package-announce%40lists.fedoraproject.org/message/HVKIOWSXL2RF2ULNAP7PHESYCFSZIJE3",
+      "https://github.com/advisories/GHSA-wcm2-9c89-wmfm"
+    ],
+    "published_at": "2017-10-24T18:33:38Z",
+    "updated_at": "2025-04-14T21:53:51Z",
+    "github_reviewed_at": "2020-06-16T22:00:08Z",
+    "nvd_published_at": "2014-11-24T16:59:00Z",
+    "withdrawn_at": null,
+    "vulnerabilities": [
+      {
+        "package": {
+          "ecosystem": "npm",
+          "name": "jquery-ui"
+        },
+        "vulnerable_version_range": ">= 1.7.0, < 1.10.0",
+        "first_patched_version": "1.10.0",
+        "vulnerable_functions": [
+
+        ]
+      },
+      {
+        "package": {
+          "ecosystem": "maven",
+          "name": "org.webjars.npm:jquery-ui"
+        },
+        "vulnerable_version_range": ">= 1.7.0, < 1.10.0",
+        "first_patched_version": "1.10.0",
+        "vulnerable_functions": [
+
+        ]
+      },
+      {
+        "package": {
+          "ecosystem": "nuget",
+          "name": "jQuery.UI.Combined"
+        },
+        "vulnerable_version_range": ">= 1.7.0, < 1.10.0",
+        "first_patched_version": "1.10.0",
+        "vulnerable_functions": [
+
+        ]
+      },
+      {
+        "package": {
+          "ecosystem": "rubygems",
+          "name": "jquery-ui-rails"
+        },
+        "vulnerable_version_range": "< 4.0.0",
+        "first_patched_version": "4.0.0",
+        "vulnerable_functions": [
+
+        ]
+      }
+    ],
+    "cvss_severities": {
+      "cvss_v3": {
+        "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:C/C:L/I:L/A:N",
+        "score": 6.1
+      },
+      "cvss_v4": {
+        "vector_string": null,
+        "score": 0.0
+      }
+    },
+    "cwes": [
+      {
+        "cwe_id": "CWE-79",
+        "name": "Improper Neutralization of Input During Web Page Generation"
+      }
+    ],
+    "credits": [
+
+    ],
+    "comments": 0,
+    "cvss": {
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:C/C:L/I:L/A:N",
+      "score": 6.1
+    },
+    "epss": {
+      "percentage": 0.18351,
+      "percentile": 0.96864
+    }
+  },
+  {
+    "ghsa_id": "GHSA-qqxp-xp9v-vvx6",
+    "cve_id": "CVE-2012-6662",
+    "url": "https://api.github.com/advisories/GHSA-qqxp-xp9v-vvx6",
+    "html_url": "https://github.com/advisories/GHSA-qqxp-xp9v-vvx6",
+    "summary": "jquery-ui Tooltip widget vulnerable to XSS",
+    "description": "Cross-site scripting (XSS) vulnerability in the default content option in jquery.ui.tooltip.js in the Tooltip widget in jQuery UI before 1.10.0 allows remote attackers to inject arbitrary web script or HTML via the title attribute, which is not properly handled in the autocomplete combo box demo.",
+    "type": "reviewed",
+    "severity": "medium",
+    "repository_advisory_url": null,
+    "source_code_location": "https://github.com/jquery/jquery",
+    "identifiers": [
+      {
+        "value": "GHSA-qqxp-xp9v-vvx6",
+        "type": "GHSA"
+      },
+      {
+        "value": "CVE-2012-6662",
+        "type": "CVE"
+      }
+    ],
+    "references": [
+      "https://nvd.nist.gov/vuln/detail/CVE-2012-6662",
+      "https://github.com/jquery/jquery/issues/2432",
+      "https://github.com/jquery/jquery-ui/commit/5fee6fd5000072ff32f2d65b6451f39af9e0e39e",
+      "https://github.com/jquery/jquery-ui/commit/f2854408cce7e4b7fc6bf8676761904af9c96bde",
+      "https://exchange.xforce.ibmcloud.com/vulnerabilities/98697",
+      "http://bugs.jqueryui.com/ticket/8859",
+      "http://bugs.jqueryui.com/ticket/8861",
+      "http://rhn.redhat.com/errata/RHSA-2015-0442.html",
+      "http://rhn.redhat.com/errata/RHSA-2015-1462.html",
+      "http://seclists.org/oss-sec/2014/q4/613",
+      "http://seclists.org/oss-sec/2014/q4/616",
+      "https://github.com/rubysec/ruby-advisory-db/blob/master/gems/jquery-ui-rails/CVE-2012-6662.yml",
+      "https://github.com/advisories/GHSA-qqxp-xp9v-vvx6"
+    ],
+    "published_at": "2017-10-24T18:33:37Z",
+    "updated_at": "2023-11-09T05:04:01Z",
+    "github_reviewed_at": "2020-06-16T21:52:37Z",
+    "nvd_published_at": "2014-11-24T16:59:01Z",
+    "withdrawn_at": null,
+    "vulnerabilities": [
+      {
+        "package": {
+          "ecosystem": "npm",
+          "name": "jquery-ui"
+        },
+        "vulnerable_version_range": "< 1.10.0",
+        "first_patched_version": "1.10.0",
+        "vulnerable_functions": [
+
+        ]
+      },
+      {
+        "package": {
+          "ecosystem": "rubygems",
+          "name": "jquery-ui-rails"
+        },
+        "vulnerable_version_range": "< 4.0.0",
+        "first_patched_version": "4.0.0",
+        "vulnerable_functions": [
+
+        ]
+      },
+      {
+        "package": {
+          "ecosystem": "maven",
+          "name": "org.webjars.npm:jquery-ui"
+        },
+        "vulnerable_version_range": "< 1.10.0",
+        "first_patched_version": "1.10.0",
+        "vulnerable_functions": [
+
+        ]
+      },
+      {
+        "package": {
+          "ecosystem": "nuget",
+          "name": "jQuery.UI.Combined"
+        },
+        "vulnerable_version_range": "< 1.10.0",
+        "first_patched_version": "1.10.0",
+        "vulnerable_functions": [
+
+        ]
+      }
+    ],
+    "cvss_severities": {
+      "cvss_v3": {
+        "vector_string": null,
+        "score": 0.0
+      },
+      "cvss_v4": {
+        "vector_string": null,
+        "score": 0.0
+      }
+    },
+    "cwes": [
+      {
+        "cwe_id": "CWE-79",
+        "name": "Improper Neutralization of Input During Web Page Generation"
+      }
+    ],
+    "credits": [
+
+    ],
+    "comments": 0,
+    "cvss": {
+      "vector_string": null,
+      "score": null
+    },
+    "epss": {
+      "percentage": 0.07475,
+      "percentile": 0.94508
+    }
+  },
+  {
+    "ghsa_id": "GHSA-hpcf-8vf9-q4gj",
+    "cve_id": "CVE-2016-7103",
+    "url": "https://api.github.com/advisories/GHSA-hpcf-8vf9-q4gj",
+    "html_url": "https://github.com/advisories/GHSA-hpcf-8vf9-q4gj",
+    "summary": "jQuery-UI vulnerable to Cross-site Scripting in dialog closeText",
+    "description": "Affected versions of `jquery-ui` are vulnerable to a cross-site scripting vulnerability when arbitrary user input is supplied as the value of the `closeText` parameter in the `dialog` function. \n\njQuery-UI is a library for manipulating UI elements via jQuery.\n\nVersion 1.11.4 has a cross site scripting (XSS) vulnerability in the `closeText` parameter of the `dialog`  function.  If your application passes user input to this parameter, it may be vulnerable to XSS via this attack vector.\n\n\n## Recommendation\n\nUpgrade to jQuery-UI 1.12.0 or later.",
+    "type": "reviewed",
+    "severity": "medium",
+    "repository_advisory_url": null,
+    "source_code_location": "https://github.com/jquery/jquery-ui",
+    "identifiers": [
+      {
+        "value": "GHSA-hpcf-8vf9-q4gj",
+        "type": "GHSA"
+      },
+      {
+        "value": "CVE-2016-7103",
+        "type": "CVE"
+      }
+    ],
+    "references": [
+      "https://nvd.nist.gov/vuln/detail/CVE-2016-7103",
+      "https://github.com/jquery/jquery-ui/pull/1622",
+      "https://github.com/jquery/api.jqueryui.com/issues/281",
+      "https://github.com/jquery/jquery-ui/commit/9644e7bae9116edaf8d37c5b38cb32b892f10ff6",
+      "https://jqueryui.com/changelog/1.12.0/",
+      "https://lists.apache.org/thread.html/519eb0fd45642dcecd9ff74cb3e71c20a4753f7d82e2f07864b5108f@%3Cdev.drill.apache.org%3E",
+      "https://lists.apache.org/thread.html/b0656d359c7d40ec9f39c8cc61bca66802ef9a2a12ee199f5b0c1442@%3Cdev.drill.apache.org%3E",
+      "https://lists.apache.org/thread.html/ba79cf1658741e9f146e4c59b50aee56656ea95d841d358d006c18b6@%3Ccommits.roller.apache.org%3E",
+      "https://lists.apache.org/thread.html/f9bc3e55f4e28d1dcd1a69aae6d53e609a758e34d2869b4d798e13cc@%3Cissues.drill.apache.org%3E",
+      "https://lists.apache.org/thread.html/ff8dcfe29377088ab655fda9d585dccd5b1f07fabd94ae84fd60a7f8@%3Ccommits.pulsar.apache.org%3E",
+      "https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org/message/E2I4UHPIW26FIALH7GGZ3IYUUA53VOOJ/",
+      "https://security.netapp.com/advisory/ntap-20190416-0007/",
+      "https://www.oracle.com/security-alerts/cpuApr2021.html",
+      "https://www.oracle.com/security-alerts/cpuapr2020.html",
+      "https://www.oracle.com/technetwork/security-advisory/cpuapr2019-5072813.html",
+      "https://www.oracle.com/technetwork/security-advisory/cpujul2019-5072835.html",
+      "https://www.oracle.com/technetwork/security-advisory/cpuoct2019-5072832.html",
+      "http://rhn.redhat.com/errata/RHSA-2016-2932.html",
+      "http://rhn.redhat.com/errata/RHSA-2016-2933.html",
+      "http://rhn.redhat.com/errata/RHSA-2017-0161.html",
+      "http://www.oracle.com/technetwork/security-advisory/cpujul2018-4258247.html",
+      "https://www.oracle.com//security-alerts/cpujul2021.html",
+      "https://lists.debian.org/debian-lts-announce/2022/01/msg00014.html",
+      "https://www.drupal.org/sa-core-2022-002",
+      "https://www.oracle.com/security-alerts/cpujan2022.html",
+      "https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org/message/HVKIOWSXL2RF2ULNAP7PHESYCFSZIJE3/",
+      "https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org/message/SGSY236PYSFYIEBRGDERLA7OSY6D7XL4/",
+      "https://lists.apache.org/thread.html/519eb0fd45642dcecd9ff74cb3e71c20a4753f7d82e2f07864b5108f%40%3Cdev.drill.apache.org%3E",
+      "https://lists.apache.org/thread.html/b0656d359c7d40ec9f39c8cc61bca66802ef9a2a12ee199f5b0c1442%40%3Cdev.drill.apache.org%3E",
+      "https://lists.apache.org/thread.html/ba79cf1658741e9f146e4c59b50aee56656ea95d841d358d006c18b6%40%3Ccommits.roller.apache.org%3E",
+      "https://lists.apache.org/thread.html/f9bc3e55f4e28d1dcd1a69aae6d53e609a758e34d2869b4d798e13cc%40%3Cissues.drill.apache.org%3E",
+      "https://lists.apache.org/thread.html/ff8dcfe29377088ab655fda9d585dccd5b1f07fabd94ae84fd60a7f8%40%3Ccommits.pulsar.apache.org%3E",
+      "https://lists.fedoraproject.org/archives/list/package-announce%40lists.fedoraproject.org/message/E2I4UHPIW26FIALH7GGZ3IYUUA53VOOJ/",
+      "https://lists.fedoraproject.org/archives/list/package-announce%40lists.fedoraproject.org/message/HVKIOWSXL2RF2ULNAP7PHESYCFSZIJE3/",
+      "https://lists.fedoraproject.org/archives/list/package-announce%40lists.fedoraproject.org/message/SGSY236PYSFYIEBRGDERLA7OSY6D7XL4/",
+      "https://github.com/jquery-ui-rails/jquery-ui-rails/commit/d504a40538fe5f7998439ad2f8fc5c4a1f843f1c",
+      "https://web.archive.org/web/20200227030100/http://www.securityfocus.com/bid/104823",
+      "https://github.com/rubysec/ruby-advisory-db/blob/master/gems/jquery-ui-rails/CVE-2016-7103.yml",
+      "https://github.com/advisories/GHSA-hpcf-8vf9-q4gj"
+    ],
+    "published_at": "2017-10-24T18:33:35Z",
+    "updated_at": "2023-09-26T17:58:16Z",
+    "github_reviewed_at": "2020-06-16T21:40:44Z",
+    "nvd_published_at": "2017-03-15T16:59:00Z",
+    "withdrawn_at": null,
+    "vulnerabilities": [
+      {
+        "package": {
+          "ecosystem": "npm",
+          "name": "jquery-ui"
+        },
+        "vulnerable_version_range": "< 1.12.0",
+        "first_patched_version": "1.12.0",
+        "vulnerable_functions": [
+
+        ]
+      },
+      {
+        "package": {
+          "ecosystem": "rubygems",
+          "name": "jquery-ui-rails"
+        },
+        "vulnerable_version_range": "< 6.0.0",
+        "first_patched_version": "6.0.0",
+        "vulnerable_functions": [
+
+        ]
+      },
+      {
+        "package": {
+          "ecosystem": "maven",
+          "name": "org.webjars.npm:jquery-ui"
+        },
+        "vulnerable_version_range": "< 1.12.0",
+        "first_patched_version": "1.12.0",
+        "vulnerable_functions": [
+
+        ]
+      },
+      {
+        "package": {
+          "ecosystem": "nuget",
+          "name": "jQuery.UI.Combined"
+        },
+        "vulnerable_version_range": "< 1.12.0",
+        "first_patched_version": "1.12.0",
+        "vulnerable_functions": [
+
+        ]
+      }
+    ],
+    "cvss_severities": {
+      "cvss_v3": {
+        "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:C/C:L/I:L/A:N",
+        "score": 6.1
+      },
+      "cvss_v4": {
+        "vector_string": null,
+        "score": 0.0
+      }
+    },
+    "cwes": [
+      {
+        "cwe_id": "CWE-79",
+        "name": "Improper Neutralization of Input During Web Page Generation"
+      }
+    ],
+    "credits": [
+
+    ],
+    "comments": 0,
+    "cvss": {
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:C/C:L/I:L/A:N",
+      "score": 6.1
+    },
+    "epss": {
+      "percentage": 0.29186,
+      "percentile": 0.98158
+    }
+  }
+]

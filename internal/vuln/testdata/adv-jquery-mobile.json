@@ -1,0 +1,72 @@
+[
+  {
+    "ghsa_id": "GHSA-fj93-7wm4-8x2g",
+    "cve_id": null,
+    "url": "https://api.github.com/advisories/GHSA-fj93-7wm4-8x2g",
+    "html_url": "https://github.com/advisories/GHSA-fj93-7wm4-8x2g",
+    "summary": "Cross-Site Scripting in jquery-mobile",
+    "description": "All version of `jquery-mobile` are vulnerable to Cross-Site Scripting. The package checks for content in `location.hash` and if a URL is found it does an XmlHttpRequest (XHR) to the URL and renders the response with `innerHTML`. It fails to validate the `Content-Type` of the response, allowing attackers to include malicious payloads as part of query parameters that are reflected back to the user. A response such as `{\"q\":\"<iframe/src='javascript:alert(1)'></iframe>\",\"results\":[]}` would be parsed as HTML and the JavaScript payload executed.\n\n\n## Recommendation\n\nNo fix is currently available. Consider using an alternative package until a fix is made available.",
+    "type": "reviewed",
+    "severity": "high",
+    "repository_advisory_url": null,
+    "source_code_location": "https://github.com/jquery/jquery-mobile/",
+    "identifiers": [
+      {
+        "value": "GHSA-fj93-7wm4-8x2g",
+        "type": "GHSA"
+      }
+    ],
+    "references": [
+      "https://gist.github.com/jupenur/e5d0c6f9b58aa81860bf74e010cf1685",
+      "https://snyk.io/vuln/SNYK-JS-JQUERYMOBILE-174599",
+      "https://www.npmjs.com/advisories/883",
+      "https://github.com/jquery/jquery-mobile/issues/8640",
+      "https://github.com/jquery/jquery-mobile/pull/8649",
+      "https://github.com/jquery/jquery-mobile/pull/8650",
+      "https://github.com/jquery/jquery-mobile/commit/b0d9cc758a48f13321750d7409fb7655dcdf2b50",
+      "https://github.com/advisories/GHSA-fj93-7wm4-8x2g"
+    ],
+    "published_at": "2020-09-02T21:22:47Z",
+    "updated_at": "2023-01-09T05:04:05Z",
+    "github_reviewed_at": "2020-08-31T18:39:15Z",
+    "nvd_published_at": null,
+    "withdrawn_at": null,
+    "vulnerabilities": [
+      {
+        "package": {
+          "ecosystem": "npm",
+          "name": "jquery-mobile"
+        },
+        "vulnerable_version_range": ">= 0",
+        "first_patched_version": null,
+        "vulnerable_functions": [
+
+        ]
+      }
+    ],
+    "cvss_severities": {
+      "cvss_v3": {
+        "vector_string": null,
+        "score": 0.0
+      },
+      "cvss_v4": {
+        "vector_string": null,
+        "score": 0.0
+      }
+    },
+    "cwes": [
+      {
+        "cwe_id": "CWE-79",
+        "name": "Improper Neutralization of Input During Web Page Generation"
+      }
+    ],
+    "credits": [
+
+    ],
+    "comments": 0,
+    "cvss": {
+      "vector_string": null,
+      "score": null
+    }
+  }
+]

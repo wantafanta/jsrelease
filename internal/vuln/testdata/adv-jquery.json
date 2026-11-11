@@ -1,0 +1,2021 @@
+[
+  {
+    "ghsa_id": "GHSA-257q-pv89-v3xv",
+    "cve_id": "CVE-2020-23064",
+    "url": "https://api.github.com/advisories/GHSA-257q-pv89-v3xv",
+    "html_url": "https://github.com/advisories/GHSA-257q-pv89-v3xv",
+    "summary": "Duplicate Advisory: jQuery Cross Site Scripting vulnerability",
+    "description": "## Duplicate Advisory\nThis advisory has been withdrawn because it is a duplicate of [GHSA-jpcq-cgw6-v4j6](https://github.com/advisories/GHSA-jpcq-cgw6-v4j6). This link is maintained to preserve external references.\n\n## Original Description\n\nCross Site Scripting vulnerability in jQuery v.2.2.0 until v.3.5.0 allows a remote attacker to execute arbitrary code via the `<options>` element.",
+    "type": "reviewed",
+    "severity": "medium",
+    "repository_advisory_url": null,
+    "source_code_location": "https://github.com/jquery/jquery",
+    "identifiers": [
+      {
+        "value": "GHSA-257q-pv89-v3xv",
+        "type": "GHSA"
+      },
+      {
+        "value": "CVE-2020-23064",
+        "type": "CVE"
+      }
+    ],
+    "references": [
+      "https://nvd.nist.gov/vuln/detail/CVE-2020-23064",
+      "https://snyk.io/vuln/SNYK-JS-JQUERY-565129",
+      "https://github.com/jquery/jquery/commit/1d61fd9407e6fbe82fe55cb0b938307aa0791f77",
+      "https://github.com/rails/jquery-rails/blob/master/CHANGELOG.md#410",
+      "https://github.com/rails/jquery-rails/blob/master/CHANGELOG.md#440",
+      "https://github.com/rails/jquery-rails/blob/v4.3.5/vendor/assets/javascripts/jquery3.js#L5979",
+      "https://github.com/rails/jquery-rails/blob/v4.4.0/vendor/assets/javascripts/jquery3.js#L6162",
+      "https://github.com/rubysec/ruby-advisory-db/blob/master/gems/jquery-rails/CVE-2020-23064.yml",
+      "https://blog.jquery.com/2020/04/10/jquery-3-5-0-released",
+      "https://security.netapp.com/advisory/ntap-20230725-0003",
+      "https://github.com/advisories/GHSA-jpcq-cgw6-v4j6",
+      "https://github.com/advisories/GHSA-257q-pv89-v3xv"
+    ],
+    "published_at": "2023-06-26T21:30:58Z",
+    "updated_at": "2024-05-15T20:10:38Z",
+    "github_reviewed_at": "2023-07-07T15:07:56Z",
+    "nvd_published_at": "2023-06-26T19:15:09Z",
+    "withdrawn_at": "2024-05-15T20:10:38Z",
+    "vulnerabilities": [
+      {
+        "package": {
+          "ecosystem": "npm",
+          "name": "jquery"
+        },
+        "vulnerable_version_range": ">= 1.0.3, < 3.5.0",
+        "first_patched_version": "3.5.0",
+        "vulnerable_functions": [
+
+        ]
+      },
+      {
+        "package": {
+          "ecosystem": "nuget",
+          "name": "jQuery"
+        },
+        "vulnerable_version_range": ">= 1.0.3, < 3.5.0",
+        "first_patched_version": "3.5.0",
+        "vulnerable_functions": [
+
+        ]
+      },
+      {
+        "package": {
+          "ecosystem": "rubygems",
+          "name": "jquery-rails"
+        },
+        "vulnerable_version_range": "< 4.4.0",
+        "first_patched_version": "4.4.0",
+        "vulnerable_functions": [
+
+        ]
+      },
+      {
+        "package": {
+          "ecosystem": "maven",
+          "name": "org.webjars.npm:jquery"
+        },
+        "vulnerable_version_range": ">= 1.0.3, < 3.5.0",
+        "first_patched_version": "3.5.0",
+        "vulnerable_functions": [
+
+        ]
+      }
+    ],
+    "cvss_severities": {
+      "cvss_v3": {
+        "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:C/C:L/I:L/A:N",
+        "score": 6.1
+      },
+      "cvss_v4": {
+        "vector_string": null,
+        "score": 0.0
+      }
+    },
+    "cwes": [
+      {
+        "cwe_id": "CWE-79",
+        "name": "Improper Neutralization of Input During Web Page Generation"
+      }
+    ],
+    "credits": [
+      {
+        "user": {
+          "login": "eoftedal",
+          "id": 238804,
+          "node_id": "MDQ6VXNlcjIzODgwNA==",
+          "avatar_url": "https://avatars.githubusercontent.com/u/238804?v=4",
+          "gravatar_id": "",
+          "url": "https://api.github.com/users/eoftedal",
+          "html_url": "https://github.com/eoftedal",
+          "followers_url": "https://api.github.com/users/eoftedal/followers",
+          "following_url": "https://api.github.com/users/eoftedal/following{/other_user}",
+          "gists_url": "https://api.github.com/users/eoftedal/gists{/gist_id}",
+          "starred_url": "https://api.github.com/users/eoftedal/starred{/owner}{/repo}",
+          "subscriptions_url": "https://api.github.com/users/eoftedal/subscriptions",
+          "organizations_url": "https://api.github.com/users/eoftedal/orgs",
+          "repos_url": "https://api.github.com/users/eoftedal/repos",
+          "events_url": "https://api.github.com/users/eoftedal/events{/privacy}",
+          "received_events_url": "https://api.github.com/users/eoftedal/received_events",
+          "type": "User",
+          "user_view_type": "public",
+          "site_admin": false
+        },
+        "type": "analyst"
+      }
+    ],
+    "comments": 0,
+    "cvss": {
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:C/C:L/I:L/A:N",
+      "score": 6.1
+    },
+    "epss": {
+      "percentage": 0.00049,
+      "percentile": 0.21662
+    }
+  },
+  {
+    "ghsa_id": "GHSA-579v-mp3v-rrw5",
+    "cve_id": "CVE-2011-4969",
+    "url": "https://api.github.com/advisories/GHSA-579v-mp3v-rrw5",
+    "html_url": "https://github.com/advisories/GHSA-579v-mp3v-rrw5",
+    "summary": "jQuery vulnerable to Cross-Site Scripting (XSS)",
+    "description": "Cross-site scripting (XSS) vulnerability in jQuery before 1.6.3, when using location.hash to select elements, allows remote attackers to inject arbitrary web script or HTML via a crafted tag.",
+    "type": "reviewed",
+    "severity": "medium",
+    "repository_advisory_url": null,
+    "source_code_location": "https://github.com/jquery/jquery",
+    "identifiers": [
+      {
+        "value": "GHSA-579v-mp3v-rrw5",
+        "type": "GHSA"
+      },
+      {
+        "value": "CVE-2011-4969",
+        "type": "CVE"
+      }
+    ],
+    "references": [
+      "https://nvd.nist.gov/vuln/detail/CVE-2011-4969",
+      "https://github.com/jquery/jquery/commit/db9e023e62c1ff5d8f21ed9868ab6878da2005e9",
+      "https://lists.apache.org/thread.html/ff8dcfe29377088ab655fda9d585dccd5b1f07fabd94ae84fd60a7f8@%3Ccommits.pulsar.apache.org%3E",
+      "http://blog.mindedsecurity.com/2011/07/jquery-is-sink.html",
+      "http://bugs.jquery.com/ticket/9521",
+      "http://www.openwall.com/lists/oss-security/2013/01/31/3",
+      "http://www.ubuntu.com/usn/USN-1722-1",
+      "https://security.snyk.io/vuln/SNYK-DOTNET-JQUERY-450224",
+      "https://github.com/rubysec/ruby-advisory-db/blob/master/gems/jquery-rails/CVE-2011-4969.yml",
+      "https://security.netapp.com/advisory/ntap-20190416-0007",
+      "http://blog.jquery.com/2011/09/01/jquery-1-6-3-released",
+      "https://github.com/advisories/GHSA-579v-mp3v-rrw5"
+    ],
+    "published_at": "2022-05-14T01:09:51Z",
+    "updated_at": "2026-01-14T21:43:53Z",
+    "github_reviewed_at": "2022-09-12T14:46:34Z",
+    "nvd_published_at": "2013-03-08T22:55:00Z",
+    "withdrawn_at": null,
+    "vulnerabilities": [
+      {
+        "package": {
+          "ecosystem": "npm",
+          "name": "jquery"
+        },
+        "vulnerable_version_range": "< 1.6.3",
+        "first_patched_version": "1.6.3",
+        "vulnerable_functions": [
+
+        ]
+      },
+      {
+        "package": {
+          "ecosystem": "nuget",
+          "name": "jQuery"
+        },
+        "vulnerable_version_range": "< 1.6.3",
+        "first_patched_version": "1.6.3",
+        "vulnerable_functions": [
+
+        ]
+      },
+      {
+        "package": {
+          "ecosystem": "rubygems",
+          "name": "jquery-rails"
+        },
+        "vulnerable_version_range": "< 1.0.16",
+        "first_patched_version": "1.0.16",
+        "vulnerable_functions": [
+
+        ]
+      },
+      {
+        "package": {
+          "ecosystem": "maven",
+          "name": "org.webjars.npm:jquery"
+        },
+        "vulnerable_version_range": "< 1.6.3",
+        "first_patched_version": "1.6.3",
+        "vulnerable_functions": [
+
+        ]
+      }
+    ],
+    "cvss_severities": {
+      "cvss_v3": {
+        "vector_string": null,
+        "score": 0.0
+      },
+      "cvss_v4": {
+        "vector_string": null,
+        "score": 0.0
+      }
+    },
+    "cwes": [
+      {
+        "cwe_id": "CWE-79",
+        "name": "Improper Neutralization of Input During Web Page Generation"
+      }
+    ],
+    "credits": [
+      {
+        "user": {
+          "login": "jhutchings1",
+          "id": 12853539,
+          "node_id": "MDQ6VXNlcjEyODUzNTM5",
+          "avatar_url": "https://avatars.githubusercontent.com/u/12853539?v=4",
+          "gravatar_id": "",
+          "url": "https://api.github.com/users/jhutchings1",
+          "html_url": "https://github.com/jhutchings1",
+          "followers_url": "https://api.github.com/users/jhutchings1/followers",
+          "following_url": "https://api.github.com/users/jhutchings1/following{/other_user}",
+          "gists_url": "https://api.github.com/users/jhutchings1/gists{/gist_id}",
+          "starred_url": "https://api.github.com/users/jhutchings1/starred{/owner}{/repo}",
+          "subscriptions_url": "https://api.github.com/users/jhutchings1/subscriptions",
+          "organizations_url": "https://api.github.com/users/jhutchings1/orgs",
+          "repos_url": "https://api.github.com/users/jhutchings1/repos",
+          "events_url": "https://api.github.com/users/jhutchings1/events{/privacy}",
+          "received_events_url": "https://api.github.com/users/jhutchings1/received_events",
+          "type": "User",
+          "user_view_type": "public",
+          "site_admin": false
+        },
+        "type": "analyst"
+      },
+      {
+        "user": {
+          "login": "klaudialax",
+          "id": 24222665,
+          "node_id": "MDQ6VXNlcjI0MjIyNjY1",
+          "avatar_url": "https://avatars.githubusercontent.com/u/24222665?v=4",
+          "gravatar_id": "",
+          "url": "https://api.github.com/users/klaudialax",
+          "html_url": "https://github.com/klaudialax",
+          "followers_url": "https://api.github.com/users/klaudialax/followers",
+          "following_url": "https://api.github.com/users/klaudialax/following{/other_user}",
+          "gists_url": "https://api.github.com/users/klaudialax/gists{/gist_id}",
+          "starred_url": "https://api.github.com/users/klaudialax/starred{/owner}{/repo}",
+          "subscriptions_url": "https://api.github.com/users/klaudialax/subscriptions",
+          "organizations_url": "https://api.github.com/users/klaudialax/orgs",
+          "repos_url": "https://api.github.com/users/klaudialax/repos",
+          "events_url": "https://api.github.com/users/klaudialax/events{/privacy}",
+          "received_events_url": "https://api.github.com/users/klaudialax/received_events",
+          "type": "User",
+          "user_view_type": "public",
+          "site_admin": false
+        },
+        "type": "analyst"
+      }
+    ],
+    "comments": 0,
+    "cvss": {
+      "vector_string": null,
+      "score": null
+    },
+    "epss": {
+      "percentage": 0.19191,
+      "percentile": 0.96977
+    }
+  },
+  {
+    "ghsa_id": "GHSA-2pqj-h3vj-pqgw",
+    "cve_id": "CVE-2012-6708",
+    "url": "https://api.github.com/advisories/GHSA-2pqj-h3vj-pqgw",
+    "html_url": "https://github.com/advisories/GHSA-2pqj-h3vj-pqgw",
+    "summary": "Cross-Site Scripting in jquery",
+    "description": "Affected versions of `jquery` are vulnerable to cross-site scripting. This occurs because the main `jquery` function uses a regular expression to differentiate between HTML and selectors, but does not properly anchor the regular expression. The result is that `jquery` may interpret HTML as selectors when given certain inputs, allowing for client side code execution.\n\n## Proof of Concept\n```\n$(\"#log\").html(\n    $(\"element[attribute='<img src=\\\"x\\\" onerror=\\\"alert(1)\\\" />']\").html()\n);\n```\n\n\n\n\n## Recommendation\n\nUpdate to version 1.9.0 or later.",
+    "type": "reviewed",
+    "severity": "medium",
+    "repository_advisory_url": null,
+    "source_code_location": "https://github.com/jquery/jquery",
+    "identifiers": [
+      {
+        "value": "GHSA-2pqj-h3vj-pqgw",
+        "type": "GHSA"
+      },
+      {
+        "value": "CVE-2012-6708",
+        "type": "CVE"
+      }
+    ],
+    "references": [
+      "https://bugs.jquery.com/ticket/11290",
+      "https://bugs.jquery.com/ticket/12531",
+      "https://bugs.jquery.com/ticket/6429",
+      "https://bugs.jquery.com/ticket/9521",
+      "https://nvd.nist.gov/vuln/detail/CVE-2017-16011",
+      "https://nvd.nist.gov/vuln/detail/CVE-2012-6708",
+      "https://github.com/jquery/jquery/commit/05531fc4080ae24070930d15ae0cea7ae056457d",
+      "https://help.ecostruxureit.com/display/public/UADCE725/Security+fixes+in+StruxureWare+Data+Center+Expert+v7.6.0",
+      "https://lists.apache.org/thread.html/519eb0fd45642dcecd9ff74cb3e71c20a4753f7d82e2f07864b5108f@%3Cdev.drill.apache.org%3E",
+      "https://lists.apache.org/thread.html/b0656d359c7d40ec9f39c8cc61bca66802ef9a2a12ee199f5b0c1442@%3Cdev.drill.apache.org%3E",
+      "https://lists.apache.org/thread.html/f9bc3e55f4e28d1dcd1a69aae6d53e609a758e34d2869b4d798e13cc@%3Cissues.drill.apache.org%3E",
+      "https://snyk.io/vuln/npm:jquery:20120206",
+      "http://lists.opensuse.org/opensuse-security-announce/2020-03/msg00041.html",
+      "http://packetstormsecurity.com/files/153237/RetireJS-CORS-Issue-Script-Execution.html",
+      "http://packetstormsecurity.com/files/161972/Linksys-EA7500-2.0.8.194281-Cross-Site-Scripting.html",
+      "https://security.snyk.io/vuln/SNYK-DOTNET-JQUERY-450223",
+      "https://research.insecurelabs.org/jquery/test/",
+      "https://web.archive.org/web/20200227132049/http://www.securityfocus.com/bid/102792",
+      "https://github.com/rails/jquery-rails/blob/v2.1.4/vendor/assets/javascripts/jquery.js#L59",
+      "https://github.com/rails/jquery-rails/blob/v2.2.0/vendor/assets/javascripts/jquery.js#L67",
+      "https://github.com/rubysec/ruby-advisory-db/blob/master/gems/jquery-rails/CVE-2012-6708.yml",
+      "https://github.com/advisories/GHSA-2pqj-h3vj-pqgw"
+    ],
+    "published_at": "2020-09-01T16:41:46Z",
+    "updated_at": "2023-07-10T13:00:14Z",
+    "github_reviewed_at": "2020-08-31T18:19:31Z",
+    "nvd_published_at": "2018-01-18T23:29:00Z",
+    "withdrawn_at": null,
+    "vulnerabilities": [
+      {
+        "package": {
+          "ecosystem": "npm",
+          "name": "jquery"
+        },
+        "vulnerable_version_range": "<= 1.8.3",
+        "first_patched_version": "1.9.0",
+        "vulnerable_functions": [
+
+        ]
+      },
+      {
+        "package": {
+          "ecosystem": "maven",
+          "name": "org.webjars.npm:jquery"
+        },
+        "vulnerable_version_range": "<= 1.8.3",
+        "first_patched_version": "1.9.0",
+        "vulnerable_functions": [
+
+        ]
+      },
+      {
+        "package": {
+          "ecosystem": "nuget",
+          "name": "jQuery"
+        },
+        "vulnerable_version_range": "<= 1.8.3",
+        "first_patched_version": "1.9.0",
+        "vulnerable_functions": [
+
+        ]
+      },
+      {
+        "package": {
+          "ecosystem": "rubygems",
+          "name": "jquery-rails"
+        },
+        "vulnerable_version_range": "< 2.2.0",
+        "first_patched_version": "2.2.0",
+        "vulnerable_functions": [
+
+        ]
+      }
+    ],
+    "cvss_severities": {
+      "cvss_v3": {
+        "vector_string": "CVSS:3.0/AV:N/AC:L/PR:N/UI:R/S:C/C:L/I:L/A:N",
+        "score": 6.1
+      },
+      "cvss_v4": {
+        "vector_string": null,
+        "score": 0.0
+      }
+    },
+    "cwes": [
+      {
+        "cwe_id": "CWE-64",
+        "name": "Windows Shortcut Following (.LNK)"
+      },
+      {
+        "cwe_id": "CWE-79",
+        "name": "Improper Neutralization of Input During Web Page Generation"
+      }
+    ],
+    "credits": [
+      {
+        "user": {
+          "login": "klaudialax",
+          "id": 24222665,
+          "node_id": "MDQ6VXNlcjI0MjIyNjY1",
+          "avatar_url": "https://avatars.githubusercontent.com/u/24222665?v=4",
+          "gravatar_id": "",
+          "url": "https://api.github.com/users/klaudialax",
+          "html_url": "https://github.com/klaudialax",
+          "followers_url": "https://api.github.com/users/klaudialax/followers",
+          "following_url": "https://api.github.com/users/klaudialax/following{/other_user}",
+          "gists_url": "https://api.github.com/users/klaudialax/gists{/gist_id}",
+          "starred_url": "https://api.github.com/users/klaudialax/starred{/owner}{/repo}",
+          "subscriptions_url": "https://api.github.com/users/klaudialax/subscriptions",
+          "organizations_url": "https://api.github.com/users/klaudialax/orgs",
+          "repos_url": "https://api.github.com/users/klaudialax/repos",
+          "events_url": "https://api.github.com/users/klaudialax/events{/privacy}",
+          "received_events_url": "https://api.github.com/users/klaudialax/received_events",
+          "type": "User",
+          "user_view_type": "public",
+          "site_admin": false
+        },
+        "type": "analyst"
+      }
+    ],
+    "comments": 0,
+    "cvss": {
+      "vector_string": "CVSS:3.0/AV:N/AC:L/PR:N/UI:R/S:C/C:L/I:L/A:N",
+      "score": 6.1
+    },
+    "epss": {
+      "percentage": 0.08632,
+      "percentile": 0.94858
+    }
+  },
+  {
+    "ghsa_id": "GHSA-q4m3-2j7h-f7xw",
+    "cve_id": "CVE-2020-7656",
+    "url": "https://api.github.com/advisories/GHSA-q4m3-2j7h-f7xw",
+    "html_url": "https://github.com/advisories/GHSA-q4m3-2j7h-f7xw",
+    "summary": "Cross-Site Scripting in jquery",
+    "description": "Versions of `jquery` prior to 1.9.0 are vulnerable to Cross-Site Scripting. The load method fails to recognize and remove `<script>` HTML tags that contain a whitespace character, i.e: `</script >`, which results in the enclosed script logic to be executed. This allows attackers to execute arbitrary JavaScript in a victim's browser.\n\n\n## Recommendation\n\nUpgrade to version 1.9.0 or later.",
+    "type": "reviewed",
+    "severity": "medium",
+    "repository_advisory_url": null,
+    "source_code_location": "https://github.com/jquery/jquery",
+    "identifiers": [
+      {
+        "value": "GHSA-q4m3-2j7h-f7xw",
+        "type": "GHSA"
+      },
+      {
+        "value": "CVE-2020-7656",
+        "type": "CVE"
+      }
+    ],
+    "references": [
+      "https://nvd.nist.gov/vuln/detail/CVE-2020-7656",
+      "https://snyk.io/vuln/SNYK-JS-JQUERY-569619",
+      "https://www.oracle.com/security-alerts/cpujul2022.html",
+      "https://github.com/jquery/jquery/blob/9e6393b0bcb52b15313f88141d0bd7dd54227426/src/ajax.js#L203",
+      "https://github.com/rails/jquery-rails/blob/master/CHANGELOG.md#220-19-january-2013",
+      "https://github.com/rails/jquery-rails/blob/v2.1.4/vendor/assets/javascripts/jquery.js#L7481",
+      "https://supportportal.juniper.net/s/article/2021-07-Security-Bulletin-Junos-OS-Multiple-J-Web-vulnerabilities-resolved-in-Junos-OS-21-2R1?language=en_US",
+      "https://github.com/rubysec/ruby-advisory-db/blob/master/gems/jquery-rails/CVE-2020-7656.yml",
+      "https://github.com/jquery/jquery/commit/05531fc4080ae24070930d15ae0cea7ae056457d",
+      "https://github.com/jquery/jquery/commit/606b863edaff29035960e4d813b45d63b8d92876",
+      "https://security.netapp.com/advisory/ntap-20200528-0001",
+      "https://github.com/advisories/GHSA-q4m3-2j7h-f7xw"
+    ],
+    "published_at": "2020-05-20T16:18:01Z",
+    "updated_at": "2024-10-10T16:17:34Z",
+    "github_reviewed_at": "2020-05-20T16:17:45Z",
+    "nvd_published_at": "2020-05-19T21:15:00Z",
+    "withdrawn_at": null,
+    "vulnerabilities": [
+      {
+        "package": {
+          "ecosystem": "rubygems",
+          "name": "jquery-rails"
+        },
+        "vulnerable_version_range": "< 2.2.0",
+        "first_patched_version": "2.2.0",
+        "vulnerable_functions": [
+
+        ]
+      },
+      {
+        "package": {
+          "ecosystem": "npm",
+          "name": "jquery"
+        },
+        "vulnerable_version_range": ">= 1.2.1, < 1.9.0",
+        "first_patched_version": "1.9.0",
+        "vulnerable_functions": [
+
+        ]
+      },
+      {
+        "package": {
+          "ecosystem": "nuget",
+          "name": "jQuery"
+        },
+        "vulnerable_version_range": ">= 1.2.1, < 1.9.0",
+        "first_patched_version": "1.9.0",
+        "vulnerable_functions": [
+
+        ]
+      },
+      {
+        "package": {
+          "ecosystem": "maven",
+          "name": "org.webjars.npm:jquery"
+        },
+        "vulnerable_version_range": ">= 1.2.1, < 1.9.0",
+        "first_patched_version": "1.9.0",
+        "vulnerable_functions": [
+
+        ]
+      }
+    ],
+    "cvss_severities": {
+      "cvss_v3": {
+        "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:C/C:L/I:L/A:N",
+        "score": 6.1
+      },
+      "cvss_v4": {
+        "vector_string": "CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:P/VC:N/VI:N/VA:N/SC:L/SI:L/SA:N",
+        "score": 5.3
+      }
+    },
+    "cwes": [
+      {
+        "cwe_id": "CWE-79",
+        "name": "Improper Neutralization of Input During Web Page Generation"
+      }
+    ],
+    "credits": [
+      {
+        "user": {
+          "login": "klaudialax",
+          "id": 24222665,
+          "node_id": "MDQ6VXNlcjI0MjIyNjY1",
+          "avatar_url": "https://avatars.githubusercontent.com/u/24222665?v=4",
+          "gravatar_id": "",
+          "url": "https://api.github.com/users/klaudialax",
+          "html_url": "https://github.com/klaudialax",
+          "followers_url": "https://api.github.com/users/klaudialax/followers",
+          "following_url": "https://api.github.com/users/klaudialax/following{/other_user}",
+          "gists_url": "https://api.github.com/users/klaudialax/gists{/gist_id}",
+          "starred_url": "https://api.github.com/users/klaudialax/starred{/owner}{/repo}",
+          "subscriptions_url": "https://api.github.com/users/klaudialax/subscriptions",
+          "organizations_url": "https://api.github.com/users/klaudialax/orgs",
+          "repos_url": "https://api.github.com/users/klaudialax/repos",
+          "events_url": "https://api.github.com/users/klaudialax/events{/privacy}",
+          "received_events_url": "https://api.github.com/users/klaudialax/received_events",
+          "type": "User",
+          "user_view_type": "public",
+          "site_admin": false
+        },
+        "type": "analyst"
+      },
+      {
+        "user": {
+          "login": "eoftedal",
+          "id": 238804,
+          "node_id": "MDQ6VXNlcjIzODgwNA==",
+          "avatar_url": "https://avatars.githubusercontent.com/u/238804?v=4",
+          "gravatar_id": "",
+          "url": "https://api.github.com/users/eoftedal",
+          "html_url": "https://github.com/eoftedal",
+          "followers_url": "https://api.github.com/users/eoftedal/followers",
+          "following_url": "https://api.github.com/users/eoftedal/following{/other_user}",
+          "gists_url": "https://api.github.com/users/eoftedal/gists{/gist_id}",
+          "starred_url": "https://api.github.com/users/eoftedal/starred{/owner}{/repo}",
+          "subscriptions_url": "https://api.github.com/users/eoftedal/subscriptions",
+          "organizations_url": "https://api.github.com/users/eoftedal/orgs",
+          "repos_url": "https://api.github.com/users/eoftedal/repos",
+          "events_url": "https://api.github.com/users/eoftedal/events{/privacy}",
+          "received_events_url": "https://api.github.com/users/eoftedal/received_events",
+          "type": "User",
+          "user_view_type": "public",
+          "site_admin": false
+        },
+        "type": "analyst"
+      }
+    ],
+    "comments": 0,
+    "cvss": {
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:C/C:L/I:L/A:N",
+      "score": 6.1
+    },
+    "epss": {
+      "percentage": 0.06428,
+      "percentile": 0.93504
+    }
+  },
+  {
+    "ghsa_id": "GHSA-jpcq-cgw6-v4j6",
+    "cve_id": "CVE-2020-11023",
+    "url": "https://api.github.com/advisories/GHSA-jpcq-cgw6-v4j6",
+    "html_url": "https://github.com/advisories/GHSA-jpcq-cgw6-v4j6",
+    "summary": "Potential XSS vulnerability in jQuery",
+    "description": "### Impact\nPassing HTML containing `<option>` elements from untrusted sources - even after sanitizing them - to one of jQuery's DOM manipulation methods (i.e. `.html()`, `.append()`, and others) may execute untrusted code.\n\n### Patches\nThis problem is patched in jQuery 3.5.0.\n\n### Workarounds\nTo workaround this issue without upgrading, use [DOMPurify](https://github.com/cure53/DOMPurify) with its `SAFE_FOR_JQUERY` option to sanitize the HTML string before passing it to a jQuery method.\n\n### References\nhttps://blog.jquery.com/2020/04/10/jquery-3-5-0-released/\n\n### For more information\nIf you have any questions or comments about this advisory, search for a relevant issue in [the jQuery repo](https://github.com/jquery/jquery/issues). If you don't find an answer, open a new issue.",
+    "type": "reviewed",
+    "severity": "medium",
+    "repository_advisory_url": "https://api.github.com/repos/jquery/jquery/security-advisories/GHSA-jpcq-cgw6-v4j6",
+    "source_code_location": "https://github.com/jquery/jquery",
+    "identifiers": [
+      {
+        "value": "GHSA-jpcq-cgw6-v4j6",
+        "type": "GHSA"
+      },
+      {
+        "value": "CVE-2020-11023",
+        "type": "CVE"
+      }
+    ],
+    "references": [
+      "https://github.com/jquery/jquery/security/advisories/GHSA-jpcq-cgw6-v4j6",
+      "https://blog.jquery.com/2020/04/10/jquery-3-5-0-released",
+      "https://nvd.nist.gov/vuln/detail/CVE-2020-11023",
+      "https://www.drupal.org/sa-core-2020-002",
+      "https://www.debian.org/security/2020/dsa-4693",
+      "https://www.oracle.com/security-alerts/cpujul2020.html",
+      "http://lists.opensuse.org/opensuse-security-announce/2020-07/msg00067.html",
+      "https://security.gentoo.org/glsa/202007-03",
+      "http://lists.opensuse.org/opensuse-security-announce/2020-07/msg00085.html",
+      "https://lists.apache.org/thread.html/r0593393ca1e97b1e7e098fe69d414d6bd0a467148e9138d07e86ebbb@%3Cissues.hive.apache.org%3E",
+      "https://lists.apache.org/thread.html/r094f435595582f6b5b24b66fedf80543aa8b1d57a3688fbcc21f06ec@%3Cissues.hive.apache.org%3E",
+      "https://lists.apache.org/thread.html/r1fed19c860a0d470f2a3eded12795772c8651ff583ef951ddac4918c@%3Cgitbox.hive.apache.org%3E",
+      "https://lists.apache.org/thread.html/r4aadb98086ca72ed75391f54167522d91489a0d0ae25b12baa8fc7c5@%3Cissues.hive.apache.org%3E",
+      "https://lists.apache.org/thread.html/r6c4df3b33e625a44471009a172dabe6865faec8d8f21cac2303463b1@%3Cissues.hive.apache.org%3E",
+      "https://lists.apache.org/thread.html/r6e97b37963926f6059ecc1e417721608723a807a76af41d4e9dbed49@%3Cissues.hive.apache.org%3E",
+      "https://lists.apache.org/thread.html/r9c5fda81e4bca8daee305b4c03283dddb383ab8428a151d4cb0b3b15@%3Cissues.hive.apache.org%3E",
+      "https://lists.apache.org/thread.html/ra32c7103ded9041c7c1cb8c12c8d125a6b2f3f3270e2937ef8417fac@%3Cgitbox.hive.apache.org%3E",
+      "https://lists.apache.org/thread.html/ra374bb0299b4aa3e04edde01ebc03ed6f90cf614dad40dd428ce8f72@%3Cgitbox.hive.apache.org%3E",
+      "https://lists.apache.org/thread.html/ra3c9219fcb0b289e18e9ec5a5ebeaa5c17d6b79a201667675af6721c@%3Cgitbox.hive.apache.org%3E",
+      "https://lists.apache.org/thread.html/ra406b3adfcffcb5ce8707013bdb7c35e3ffc2776a8a99022f15274c6@%3Cissues.hive.apache.org%3E",
+      "https://lists.apache.org/thread.html/rab82dd040f302018c85bd07d33f5604113573514895ada523c3401d9@%3Ccommits.hive.apache.org%3E",
+      "https://lists.apache.org/thread.html/radcb2aa874a79647789f3563fcbbceaf1045a029ee8806b59812a8ea@%3Cissues.hive.apache.org%3E",
+      "https://lists.apache.org/thread.html/rb25c3bc7418ae75cba07988dafe1b6912f76a9dd7d94757878320d61@%3Cgitbox.hive.apache.org%3E",
+      "https://lists.apache.org/thread.html/rb69b7d8217c1a6a2100247a5d06ce610836b31e3f5d73fc113ded8e7@%3Cissues.hive.apache.org%3E",
+      "https://lists.apache.org/thread.html/rd38b4185a797b324c8dd940d9213cf99fcdc2dbf1fc5a63ba7dee8c9@%3Cissues.hive.apache.org%3E",
+      "https://lists.apache.org/thread.html/rda99599896c3667f2cc9e9d34c7b6ef5d2bbed1f4801e1d75a2b0679@%3Ccommits.nifi.apache.org%3E",
+      "https://lists.apache.org/thread.html/rf1ba79e564fe7efc56aef7c986106f1cf67a3427d08e997e088e7a93@%3Cgitbox.hive.apache.org%3E",
+      "https://lists.apache.org/thread.html/rf661a90a15da8da5922ba6127b3f5f8194d4ebec8855d60a0dd13248@%3Cdev.hive.apache.org%3E",
+      "https://www.oracle.com/security-alerts/cpuoct2020.html",
+      "https://lists.apache.org/thread.html/r706cfbc098420f7113968cc377247ec3d1439bce42e679c11c609e2d@%3Cissues.flink.apache.org%3E",
+      "https://lists.apache.org/thread.html/rbb448222ba62c430e21e13f940be4cb5cfc373cd3bce56b48c0ffa67@%3Cdev.flink.apache.org%3E",
+      "http://lists.opensuse.org/opensuse-security-announce/2020-11/msg00039.html",
+      "https://lists.apache.org/thread.html/r49ce4243b4738dd763caeb27fa8ad6afb426ae3e8c011ff00b8b1f48@%3Cissues.flink.apache.org%3E",
+      "https://lists.apache.org/thread.html/r07ab379471fb15644bf7a92e4a98cbc7df3cf4e736abae0cc7625fe6@%3Cdev.felix.apache.org%3E",
+      "https://lists.apache.org/thread.html/r2c85121a47442036c7f8353a3724aa04f8ecdfda1819d311ba4f5330@%3Cdev.felix.apache.org%3E",
+      "https://lists.apache.org/thread.html/r3702ede0ff83a29ba3eb418f6f11c473d6e3736baba981a8dbd9c9ef@%3Cdev.felix.apache.org%3E",
+      "https://lists.apache.org/thread.html/r4dba67be3239b34861f1b9cfdf9dfb3a90272585dcce374112ed6e16@%3Cdev.felix.apache.org%3E",
+      "https://lists.apache.org/thread.html/r55f5e066cc7301e3630ce90bbbf8d28c82212ae1f2d4871012141494@%3Cdev.felix.apache.org%3E",
+      "https://lists.apache.org/thread.html/r9006ad2abf81d02a0ef2126bab5177987e59095b7194a487c4ea247c@%3Ccommits.felix.apache.org%3E",
+      "https://lists.apache.org/thread.html/r9e0bd31b7da9e7403478d22652b8760c946861f8ebd7bd750844898e@%3Cdev.felix.apache.org%3E",
+      "https://lists.apache.org/thread.html/rf0f8939596081d84be1ae6a91d6248b96a02d8388898c372ac807817@%3Cdev.felix.apache.org%3E",
+      "https://www.oracle.com/security-alerts/cpujan2021.html",
+      "https://lists.apache.org/thread.html/r564585d97bc069137e64f521e68ba490c7c9c5b342df5d73c49a0760@%3Cissues.flink.apache.org%3E",
+      "https://lists.apache.org/thread.html/r8f70b0f65d6bedf316ecd899371fd89e65333bc988f6326d2956735c@%3Cissues.flink.apache.org%3E",
+      "https://www.tenable.com/security/tns-2021-02",
+      "https://lists.debian.org/debian-lts-announce/2021/03/msg00033.html",
+      "http://packetstormsecurity.com/files/162160/jQuery-1.0.3-Cross-Site-Scripting.html",
+      "https://lists.apache.org/thread.html/rede9cfaa756e050a3d83045008f84a62802fc68c17f2b4eabeaae5e4@%3Cissues.flink.apache.org%3E",
+      "https://lists.apache.org/thread.html/ree3bd8ddb23df5fa4e372d11c226830ea3650056b1059f3965b3fce2@%3Cissues.flink.apache.org%3E",
+      "https://lists.apache.org/thread.html/r54565a8f025c7c4f305355fdfd75b68eca442eebdb5f31c2e7d977ae@%3Cissues.flink.apache.org%3E",
+      "https://lists.apache.org/thread.html/re4ae96fa5c1a2fe71ccbb7b7ac1538bd0cb677be270a2bf6e2f8d108@%3Cissues.flink.apache.org%3E",
+      "https://www.tenable.com/security/tns-2021-10",
+      "https://www.oracle.com/security-alerts/cpuApr2021.html",
+      "https://www.oracle.com//security-alerts/cpujul2021.html",
+      "https://www.oracle.com/security-alerts/cpuoct2021.html",
+      "https://lists.apache.org/thread.html/r0483ba0072783c2e1bfea613984bfb3c86e73ba8879d780dc1cc7d36@%3Cissues.flink.apache.org%3E",
+      "https://github.com/jquery/jquery/releases/tag/3.5.0",
+      "https://www.oracle.com/security-alerts/cpujan2022.html",
+      "https://www.oracle.com/security-alerts/cpuapr2022.html",
+      "https://www.oracle.com/security-alerts/cpujul2022.html",
+      "https://github.com/rubysec/ruby-advisory-db/blob/master/gems/jquery-rails/CVE-2020-11023.yml",
+      "https://security.snyk.io/vuln/SNYK-DOTNET-JQUERY-565440",
+      "https://lists.debian.org/debian-lts-announce/2023/08/msg00040.html",
+      "https://github.com/jquery/jquery/commit/1d61fd9407e6fbe82fe55cb0b938307aa0791f77",
+      "https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org/message/SFP4UK4EGP4AFH2MWYJ5A5Z4I7XVFQ6B",
+      "https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org/message/SAPQVX3XDNPGFT26QAQ6AJIXZZBZ4CD4",
+      "https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org/message/QPN2L2XVQGUA2V5HNQJWHK3APSK3VN7K",
+      "https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org/message/AVKYXLWCLZBV2N7M46KYK4LVA5OXWPBY",
+      "https://snyk.io/vuln/SNYK-JS-JQUERY-565129",
+      "https://security.netapp.com/advisory/ntap-20230725-0003",
+      "https://security.netapp.com/advisory/ntap-20200511-0006",
+      "https://jquery.com/upgrade-guide/3.5",
+      "https://github.com/rubysec/ruby-advisory-db/blob/master/gems/jquery-rails/CVE-2020-23064.yml",
+      "https://github.com/rails/jquery-rails/blob/v4.4.0/vendor/assets/javascripts/jquery3.js#L6162",
+      "https://github.com/rails/jquery-rails/blob/v4.3.5/vendor/assets/javascripts/jquery3.js#L5979",
+      "https://github.com/rails/jquery-rails/blob/master/CHANGELOG.md#440",
+      "https://github.com/rails/jquery-rails/blob/master/CHANGELOG.md#410",
+      "https://lists.apache.org/thread.html/rda99599896c3667f2cc9e9d34c7b6ef5d2bbed1f4801e1d75a2b0679%40%3Ccommits.nifi.apache.org%3E",
+      "https://lists.apache.org/thread.html/re4ae96fa5c1a2fe71ccbb7b7ac1538bd0cb677be270a2bf6e2f8d108%40%3Cissues.flink.apache.org%3E",
+      "https://lists.apache.org/thread.html/rede9cfaa756e050a3d83045008f84a62802fc68c17f2b4eabeaae5e4%40%3Cissues.flink.apache.org%3E",
+      "https://lists.apache.org/thread.html/ree3bd8ddb23df5fa4e372d11c226830ea3650056b1059f3965b3fce2%40%3Cissues.flink.apache.org%3E",
+      "https://lists.apache.org/thread.html/rf0f8939596081d84be1ae6a91d6248b96a02d8388898c372ac807817%40%3Cdev.felix.apache.org%3E",
+      "https://lists.apache.org/thread.html/rf1ba79e564fe7efc56aef7c986106f1cf67a3427d08e997e088e7a93%40%3Cgitbox.hive.apache.org%3E",
+      "https://lists.apache.org/thread.html/rf661a90a15da8da5922ba6127b3f5f8194d4ebec8855d60a0dd13248%40%3Cdev.hive.apache.org%3E",
+      "https://lists.apache.org/thread.html/rd38b4185a797b324c8dd940d9213cf99fcdc2dbf1fc5a63ba7dee8c9%40%3Cissues.hive.apache.org%3E",
+      "https://lists.apache.org/thread.html/rbb448222ba62c430e21e13f940be4cb5cfc373cd3bce56b48c0ffa67%40%3Cdev.flink.apache.org%3E",
+      "https://lists.apache.org/thread.html/rb69b7d8217c1a6a2100247a5d06ce610836b31e3f5d73fc113ded8e7%40%3Cissues.hive.apache.org%3E",
+      "https://lists.apache.org/thread.html/rb25c3bc7418ae75cba07988dafe1b6912f76a9dd7d94757878320d61%40%3Cgitbox.hive.apache.org%3E",
+      "https://lists.apache.org/thread.html/radcb2aa874a79647789f3563fcbbceaf1045a029ee8806b59812a8ea%40%3Cissues.hive.apache.org%3E",
+      "https://lists.apache.org/thread.html/rab82dd040f302018c85bd07d33f5604113573514895ada523c3401d9%40%3Ccommits.hive.apache.org%3E",
+      "https://lists.apache.org/thread.html/ra406b3adfcffcb5ce8707013bdb7c35e3ffc2776a8a99022f15274c6%40%3Cissues.hive.apache.org%3E",
+      "https://lists.fedoraproject.org/archives/list/package-announce%40lists.fedoraproject.org/message/SFP4UK4EGP4AFH2MWYJ5A5Z4I7XVFQ6B",
+      "https://lists.fedoraproject.org/archives/list/package-announce%40lists.fedoraproject.org/message/SAPQVX3XDNPGFT26QAQ6AJIXZZBZ4CD4",
+      "https://lists.fedoraproject.org/archives/list/package-announce%40lists.fedoraproject.org/message/QPN2L2XVQGUA2V5HNQJWHK3APSK3VN7K",
+      "https://lists.fedoraproject.org/archives/list/package-announce%40lists.fedoraproject.org/message/AVKYXLWCLZBV2N7M46KYK4LVA5OXWPBY",
+      "https://lists.apache.org/thread.html/r4aadb98086ca72ed75391f54167522d91489a0d0ae25b12baa8fc7c5%40%3Cissues.hive.apache.org%3E",
+      "https://lists.apache.org/thread.html/r49ce4243b4738dd763caeb27fa8ad6afb426ae3e8c011ff00b8b1f48%40%3Cissues.flink.apache.org%3E",
+      "https://lists.apache.org/thread.html/r3702ede0ff83a29ba3eb418f6f11c473d6e3736baba981a8dbd9c9ef%40%3Cdev.felix.apache.org%3E",
+      "https://lists.apache.org/thread.html/r2c85121a47442036c7f8353a3724aa04f8ecdfda1819d311ba4f5330%40%3Cdev.felix.apache.org%3E",
+      "https://lists.apache.org/thread.html/r1fed19c860a0d470f2a3eded12795772c8651ff583ef951ddac4918c%40%3Cgitbox.hive.apache.org%3E",
+      "https://lists.apache.org/thread.html/r094f435595582f6b5b24b66fedf80543aa8b1d57a3688fbcc21f06ec%40%3Cissues.hive.apache.org%3E",
+      "https://lists.apache.org/thread.html/r07ab379471fb15644bf7a92e4a98cbc7df3cf4e736abae0cc7625fe6%40%3Cdev.felix.apache.org%3E",
+      "https://lists.apache.org/thread.html/r0593393ca1e97b1e7e098fe69d414d6bd0a467148e9138d07e86ebbb%40%3Cissues.hive.apache.org%3E",
+      "https://lists.apache.org/thread.html/r0483ba0072783c2e1bfea613984bfb3c86e73ba8879d780dc1cc7d36%40%3Cissues.flink.apache.org%3E",
+      "https://github.com/github/advisory-database/blob/99afa6fdeaf5d1d23e1021ff915a5e5dbc82c1f1/advisories/github-reviewed/2020/04/GHSA-jpcq-cgw6-v4j6/GHSA-jpcq-cgw6-v4j6.json#L20-L37",
+      "https://lists.apache.org/thread.html/ra3c9219fcb0b289e18e9ec5a5ebeaa5c17d6b79a201667675af6721c%40%3Cgitbox.hive.apache.org%3E",
+      "https://lists.apache.org/thread.html/ra374bb0299b4aa3e04edde01ebc03ed6f90cf614dad40dd428ce8f72%40%3Cgitbox.hive.apache.org%3E",
+      "https://lists.apache.org/thread.html/ra32c7103ded9041c7c1cb8c12c8d125a6b2f3f3270e2937ef8417fac%40%3Cgitbox.hive.apache.org%3E",
+      "https://lists.apache.org/thread.html/r9e0bd31b7da9e7403478d22652b8760c946861f8ebd7bd750844898e%40%3Cdev.felix.apache.org%3E",
+      "https://lists.apache.org/thread.html/r9c5fda81e4bca8daee305b4c03283dddb383ab8428a151d4cb0b3b15%40%3Cissues.hive.apache.org%3E",
+      "https://lists.apache.org/thread.html/r9006ad2abf81d02a0ef2126bab5177987e59095b7194a487c4ea247c%40%3Ccommits.felix.apache.org%3E",
+      "https://lists.apache.org/thread.html/r8f70b0f65d6bedf316ecd899371fd89e65333bc988f6326d2956735c%40%3Cissues.flink.apache.org%3E",
+      "https://lists.apache.org/thread.html/r706cfbc098420f7113968cc377247ec3d1439bce42e679c11c609e2d%40%3Cissues.flink.apache.org%3E",
+      "https://lists.apache.org/thread.html/r6e97b37963926f6059ecc1e417721608723a807a76af41d4e9dbed49%40%3Cissues.hive.apache.org%3E",
+      "https://lists.apache.org/thread.html/r6c4df3b33e625a44471009a172dabe6865faec8d8f21cac2303463b1%40%3Cissues.hive.apache.org%3E",
+      "https://lists.apache.org/thread.html/r564585d97bc069137e64f521e68ba490c7c9c5b342df5d73c49a0760%40%3Cissues.flink.apache.org%3E",
+      "https://lists.apache.org/thread.html/r55f5e066cc7301e3630ce90bbbf8d28c82212ae1f2d4871012141494%40%3Cdev.felix.apache.org%3E",
+      "https://lists.apache.org/thread.html/r54565a8f025c7c4f305355fdfd75b68eca442eebdb5f31c2e7d977ae%40%3Cissues.flink.apache.org%3E",
+      "https://lists.apache.org/thread.html/r4dba67be3239b34861f1b9cfdf9dfb3a90272585dcce374112ed6e16%40%3Cdev.felix.apache.org%3E",
+      "https://www.cisa.gov/known-exploited-vulnerabilities-catalog?field_cve=CVE-2020-11023",
+      "https://github.com/advisories/GHSA-jpcq-cgw6-v4j6"
+    ],
+    "published_at": "2020-04-29T22:19:14Z",
+    "updated_at": "2025-10-22T17:52:05Z",
+    "github_reviewed_at": "2020-04-29T21:04:50Z",
+    "nvd_published_at": "2020-04-29T21:15:00Z",
+    "withdrawn_at": null,
+    "vulnerabilities": [
+      {
+        "package": {
+          "ecosystem": "npm",
+          "name": "jquery"
+        },
+        "vulnerable_version_range": ">= 1.0.3, < 3.5.0",
+        "first_patched_version": "3.5.0",
+        "vulnerable_functions": [
+
+        ]
+      },
+      {
+        "package": {
+          "ecosystem": "rubygems",
+          "name": "jquery-rails"
+        },
+        "vulnerable_version_range": "< 4.4.0",
+        "first_patched_version": "4.4.0",
+        "vulnerable_functions": [
+
+        ]
+      },
+      {
+        "package": {
+          "ecosystem": "nuget",
+          "name": "jQuery"
+        },
+        "vulnerable_version_range": ">= 1.0.3, < 3.5.0",
+        "first_patched_version": "3.5.0",
+        "vulnerable_functions": [
+
+        ]
+      },
+      {
+        "package": {
+          "ecosystem": "maven",
+          "name": "org.webjars.npm:jquery"
+        },
+        "vulnerable_version_range": ">= 1.0.3, < 3.5.0",
+        "first_patched_version": "3.5.0",
+        "vulnerable_functions": [
+
+        ]
+      },
+      {
+        "package": {
+          "ecosystem": "composer",
+          "name": "components/jquery"
+        },
+        "vulnerable_version_range": ">= 1.0.3, < 3.5.0",
+        "first_patched_version": "3.5.0",
+        "vulnerable_functions": [
+
+        ]
+      }
+    ],
+    "cvss_severities": {
+      "cvss_v3": {
+        "vector_string": "CVSS:3.1/AV:N/AC:H/PR:N/UI:R/S:C/C:H/I:L/A:N/E:H",
+        "score": 6.9
+      },
+      "cvss_v4": {
+        "vector_string": null,
+        "score": 0.0
+      }
+    },
+    "cwes": [
+      {
+        "cwe_id": "CWE-79",
+        "name": "Improper Neutralization of Input During Web Page Generation"
+      }
+    ],
+    "credits": [
+      {
+        "user": {
+          "login": "masatokinugawa",
+          "id": 1499192,
+          "node_id": "MDQ6VXNlcjE0OTkxOTI=",
+          "avatar_url": "https://avatars.githubusercontent.com/u/1499192?v=4",
+          "gravatar_id": "",
+          "url": "https://api.github.com/users/masatokinugawa",
+          "html_url": "https://github.com/masatokinugawa",
+          "followers_url": "https://api.github.com/users/masatokinugawa/followers",
+          "following_url": "https://api.github.com/users/masatokinugawa/following{/other_user}",
+          "gists_url": "https://api.github.com/users/masatokinugawa/gists{/gist_id}",
+          "starred_url": "https://api.github.com/users/masatokinugawa/starred{/owner}{/repo}",
+          "subscriptions_url": "https://api.github.com/users/masatokinugawa/subscriptions",
+          "organizations_url": "https://api.github.com/users/masatokinugawa/orgs",
+          "repos_url": "https://api.github.com/users/masatokinugawa/repos",
+          "events_url": "https://api.github.com/users/masatokinugawa/events{/privacy}",
+          "received_events_url": "https://api.github.com/users/masatokinugawa/received_events",
+          "type": "User",
+          "user_view_type": "public",
+          "site_admin": false
+        },
+        "type": "analyst"
+      },
+      {
+        "user": {
+          "login": "klaudialax",
+          "id": 24222665,
+          "node_id": "MDQ6VXNlcjI0MjIyNjY1",
+          "avatar_url": "https://avatars.githubusercontent.com/u/24222665?v=4",
+          "gravatar_id": "",
+          "url": "https://api.github.com/users/klaudialax",
+          "html_url": "https://github.com/klaudialax",
+          "followers_url": "https://api.github.com/users/klaudialax/followers",
+          "following_url": "https://api.github.com/users/klaudialax/following{/other_user}",
+          "gists_url": "https://api.github.com/users/klaudialax/gists{/gist_id}",
+          "starred_url": "https://api.github.com/users/klaudialax/starred{/owner}{/repo}",
+          "subscriptions_url": "https://api.github.com/users/klaudialax/subscriptions",
+          "organizations_url": "https://api.github.com/users/klaudialax/orgs",
+          "repos_url": "https://api.github.com/users/klaudialax/repos",
+          "events_url": "https://api.github.com/users/klaudialax/events{/privacy}",
+          "received_events_url": "https://api.github.com/users/klaudialax/received_events",
+          "type": "User",
+          "user_view_type": "public",
+          "site_admin": false
+        },
+        "type": "analyst"
+      },
+      {
+        "user": {
+          "login": "Rudloff",
+          "id": 840125,
+          "node_id": "MDQ6VXNlcjg0MDEyNQ==",
+          "avatar_url": "https://avatars.githubusercontent.com/u/840125?v=4",
+          "gravatar_id": "",
+          "url": "https://api.github.com/users/Rudloff",
+          "html_url": "https://github.com/Rudloff",
+          "followers_url": "https://api.github.com/users/Rudloff/followers",
+          "following_url": "https://api.github.com/users/Rudloff/following{/other_user}",
+          "gists_url": "https://api.github.com/users/Rudloff/gists{/gist_id}",
+          "starred_url": "https://api.github.com/users/Rudloff/starred{/owner}{/repo}",
+          "subscriptions_url": "https://api.github.com/users/Rudloff/subscriptions",
+          "organizations_url": "https://api.github.com/users/Rudloff/orgs",
+          "repos_url": "https://api.github.com/users/Rudloff/repos",
+          "events_url": "https://api.github.com/users/Rudloff/events{/privacy}",
+          "received_events_url": "https://api.github.com/users/Rudloff/received_events",
+          "type": "User",
+          "user_view_type": "public",
+          "site_admin": false
+        },
+        "type": "analyst"
+      }
+    ],
+    "comments": 4,
+    "cvss": {
+      "vector_string": "CVSS:3.1/AV:N/AC:H/PR:N/UI:R/S:C/C:H/I:L/A:N/E:H",
+      "score": 6.9
+    },
+    "epss": {
+      "percentage": 0.84887,
+      "percentile": 0.99697
+    }
+  },
+  {
+    "ghsa_id": "GHSA-gxr4-xjj5-5px2",
+    "cve_id": "CVE-2020-11022",
+    "url": "https://api.github.com/advisories/GHSA-gxr4-xjj5-5px2",
+    "html_url": "https://github.com/advisories/GHSA-gxr4-xjj5-5px2",
+    "summary": "Potential XSS vulnerability in jQuery",
+    "description": "### Impact\nPassing HTML from untrusted sources - even after sanitizing it - to one of jQuery's DOM manipulation methods (i.e. `.html()`, `.append()`, and others) may execute untrusted code.\n\n### Patches\nThis problem is patched in jQuery 3.5.0.\n\n### Workarounds\nTo workaround the issue without upgrading, adding the following to your code:\n\n```js\njQuery.htmlPrefilter = function( html ) {\n\treturn html;\n};\n```\n\nYou need to use at least jQuery 1.12/2.2 or newer to be able to apply this workaround.\n\n### References\nhttps://blog.jquery.com/2020/04/10/jquery-3-5-0-released/\nhttps://jquery.com/upgrade-guide/3.5/\n\n### For more information\nIf you have any questions or comments about this advisory, search for a relevant issue in [the jQuery repo](https://github.com/jquery/jquery/issues). If you don't find an answer, open a new issue.",
+    "type": "reviewed",
+    "severity": "medium",
+    "repository_advisory_url": "https://api.github.com/repos/jquery/jquery/security-advisories/GHSA-gxr4-xjj5-5px2",
+    "source_code_location": "https://github.com/jquery/jquery",
+    "identifiers": [
+      {
+        "value": "GHSA-gxr4-xjj5-5px2",
+        "type": "GHSA"
+      },
+      {
+        "value": "CVE-2020-11022",
+        "type": "CVE"
+      }
+    ],
+    "references": [
+      "https://github.com/jquery/jquery/security/advisories/GHSA-gxr4-xjj5-5px2",
+      "https://github.com/jquery/jquery/commit/1d61fd9407e6fbe82fe55cb0b938307aa0791f77",
+      "https://nvd.nist.gov/vuln/detail/CVE-2020-11022",
+      "https://www.drupal.org/sa-core-2020-002",
+      "https://www.debian.org/security/2020/dsa-4693",
+      "https://www.oracle.com/security-alerts/cpujul2020.html",
+      "https://security.gentoo.org/glsa/202007-03",
+      "https://lists.apache.org/thread.html/rdf44341677cf7eec7e9aa96dcf3f37ed709544863d619cca8c36f133@%3Ccommits.airflow.apache.org%3E",
+      "https://www.oracle.com/security-alerts/cpuoct2020.html",
+      "https://lists.apache.org/thread.html/r706cfbc098420f7113968cc377247ec3d1439bce42e679c11c609e2d@%3Cissues.flink.apache.org%3E",
+      "https://lists.apache.org/thread.html/rbb448222ba62c430e21e13f940be4cb5cfc373cd3bce56b48c0ffa67@%3Cdev.flink.apache.org%3E",
+      "https://lists.apache.org/thread.html/r49ce4243b4738dd763caeb27fa8ad6afb426ae3e8c011ff00b8b1f48@%3Cissues.flink.apache.org%3E",
+      "https://www.tenable.com/security/tns-2020-10",
+      "https://www.tenable.com/security/tns-2020-11",
+      "https://www.oracle.com/security-alerts/cpujan2021.html",
+      "https://lists.apache.org/thread.html/r564585d97bc069137e64f521e68ba490c7c9c5b342df5d73c49a0760@%3Cissues.flink.apache.org%3E",
+      "https://lists.apache.org/thread.html/r8f70b0f65d6bedf316ecd899371fd89e65333bc988f6326d2956735c@%3Cissues.flink.apache.org%3E",
+      "https://www.tenable.com/security/tns-2021-02",
+      "https://lists.debian.org/debian-lts-announce/2021/03/msg00033.html",
+      "https://lists.apache.org/thread.html/rede9cfaa756e050a3d83045008f84a62802fc68c17f2b4eabeaae5e4@%3Cissues.flink.apache.org%3E",
+      "https://lists.apache.org/thread.html/ree3bd8ddb23df5fa4e372d11c226830ea3650056b1059f3965b3fce2@%3Cissues.flink.apache.org%3E",
+      "https://lists.apache.org/thread.html/r54565a8f025c7c4f305355fdfd75b68eca442eebdb5f31c2e7d977ae@%3Cissues.flink.apache.org%3E",
+      "https://lists.apache.org/thread.html/re4ae96fa5c1a2fe71ccbb7b7ac1538bd0cb677be270a2bf6e2f8d108@%3Cissues.flink.apache.org%3E",
+      "https://www.tenable.com/security/tns-2021-10",
+      "https://www.oracle.com/security-alerts/cpuApr2021.html",
+      "https://www.oracle.com//security-alerts/cpujul2021.html",
+      "https://www.oracle.com/security-alerts/cpuoct2021.html",
+      "https://lists.apache.org/thread.html/r0483ba0072783c2e1bfea613984bfb3c86e73ba8879d780dc1cc7d36@%3Cissues.flink.apache.org%3E",
+      "https://github.com/jquery/jquery/releases/tag/3.5.0",
+      "https://www.oracle.com/security-alerts/cpujan2022.html",
+      "https://www.oracle.com/security-alerts/cpuapr2022.html",
+      "https://www.oracle.com/security-alerts/cpujul2022.html",
+      "https://lists.debian.org/debian-lts-announce/2023/08/msg00040.html",
+      "https://github.com/rubysec/ruby-advisory-db/blob/master/gems/jquery-rails/CVE-2020-11022.yml",
+      "https://github.com/maximebf/php-debugbar/issues/447",
+      "https://github.com/maximebf/php-debugbar/commit/847216e60544258c881f2733d699bbcfeefac0fc",
+      "https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org/message/SFP4UK4EGP4AFH2MWYJ5A5Z4I7XVFQ6B",
+      "https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org/message/VOE7P7APPRQKD4FGNHBKJPDY6FFCOH3W",
+      "https://blog.jquery.com/2020/04/10/jquery-3-5-0-released",
+      "https://jquery.com/upgrade-guide/3.5",
+      "https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org/message/AVKYXLWCLZBV2N7M46KYK4LVA5OXWPBY",
+      "https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org/message/QPN2L2XVQGUA2V5HNQJWHK3APSK3VN7K",
+      "https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org/message/SAPQVX3XDNPGFT26QAQ6AJIXZZBZ4CD4",
+      "https://lists.opensuse.org/opensuse-security-announce/2020-07/msg00067.html",
+      "https://lists.opensuse.org/opensuse-security-announce/2020-07/msg00085.html",
+      "https://lists.opensuse.org/opensuse-security-announce/2020-11/msg00039.html",
+      "https://packetstormsecurity.com/files/162159/jQuery-1.2-Cross-Site-Scripting.html",
+      "http://security.netapp.com/advisory/ntap-20200511-0006",
+      "https://github.com/Athlon1600/youtube-downloader/releases/tag/v4.0.1",
+      "https://github.com/advisories/GHSA-gxr4-xjj5-5px2"
+    ],
+    "published_at": "2020-04-29T22:18:55Z",
+    "updated_at": "2026-07-09T19:26:18Z",
+    "github_reviewed_at": "2020-04-29T22:18:37Z",
+    "nvd_published_at": "2020-04-29T22:15:00Z",
+    "withdrawn_at": null,
+    "vulnerabilities": [
+      {
+        "package": {
+          "ecosystem": "rubygems",
+          "name": "jquery-rails"
+        },
+        "vulnerable_version_range": "< 4.4.0",
+        "first_patched_version": "4.4.0",
+        "vulnerable_functions": [
+
+        ]
+      },
+      {
+        "package": {
+          "ecosystem": "composer",
+          "name": "maximebf/debugbar"
+        },
+        "vulnerable_version_range": "< 1.19.0",
+        "first_patched_version": "1.19.0",
+        "vulnerable_functions": [
+
+        ]
+      },
+      {
+        "package": {
+          "ecosystem": "composer",
+          "name": "athlon1600/youtube-downloader"
+        },
+        "vulnerable_version_range": "<= 4.0.0",
+        "first_patched_version": "4.0.1",
+        "vulnerable_functions": [
+
+        ]
+      },
+      {
+        "package": {
+          "ecosystem": "npm",
+          "name": "jquery"
+        },
+        "vulnerable_version_range": ">= 1.12.0, < 3.5.0",
+        "first_patched_version": "3.5.0",
+        "vulnerable_functions": [
+
+        ]
+      },
+      {
+        "package": {
+          "ecosystem": "nuget",
+          "name": "jquery"
+        },
+        "vulnerable_version_range": ">= 1.12.0, < 3.5.0",
+        "first_patched_version": "3.5.0",
+        "vulnerable_functions": [
+
+        ]
+      },
+      {
+        "package": {
+          "ecosystem": "maven",
+          "name": "org.webjars.npm:jquery"
+        },
+        "vulnerable_version_range": ">= 1.12.0, < 3.5.0",
+        "first_patched_version": "3.5.0",
+        "vulnerable_functions": [
+
+        ]
+      },
+      {
+        "package": {
+          "ecosystem": "composer",
+          "name": "components/jquery"
+        },
+        "vulnerable_version_range": ">= 1.12.0, < 3.5.0",
+        "first_patched_version": "3.5.0",
+        "vulnerable_functions": [
+
+        ]
+      }
+    ],
+    "cvss_severities": {
+      "cvss_v3": {
+        "vector_string": "CVSS:3.1/AV:N/AC:H/PR:N/UI:R/S:C/C:H/I:L/A:N",
+        "score": 6.9
+      },
+      "cvss_v4": {
+        "vector_string": null,
+        "score": 0.0
+      }
+    },
+    "cwes": [
+      {
+        "cwe_id": "CWE-79",
+        "name": "Improper Neutralization of Input During Web Page Generation"
+      }
+    ],
+    "credits": [
+      {
+        "user": {
+          "login": "masatokinugawa",
+          "id": 1499192,
+          "node_id": "MDQ6VXNlcjE0OTkxOTI=",
+          "avatar_url": "https://avatars.githubusercontent.com/u/1499192?v=4",
+          "gravatar_id": "",
+          "url": "https://api.github.com/users/masatokinugawa",
+          "html_url": "https://github.com/masatokinugawa",
+          "followers_url": "https://api.github.com/users/masatokinugawa/followers",
+          "following_url": "https://api.github.com/users/masatokinugawa/following{/other_user}",
+          "gists_url": "https://api.github.com/users/masatokinugawa/gists{/gist_id}",
+          "starred_url": "https://api.github.com/users/masatokinugawa/starred{/owner}{/repo}",
+          "subscriptions_url": "https://api.github.com/users/masatokinugawa/subscriptions",
+          "organizations_url": "https://api.github.com/users/masatokinugawa/orgs",
+          "repos_url": "https://api.github.com/users/masatokinugawa/repos",
+          "events_url": "https://api.github.com/users/masatokinugawa/events{/privacy}",
+          "received_events_url": "https://api.github.com/users/masatokinugawa/received_events",
+          "type": "User",
+          "user_view_type": "public",
+          "site_admin": false
+        },
+        "type": "analyst"
+      },
+      {
+        "user": {
+          "login": "Churro",
+          "id": 343448,
+          "node_id": "MDQ6VXNlcjM0MzQ0OA==",
+          "avatar_url": "https://avatars.githubusercontent.com/u/343448?v=4",
+          "gravatar_id": "",
+          "url": "https://api.github.com/users/Churro",
+          "html_url": "https://github.com/Churro",
+          "followers_url": "https://api.github.com/users/Churro/followers",
+          "following_url": "https://api.github.com/users/Churro/following{/other_user}",
+          "gists_url": "https://api.github.com/users/Churro/gists{/gist_id}",
+          "starred_url": "https://api.github.com/users/Churro/starred{/owner}{/repo}",
+          "subscriptions_url": "https://api.github.com/users/Churro/subscriptions",
+          "organizations_url": "https://api.github.com/users/Churro/orgs",
+          "repos_url": "https://api.github.com/users/Churro/repos",
+          "events_url": "https://api.github.com/users/Churro/events{/privacy}",
+          "received_events_url": "https://api.github.com/users/Churro/received_events",
+          "type": "User",
+          "user_view_type": "public",
+          "site_admin": false
+        },
+        "type": "analyst"
+      },
+      {
+        "user": {
+          "login": "Rudloff",
+          "id": 840125,
+          "node_id": "MDQ6VXNlcjg0MDEyNQ==",
+          "avatar_url": "https://avatars.githubusercontent.com/u/840125?v=4",
+          "gravatar_id": "",
+          "url": "https://api.github.com/users/Rudloff",
+          "html_url": "https://github.com/Rudloff",
+          "followers_url": "https://api.github.com/users/Rudloff/followers",
+          "following_url": "https://api.github.com/users/Rudloff/following{/other_user}",
+          "gists_url": "https://api.github.com/users/Rudloff/gists{/gist_id}",
+          "starred_url": "https://api.github.com/users/Rudloff/starred{/owner}{/repo}",
+          "subscriptions_url": "https://api.github.com/users/Rudloff/subscriptions",
+          "organizations_url": "https://api.github.com/users/Rudloff/orgs",
+          "repos_url": "https://api.github.com/users/Rudloff/repos",
+          "events_url": "https://api.github.com/users/Rudloff/events{/privacy}",
+          "received_events_url": "https://api.github.com/users/Rudloff/received_events",
+          "type": "User",
+          "user_view_type": "public",
+          "site_admin": false
+        },
+        "type": "analyst"
+      },
+      {
+        "user": {
+          "login": "sealonohana",
+          "id": 173139956,
+          "node_id": "U_kgDOClHn9A",
+          "avatar_url": "https://avatars.githubusercontent.com/u/173139956?v=4",
+          "gravatar_id": "",
+          "url": "https://api.github.com/users/sealonohana",
+          "html_url": "https://github.com/sealonohana",
+          "followers_url": "https://api.github.com/users/sealonohana/followers",
+          "following_url": "https://api.github.com/users/sealonohana/following{/other_user}",
+          "gists_url": "https://api.github.com/users/sealonohana/gists{/gist_id}",
+          "starred_url": "https://api.github.com/users/sealonohana/starred{/owner}{/repo}",
+          "subscriptions_url": "https://api.github.com/users/sealonohana/subscriptions",
+          "organizations_url": "https://api.github.com/users/sealonohana/orgs",
+          "repos_url": "https://api.github.com/users/sealonohana/repos",
+          "events_url": "https://api.github.com/users/sealonohana/events{/privacy}",
+          "received_events_url": "https://api.github.com/users/sealonohana/received_events",
+          "type": "User",
+          "user_view_type": "public",
+          "site_admin": false
+        },
+        "type": "analyst"
+      },
+      {
+        "user": {
+          "login": "Athlon1600",
+          "id": 1063088,
+          "node_id": "MDQ6VXNlcjEwNjMwODg=",
+          "avatar_url": "https://avatars.githubusercontent.com/u/1063088?v=4",
+          "gravatar_id": "",
+          "url": "https://api.github.com/users/Athlon1600",
+          "html_url": "https://github.com/Athlon1600",
+          "followers_url": "https://api.github.com/users/Athlon1600/followers",
+          "following_url": "https://api.github.com/users/Athlon1600/following{/other_user}",
+          "gists_url": "https://api.github.com/users/Athlon1600/gists{/gist_id}",
+          "starred_url": "https://api.github.com/users/Athlon1600/starred{/owner}{/repo}",
+          "subscriptions_url": "https://api.github.com/users/Athlon1600/subscriptions",
+          "organizations_url": "https://api.github.com/users/Athlon1600/orgs",
+          "repos_url": "https://api.github.com/users/Athlon1600/repos",
+          "events_url": "https://api.github.com/users/Athlon1600/events{/privacy}",
+          "received_events_url": "https://api.github.com/users/Athlon1600/received_events",
+          "type": "User",
+          "user_view_type": "public",
+          "site_admin": false
+        },
+        "type": "analyst"
+      }
+    ],
+    "comments": 3,
+    "cvss": {
+      "vector_string": "CVSS:3.1/AV:N/AC:H/PR:N/UI:R/S:C/C:H/I:L/A:N",
+      "score": 6.9
+    },
+    "epss": {
+      "percentage": 0.99215,
+      "percentile": 0.99934
+    }
+  },
+  {
+    "ghsa_id": "GHSA-6c3j-c64m-qhgq",
+    "cve_id": "CVE-2019-11358",
+    "url": "https://api.github.com/advisories/GHSA-6c3j-c64m-qhgq",
+    "html_url": "https://github.com/advisories/GHSA-6c3j-c64m-qhgq",
+    "summary": "XSS in jQuery as used in Drupal, Backdrop CMS, and other products",
+    "description": "jQuery from 1.1.4 until 3.4.0, as used in Drupal, Backdrop CMS, and other products, mishandles `jQuery.extend(true, {}, ...)` because of `Object.prototype` pollution. If an unsanitized source object contained an enumerable `__proto__` property, it could extend the native `Object.prototype`.",
+    "type": "reviewed",
+    "severity": "medium",
+    "repository_advisory_url": null,
+    "source_code_location": "https://github.com/jquery/jquery",
+    "identifiers": [
+      {
+        "value": "GHSA-6c3j-c64m-qhgq",
+        "type": "GHSA"
+      },
+      {
+        "value": "CVE-2019-11358",
+        "type": "CVE"
+      }
+    ],
+    "references": [
+      "https://nvd.nist.gov/vuln/detail/CVE-2019-11358",
+      "https://backdropcms.org/security/backdrop-sa-core-2019-009",
+      "https://github.com/jquery/jquery/commit/753d591aea698e57d6db58c9f722cd0808619b1b",
+      "https://github.com/jquery/jquery/pull/4333",
+      "https://snyk.io/vuln/SNYK-JS-JQUERY-174006",
+      "https://www.drupal.org/sa-core-2019-006",
+      "https://access.redhat.com/errata/RHSA-2019:3023",
+      "https://access.redhat.com/errata/RHSA-2019:3024",
+      "https://lists.apache.org/thread.html/08720ef215ee7ab3386c05a1a90a7d1c852bf0706f176a7816bf65fc@%3Ccommits.airflow.apache.org%3E",
+      "https://lists.apache.org/thread.html/519eb0fd45642dcecd9ff74cb3e71c20a4753f7d82e2f07864b5108f@%3Cdev.drill.apache.org%3E",
+      "https://lists.apache.org/thread.html/5928aa293e39d248266472210c50f176cac1535220f2486e6a7fa844@%3Ccommits.airflow.apache.org%3E",
+      "https://lists.apache.org/thread.html/6097cdbd6f0a337bedd9bb5cc441b2d525ff002a96531de367e4259f@%3Ccommits.airflow.apache.org%3E",
+      "https://lists.apache.org/thread.html/88fb0362fd40e5b605ea8149f63241537b8b6fb5bfa315391fc5cbb7@%3Ccommits.airflow.apache.org%3E",
+      "https://lists.apache.org/thread.html/b0656d359c7d40ec9f39c8cc61bca66802ef9a2a12ee199f5b0c1442@%3Cdev.drill.apache.org%3E",
+      "https://lists.apache.org/thread.html/b736d0784cf02f5a30fbb4c5902762a15ad6d47e17e2c5a17b7d6205@%3Ccommits.airflow.apache.org%3E",
+      "https://lists.apache.org/thread.html/ba79cf1658741e9f146e4c59b50aee56656ea95d841d358d006c18b6@%3Ccommits.roller.apache.org%3E",
+      "https://lists.apache.org/thread.html/bcce5a9c532b386c68dab2f6b3ce8b0cc9b950ec551766e76391caa3@%3Ccommits.nifi.apache.org%3E",
+      "https://lists.apache.org/thread.html/f9bc3e55f4e28d1dcd1a69aae6d53e609a758e34d2869b4d798e13cc@%3Cissues.drill.apache.org%3E",
+      "https://lists.apache.org/thread.html/r38f0d1aa3c923c22977fe7376508f030f22e22c1379fbb155bf29766@%3Cdev.syncope.apache.org%3E",
+      "https://lists.apache.org/thread.html/r7aac081cbddb6baa24b75e74abf0929bf309b176755a53e3ed810355@%3Cdev.flink.apache.org%3E",
+      "https://lists.apache.org/thread.html/rac25da84ecdcd36f6de5ad0d255f4e967209bbbebddb285e231da37d@%3Cissues.flink.apache.org%3E",
+      "https://lists.apache.org/thread.html/rca37935d661f4689cb4119f1b3b224413b22be161b678e6e6ce0c69b@%3Ccommits.nifi.apache.org%3E",
+      "https://lists.debian.org/debian-lts-announce/2019/05/msg00006.html",
+      "https://lists.debian.org/debian-lts-announce/2019/05/msg00029.html",
+      "https://lists.debian.org/debian-lts-announce/2020/02/msg00024.html",
+      "https://www.debian.org/security/2019/dsa-4434",
+      "https://www.debian.org/security/2019/dsa-4460",
+      "https://www.synology.com/security/advisory/Synology_SA_19_19",
+      "https://www.tenable.com/security/tns-2019-08",
+      "https://www.tenable.com/security/tns-2020-02",
+      "http://lists.opensuse.org/opensuse-security-announce/2019-08/msg00006.html",
+      "http://lists.opensuse.org/opensuse-security-announce/2019-08/msg00025.html",
+      "http://packetstormsecurity.com/files/152787/dotCMS-5.1.1-Vulnerable-Dependencies.html",
+      "http://packetstormsecurity.com/files/153237/RetireJS-CORS-Issue-Script-Execution.html",
+      "http://packetstormsecurity.com/files/156743/OctoberCMS-Insecure-Dependencies.html",
+      "http://www.openwall.com/lists/oss-security/2019/06/03/2",
+      "https://lists.apache.org/thread.html/r2041a75d3fc09dec55adfd95d598b38d22715303f65c997c054844c9@%3Cissues.flink.apache.org%3E",
+      "https://lists.apache.org/thread.html/r2baacab6e0acb5a2092eb46ae04fd6c3e8277b4fd79b1ffb7f3254fa@%3Cissues.flink.apache.org%3E",
+      "https://lists.apache.org/thread.html/r41b5bfe009c845f67d4f68948cc9419ac2d62e287804aafd72892b08@%3Cissues.flink.apache.org%3E",
+      "https://lists.apache.org/thread.html/r7e8ebccb7c022e41295f6fdb7b971209b83702339f872ddd8cf8bf73@%3Cissues.flink.apache.org%3E",
+      "https://lists.apache.org/thread.html/r7d64895cc4dff84d0becfc572b20c0e4bf9bfa7b10c6f5f73e783734@%3Cdev.storm.apache.org%3E",
+      "https://kb.pulsesecure.net/articles/Pulse_Security_Advisories/SA44601",
+      "https://github.com/rails/jquery-rails/blob/master/CHANGELOG.md#434",
+      "https://github.com/rubysec/ruby-advisory-db/blob/master/gems/jquery-rails/CVE-2019-11358.yml",
+      "https://security.snyk.io/vuln/SNYK-DOTNET-JQUERY-450226",
+      "https://access.redhat.com/errata/RHBA-2019:1570",
+      "https://access.redhat.com/errata/RHSA-2019:1456",
+      "https://access.redhat.com/errata/RHSA-2019:2587",
+      "https://seclists.org/bugtraq/2019/Apr/32",
+      "https://seclists.org/bugtraq/2019/Jun/12",
+      "https://seclists.org/bugtraq/2019/May/18",
+      "https://www.oracle.com//security-alerts/cpujul2021.html",
+      "https://www.oracle.com/security-alerts/cpuApr2021.html",
+      "https://www.oracle.com/security-alerts/cpuapr2020.html",
+      "https://www.oracle.com/security-alerts/cpujan2020.html",
+      "https://www.oracle.com/security-alerts/cpujan2021.html",
+      "https://www.oracle.com/security-alerts/cpujan2022.html",
+      "https://www.oracle.com/security-alerts/cpujul2020.html",
+      "https://www.oracle.com/security-alerts/cpuoct2020.html",
+      "https://www.oracle.com/security-alerts/cpuoct2021.html",
+      "https://www.oracle.com/technetwork/security-advisory/cpujul2019-5072835.html",
+      "https://www.oracle.com/technetwork/security-advisory/cpuoct2019-5072832.html",
+      "http://seclists.org/fulldisclosure/2019/May/10",
+      "http://seclists.org/fulldisclosure/2019/May/11",
+      "http://seclists.org/fulldisclosure/2019/May/13",
+      "https://supportportal.juniper.net/s/article/2021-07-Security-Bulletin-Junos-OS-Multiple-J-Web-vulnerabilities-resolved-in-Junos-OS-21-2R1",
+      "https://web.archive.org/web/20190824065237/http://www.securityfocus.com/bid/108023",
+      "https://github.com/django/django/commit/34ec52269ade54af31a021b12969913129571a3f",
+      "https://github.com/django/django/commit/95649bc08547a878cebfa1d019edec8cb1b80829",
+      "https://github.com/django/django/commit/baaf187a4e354bf3976c51e2c83a0d2f8ee6e6ad",
+      "https://lists.debian.org/debian-lts-announce/2023/08/msg00040.html",
+      "http://www.securityfocus.com/bid/108023",
+      "https://blog.jquery.com/2019/04/10/jquery-3-4-0-released",
+      "https://lists.apache.org/thread.html/08720ef215ee7ab3386c05a1a90a7d1c852bf0706f176a7816bf65fc%40%3Ccommits.airflow.apache.org%3E",
+      "https://lists.apache.org/thread.html/519eb0fd45642dcecd9ff74cb3e71c20a4753f7d82e2f07864b5108f%40%3Cdev.drill.apache.org%3E",
+      "https://lists.apache.org/thread.html/5928aa293e39d248266472210c50f176cac1535220f2486e6a7fa844%40%3Ccommits.airflow.apache.org%3E",
+      "https://lists.apache.org/thread.html/6097cdbd6f0a337bedd9bb5cc441b2d525ff002a96531de367e4259f%40%3Ccommits.airflow.apache.org%3E",
+      "https://lists.apache.org/thread.html/88fb0362fd40e5b605ea8149f63241537b8b6fb5bfa315391fc5cbb7%40%3Ccommits.airflow.apache.org%3E",
+      "https://lists.apache.org/thread.html/b0656d359c7d40ec9f39c8cc61bca66802ef9a2a12ee199f5b0c1442%40%3Cdev.drill.apache.org%3E",
+      "https://lists.apache.org/thread.html/b736d0784cf02f5a30fbb4c5902762a15ad6d47e17e2c5a17b7d6205%40%3Ccommits.airflow.apache.org%3E",
+      "https://lists.apache.org/thread.html/ba79cf1658741e9f146e4c59b50aee56656ea95d841d358d006c18b6%40%3Ccommits.roller.apache.org%3E",
+      "https://lists.apache.org/thread.html/bcce5a9c532b386c68dab2f6b3ce8b0cc9b950ec551766e76391caa3%40%3Ccommits.nifi.apache.org%3E",
+      "https://lists.apache.org/thread.html/f9bc3e55f4e28d1dcd1a69aae6d53e609a758e34d2869b4d798e13cc%40%3Cissues.drill.apache.org%3E",
+      "https://lists.apache.org/thread.html/r2041a75d3fc09dec55adfd95d598b38d22715303f65c997c054844c9%40%3Cissues.flink.apache.org%3E",
+      "https://lists.apache.org/thread.html/r2baacab6e0acb5a2092eb46ae04fd6c3e8277b4fd79b1ffb7f3254fa%40%3Cissues.flink.apache.org%3E",
+      "https://lists.apache.org/thread.html/r38f0d1aa3c923c22977fe7376508f030f22e22c1379fbb155bf29766%40%3Cdev.syncope.apache.org%3E",
+      "https://lists.apache.org/thread.html/r41b5bfe009c845f67d4f68948cc9419ac2d62e287804aafd72892b08%40%3Cissues.flink.apache.org%3E",
+      "https://lists.apache.org/thread.html/r7aac081cbddb6baa24b75e74abf0929bf309b176755a53e3ed810355%40%3Cdev.flink.apache.org%3E",
+      "https://lists.apache.org/thread.html/r7d64895cc4dff84d0becfc572b20c0e4bf9bfa7b10c6f5f73e783734%40%3Cdev.storm.apache.org%3E",
+      "https://lists.apache.org/thread.html/r7e8ebccb7c022e41295f6fdb7b971209b83702339f872ddd8cf8bf73%40%3Cissues.flink.apache.org%3E",
+      "https://lists.apache.org/thread.html/rac25da84ecdcd36f6de5ad0d255f4e967209bbbebddb285e231da37d%40%3Cissues.flink.apache.org%3E",
+      "https://lists.apache.org/thread.html/rca37935d661f4689cb4119f1b3b224413b22be161b678e6e6ce0c69b%40%3Ccommits.nifi.apache.org%3E",
+      "https://lists.fedoraproject.org/archives/list/package-announce%40lists.fedoraproject.org/message/4UOAZIFCSZ3ENEFOR5IXX6NFAD3HV7FA",
+      "https://lists.fedoraproject.org/archives/list/package-announce%40lists.fedoraproject.org/message/5IABSKTYZ5JUGL735UKGXL5YPRYOPUYI",
+      "https://lists.fedoraproject.org/archives/list/package-announce%40lists.fedoraproject.org/message/KYH3OAGR2RTCHRA5NOKX2TES7SNQMWGO",
+      "https://lists.fedoraproject.org/archives/list/package-announce%40lists.fedoraproject.org/message/QV3PKZC3PQCO3273HAT76PAQZFBEO4KP",
+      "https://lists.fedoraproject.org/archives/list/package-announce%40lists.fedoraproject.org/message/RLXRX23725JL366CNZGJZ7AQQB7LHQ6F",
+      "https://lists.fedoraproject.org/archives/list/package-announce%40lists.fedoraproject.org/message/WZW27UCJ5CYFL4KFFFMYMIBNMIU2ALG5",
+      "https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org/message/4UOAZIFCSZ3ENEFOR5IXX6NFAD3HV7FA",
+      "https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org/message/5IABSKTYZ5JUGL735UKGXL5YPRYOPUYI",
+      "https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org/message/KYH3OAGR2RTCHRA5NOKX2TES7SNQMWGO",
+      "https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org/message/QV3PKZC3PQCO3273HAT76PAQZFBEO4KP",
+      "https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org/message/RLXRX23725JL366CNZGJZ7AQQB7LHQ6F",
+      "https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org/message/WZW27UCJ5CYFL4KFFFMYMIBNMIU2ALG5",
+      "https://security.netapp.com/advisory/ntap-20190919-0001",
+      "https://www.djangoproject.com/weblog/2019/jun/03/security-releases",
+      "https://www.privacy-wise.com/mitigating-cve-2019-11358-in-old-versions-of-jquery",
+      "https://github.com/maximebf/php-debugbar/issues/447",
+      "https://github.com/maximebf/php-debugbar/commit/847216e60544258c881f2733d699bbcfeefac0fc",
+      "https://github.com/advisories/GHSA-6c3j-c64m-qhgq"
+    ],
+    "published_at": "2019-04-26T16:29:11Z",
+    "updated_at": "2024-11-05T20:16:56Z",
+    "github_reviewed_at": "2019-04-26T16:28:41Z",
+    "nvd_published_at": "2019-04-20T00:29:00Z",
+    "withdrawn_at": null,
+    "vulnerabilities": [
+      {
+        "package": {
+          "ecosystem": "rubygems",
+          "name": "jquery-rails"
+        },
+        "vulnerable_version_range": "< 4.3.4",
+        "first_patched_version": "4.3.4",
+        "vulnerable_functions": [
+
+        ]
+      },
+      {
+        "package": {
+          "ecosystem": "pip",
+          "name": "django"
+        },
+        "vulnerable_version_range": ">= 2.0a1, < 2.1.9",
+        "first_patched_version": "2.1.9",
+        "vulnerable_functions": [
+
+        ]
+      },
+      {
+        "package": {
+          "ecosystem": "pip",
+          "name": "django"
+        },
+        "vulnerable_version_range": ">= 2.2a1, < 2.2.2",
+        "first_patched_version": "2.2.2",
+        "vulnerable_functions": [
+
+        ]
+      },
+      {
+        "package": {
+          "ecosystem": "npm",
+          "name": "jquery"
+        },
+        "vulnerable_version_range": ">= 1.1.4, < 3.4.0",
+        "first_patched_version": "3.4.0",
+        "vulnerable_functions": [
+
+        ]
+      },
+      {
+        "package": {
+          "ecosystem": "nuget",
+          "name": "jQuery"
+        },
+        "vulnerable_version_range": ">= 1.1.4, < 3.4.0",
+        "first_patched_version": "3.4.0",
+        "vulnerable_functions": [
+
+        ]
+      },
+      {
+        "package": {
+          "ecosystem": "maven",
+          "name": "org.webjars.npm:jquery"
+        },
+        "vulnerable_version_range": ">= 1.1.4, < 3.4.0",
+        "first_patched_version": "3.4.0",
+        "vulnerable_functions": [
+
+        ]
+      },
+      {
+        "package": {
+          "ecosystem": "composer",
+          "name": "maximebf/debugbar"
+        },
+        "vulnerable_version_range": "< 1.19.0",
+        "first_patched_version": "1.19.0",
+        "vulnerable_functions": [
+
+        ]
+      }
+    ],
+    "cvss_severities": {
+      "cvss_v3": {
+        "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:C/C:L/I:L/A:N",
+        "score": 6.1
+      },
+      "cvss_v4": {
+        "vector_string": null,
+        "score": 0.0
+      }
+    },
+    "cwes": [
+      {
+        "cwe_id": "CWE-79",
+        "name": "Improper Neutralization of Input During Web Page Generation"
+      },
+      {
+        "cwe_id": "CWE-1321",
+        "name": "Improperly Controlled Modification of Object Prototype Attributes"
+      }
+    ],
+    "credits": [
+      {
+        "user": {
+          "login": "klaudialax",
+          "id": 24222665,
+          "node_id": "MDQ6VXNlcjI0MjIyNjY1",
+          "avatar_url": "https://avatars.githubusercontent.com/u/24222665?v=4",
+          "gravatar_id": "",
+          "url": "https://api.github.com/users/klaudialax",
+          "html_url": "https://github.com/klaudialax",
+          "followers_url": "https://api.github.com/users/klaudialax/followers",
+          "following_url": "https://api.github.com/users/klaudialax/following{/other_user}",
+          "gists_url": "https://api.github.com/users/klaudialax/gists{/gist_id}",
+          "starred_url": "https://api.github.com/users/klaudialax/starred{/owner}{/repo}",
+          "subscriptions_url": "https://api.github.com/users/klaudialax/subscriptions",
+          "organizations_url": "https://api.github.com/users/klaudialax/orgs",
+          "repos_url": "https://api.github.com/users/klaudialax/repos",
+          "events_url": "https://api.github.com/users/klaudialax/events{/privacy}",
+          "received_events_url": "https://api.github.com/users/klaudialax/received_events",
+          "type": "User",
+          "user_view_type": "public",
+          "site_admin": false
+        },
+        "type": "analyst"
+      },
+      {
+        "user": {
+          "login": "eoftedal",
+          "id": 238804,
+          "node_id": "MDQ6VXNlcjIzODgwNA==",
+          "avatar_url": "https://avatars.githubusercontent.com/u/238804?v=4",
+          "gravatar_id": "",
+          "url": "https://api.github.com/users/eoftedal",
+          "html_url": "https://github.com/eoftedal",
+          "followers_url": "https://api.github.com/users/eoftedal/followers",
+          "following_url": "https://api.github.com/users/eoftedal/following{/other_user}",
+          "gists_url": "https://api.github.com/users/eoftedal/gists{/gist_id}",
+          "starred_url": "https://api.github.com/users/eoftedal/starred{/owner}{/repo}",
+          "subscriptions_url": "https://api.github.com/users/eoftedal/subscriptions",
+          "organizations_url": "https://api.github.com/users/eoftedal/orgs",
+          "repos_url": "https://api.github.com/users/eoftedal/repos",
+          "events_url": "https://api.github.com/users/eoftedal/events{/privacy}",
+          "received_events_url": "https://api.github.com/users/eoftedal/received_events",
+          "type": "User",
+          "user_view_type": "public",
+          "site_admin": false
+        },
+        "type": "analyst"
+      },
+      {
+        "user": {
+          "login": "Rudloff",
+          "id": 840125,
+          "node_id": "MDQ6VXNlcjg0MDEyNQ==",
+          "avatar_url": "https://avatars.githubusercontent.com/u/840125?v=4",
+          "gravatar_id": "",
+          "url": "https://api.github.com/users/Rudloff",
+          "html_url": "https://github.com/Rudloff",
+          "followers_url": "https://api.github.com/users/Rudloff/followers",
+          "following_url": "https://api.github.com/users/Rudloff/following{/other_user}",
+          "gists_url": "https://api.github.com/users/Rudloff/gists{/gist_id}",
+          "starred_url": "https://api.github.com/users/Rudloff/starred{/owner}{/repo}",
+          "subscriptions_url": "https://api.github.com/users/Rudloff/subscriptions",
+          "organizations_url": "https://api.github.com/users/Rudloff/orgs",
+          "repos_url": "https://api.github.com/users/Rudloff/repos",
+          "events_url": "https://api.github.com/users/Rudloff/events{/privacy}",
+          "received_events_url": "https://api.github.com/users/Rudloff/received_events",
+          "type": "User",
+          "user_view_type": "public",
+          "site_admin": false
+        },
+        "type": "analyst"
+      }
+    ],
+    "comments": 0,
+    "cvss": {
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:C/C:L/I:L/A:N",
+      "score": 6.1
+    },
+    "epss": {
+      "percentage": 0.8682,
+      "percentile": 0.9974
+    }
+  },
+  {
+    "ghsa_id": "GHSA-wv67-q8rr-grjp",
+    "cve_id": "CVE-2019-5428",
+    "url": "https://api.github.com/advisories/GHSA-wv67-q8rr-grjp",
+    "html_url": "https://github.com/advisories/GHSA-wv67-q8rr-grjp",
+    "summary": "Duplicate Advisory: Prototype Pollution in jquery",
+    "description": "## Duplicate Advisory\nThis advisory is a duplicate of [GHSA-6c3j-c64m-qhgq](https://github.com/advisories/GHSA-6c3j-c64m-qhgq). This link is maintained to preserve external references.\n\n## Original Description\nVersions of `jquery`  prior to 3.4.0 are vulnerable to Prototype Pollution. The extend() method allows an attacker to modify the prototype for `Object` causing changes in properties that will exist on all objects.\n\n## Recommendation\nUpgrade to version 3.4.0 or later.",
+    "type": "reviewed",
+    "severity": "medium",
+    "repository_advisory_url": null,
+    "source_code_location": "",
+    "identifiers": [
+      {
+        "value": "GHSA-wv67-q8rr-grjp",
+        "type": "GHSA"
+      },
+      {
+        "value": "CVE-2019-5428",
+        "type": "CVE"
+      }
+    ],
+    "references": [
+      "https://nvd.nist.gov/vuln/detail/CVE-2019-5428",
+      "https://blog.jquery.com/2019/04/10/jquery-3-4-0-released/",
+      "https://github.com/jquery/jquery/pull/4333",
+      "https://hackerone.com/reports/454365",
+      "https://www.npmjs.com/advisories/796",
+      "https://github.com/advisories/GHSA-wv67-q8rr-grjp"
+    ],
+    "published_at": "2019-04-23T15:59:10Z",
+    "updated_at": "2023-09-25T23:22:55Z",
+    "github_reviewed_at": "2019-04-23T15:57:18Z",
+    "nvd_published_at": null,
+    "withdrawn_at": "2019-04-26T14:50:56Z",
+    "vulnerabilities": [
+      {
+        "package": {
+          "ecosystem": "npm",
+          "name": "jquery"
+        },
+        "vulnerable_version_range": "< 3.4.0",
+        "first_patched_version": "3.4.0",
+        "vulnerable_functions": [
+
+        ]
+      },
+      {
+        "package": {
+          "ecosystem": "nuget",
+          "name": "jquery"
+        },
+        "vulnerable_version_range": "< 3.4.0",
+        "first_patched_version": "3.4.0",
+        "vulnerable_functions": [
+
+        ]
+      },
+      {
+        "package": {
+          "ecosystem": "maven",
+          "name": "org.webjars.npm:jquery"
+        },
+        "vulnerable_version_range": "< 3.4.0",
+        "first_patched_version": "3.4.0",
+        "vulnerable_functions": [
+
+        ]
+      },
+      {
+        "package": {
+          "ecosystem": "rubygems",
+          "name": "jquery-rails"
+        },
+        "vulnerable_version_range": "< 3.4.0",
+        "first_patched_version": "3.4.0",
+        "vulnerable_functions": [
+
+        ]
+      }
+    ],
+    "cvss_severities": {
+      "cvss_v3": {
+        "vector_string": null,
+        "score": 0.0
+      },
+      "cvss_v4": {
+        "vector_string": null,
+        "score": 0.0
+      }
+    },
+    "cwes": [
+
+    ],
+    "credits": [
+      {
+        "user": {
+          "login": "kurt-r2c",
+          "id": 98792107,
+          "node_id": "U_kgDOBeNyqw",
+          "avatar_url": "https://avatars.githubusercontent.com/u/98792107?v=4",
+          "gravatar_id": "",
+          "url": "https://api.github.com/users/kurt-r2c",
+          "html_url": "https://github.com/kurt-r2c",
+          "followers_url": "https://api.github.com/users/kurt-r2c/followers",
+          "following_url": "https://api.github.com/users/kurt-r2c/following{/other_user}",
+          "gists_url": "https://api.github.com/users/kurt-r2c/gists{/gist_id}",
+          "starred_url": "https://api.github.com/users/kurt-r2c/starred{/owner}{/repo}",
+          "subscriptions_url": "https://api.github.com/users/kurt-r2c/subscriptions",
+          "organizations_url": "https://api.github.com/users/kurt-r2c/orgs",
+          "repos_url": "https://api.github.com/users/kurt-r2c/repos",
+          "events_url": "https://api.github.com/users/kurt-r2c/events{/privacy}",
+          "received_events_url": "https://api.github.com/users/kurt-r2c/received_events",
+          "type": "User",
+          "user_view_type": "public",
+          "site_admin": false
+        },
+        "type": "analyst"
+      }
+    ],
+    "comments": 0,
+    "cvss": {
+      "vector_string": null,
+      "score": null
+    },
+    "epss": {
+      "percentage": 0.00241,
+      "percentile": 0.63534
+    }
+  },
+  {
+    "ghsa_id": "GHSA-mhpp-875w-9cpv",
+    "cve_id": "CVE-2016-10707",
+    "url": "https://api.github.com/advisories/GHSA-mhpp-875w-9cpv",
+    "html_url": "https://github.com/advisories/GHSA-mhpp-875w-9cpv",
+    "summary": "Denial of Service in jquery",
+    "description": "Affected versions of `jquery` use a lowercasing logic on attribute names. When given a boolean attribute with a name that contains uppercase characters, `jquery` enters into an infinite recursion loop, exceeding the call stack limit, and resulting in a denial of service condition.\n\n\n## Recommendation\n\nUpdate to version 3.0.0 or later.",
+    "type": "reviewed",
+    "severity": "high",
+    "repository_advisory_url": null,
+    "source_code_location": "https://github.com/jquery/jquery",
+    "identifiers": [
+      {
+        "value": "GHSA-mhpp-875w-9cpv",
+        "type": "GHSA"
+      },
+      {
+        "value": "CVE-2016-10707",
+        "type": "CVE"
+      }
+    ],
+    "references": [
+      "https://nvd.nist.gov/vuln/detail/CVE-2016-10707",
+      "https://github.com/jquery/jquery/issues/3133",
+      "https://github.com/advisories/GHSA-mhpp-875w-9cpv",
+      "https://www.npmjs.com/advisories/330",
+      "https://github.com/jquery/jquery/pull/3134",
+      "https://snyk.io/vuln/npm:jquery:20160529",
+      "https://github.com/jquery/jquery/issues/3133#issuecomment-358978489",
+      "https://github.com/rubysec/ruby-advisory-db/blob/master/gems/jquery-rails/CVE-2016-10707.yml"
+    ],
+    "published_at": "2018-01-22T13:32:42Z",
+    "updated_at": "2025-09-02T22:35:02Z",
+    "github_reviewed_at": "2020-06-16T21:46:22Z",
+    "nvd_published_at": "2018-01-18T23:29:00Z",
+    "withdrawn_at": null,
+    "vulnerabilities": [
+      {
+        "package": {
+          "ecosystem": "npm",
+          "name": "jquery"
+        },
+        "vulnerable_version_range": "= 3.0.0-rc.1",
+        "first_patched_version": "3.0.0",
+        "vulnerable_functions": [
+
+        ]
+      },
+      {
+        "package": {
+          "ecosystem": "nuget",
+          "name": "jQuery"
+        },
+        "vulnerable_version_range": "= 3.0.0-rc.1",
+        "first_patched_version": "3.0.0",
+        "vulnerable_functions": [
+
+        ]
+      },
+      {
+        "package": {
+          "ecosystem": "rubygems",
+          "name": "jquery-rails"
+        },
+        "vulnerable_version_range": "= 3.0.0-rc.1",
+        "first_patched_version": "3.0.0",
+        "vulnerable_functions": [
+
+        ]
+      },
+      {
+        "package": {
+          "ecosystem": "maven",
+          "name": "org.webjars.npm:jquery"
+        },
+        "vulnerable_version_range": "= 3.0.0-rc1",
+        "first_patched_version": "3.0.0",
+        "vulnerable_functions": [
+
+        ]
+      }
+    ],
+    "cvss_severities": {
+      "cvss_v3": {
+        "vector_string": "CVSS:3.0/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+        "score": 7.5
+      },
+      "cvss_v4": {
+        "vector_string": null,
+        "score": 0.0
+      }
+    },
+    "cwes": [
+      {
+        "cwe_id": "CWE-400",
+        "name": "Uncontrolled Resource Consumption"
+      },
+      {
+        "cwe_id": "CWE-674",
+        "name": "Uncontrolled Recursion"
+      }
+    ],
+    "credits": [
+      {
+        "user": {
+          "login": "anlakii",
+          "id": 15184862,
+          "node_id": "MDQ6VXNlcjE1MTg0ODYy",
+          "avatar_url": "https://avatars.githubusercontent.com/u/15184862?v=4",
+          "gravatar_id": "",
+          "url": "https://api.github.com/users/anlakii",
+          "html_url": "https://github.com/anlakii",
+          "followers_url": "https://api.github.com/users/anlakii/followers",
+          "following_url": "https://api.github.com/users/anlakii/following{/other_user}",
+          "gists_url": "https://api.github.com/users/anlakii/gists{/gist_id}",
+          "starred_url": "https://api.github.com/users/anlakii/starred{/owner}{/repo}",
+          "subscriptions_url": "https://api.github.com/users/anlakii/subscriptions",
+          "organizations_url": "https://api.github.com/users/anlakii/orgs",
+          "repos_url": "https://api.github.com/users/anlakii/repos",
+          "events_url": "https://api.github.com/users/anlakii/events{/privacy}",
+          "received_events_url": "https://api.github.com/users/anlakii/received_events",
+          "type": "User",
+          "user_view_type": "public",
+          "site_admin": false
+        },
+        "type": "analyst"
+      }
+    ],
+    "comments": 0,
+    "cvss": {
+      "vector_string": "CVSS:3.0/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+      "score": 7.5
+    },
+    "epss": {
+      "percentage": 0.03232,
+      "percentile": 0.87927
+    }
+  },
+  {
+    "ghsa_id": "GHSA-rmxg-73gg-4p98",
+    "cve_id": "CVE-2015-9251",
+    "url": "https://api.github.com/advisories/GHSA-rmxg-73gg-4p98",
+    "html_url": "https://github.com/advisories/GHSA-rmxg-73gg-4p98",
+    "summary": "Cross-Site Scripting (XSS) in jquery",
+    "description": "Affected versions of `jquery` interpret `text/javascript` responses from cross-origin ajax requests, and automatically execute the contents in `jQuery.globalEval`, even when the ajax request doesn't contain the `dataType` option.\n\n\n## Recommendation\n\nUpdate to version 3.0.0 or later.",
+    "type": "reviewed",
+    "severity": "medium",
+    "repository_advisory_url": null,
+    "source_code_location": "https://github.com/jquery/jquery",
+    "identifiers": [
+      {
+        "value": "GHSA-rmxg-73gg-4p98",
+        "type": "GHSA"
+      },
+      {
+        "value": "CVE-2015-9251",
+        "type": "CVE"
+      }
+    ],
+    "references": [
+      "https://nvd.nist.gov/vuln/detail/CVE-2015-9251",
+      "https://github.com/jquery/jquery/issues/2432",
+      "https://github.com/jquery/jquery/pull/2588",
+      "https://github.com/jquery/jquery/commit/b078a62013782c7424a4a61a240c23c4c0b42614",
+      "https://github.com/jquery/jquery/pull/2588/commits/c254d308a7d3f1eac4d0b42837804cfffcba4bb2",
+      "https://github.com/jquery/jquery/commit/f60729f3903d17917dc351f3ac87794de379b0cc",
+      "https://access.redhat.com/errata/RHSA-2020:0481",
+      "https://access.redhat.com/errata/RHSA-2020:0729",
+      "https://ics-cert.us-cert.gov/advisories/ICSA-18-212-04",
+      "https://kb.pulsesecure.net/articles/Pulse_Security_Advisories/SA44601",
+      "https://lists.apache.org/thread.html/10f0f3aefd51444d1198c65f44ffdf2d78ca3359423dbc1c168c9731@%3Cdev.flink.apache.org%3E",
+      "https://lists.apache.org/thread.html/17ff53f7999e74fbe3cc0ceb4e1c3b00b180b7c5afec8e978837bc49@%3Cuser.flink.apache.org%3E",
+      "https://lists.apache.org/thread.html/519eb0fd45642dcecd9ff74cb3e71c20a4753f7d82e2f07864b5108f@%3Cdev.drill.apache.org%3E",
+      "https://lists.apache.org/thread.html/52bafac05ad174000ea465fe275fd3cc7bd5c25535a7631c0bc9bfb2@%3Cuser.flink.apache.org%3E",
+      "https://lists.apache.org/thread.html/54df3aeb4239b64b50b356f0ca6f986e3c4ca5b84c515dce077c7854@%3Cuser.flink.apache.org%3E",
+      "https://lists.apache.org/thread.html/b0656d359c7d40ec9f39c8cc61bca66802ef9a2a12ee199f5b0c1442@%3Cdev.drill.apache.org%3E",
+      "https://lists.apache.org/thread.html/ba79cf1658741e9f146e4c59b50aee56656ea95d841d358d006c18b6@%3Ccommits.roller.apache.org%3E",
+      "https://lists.apache.org/thread.html/f9bc3e55f4e28d1dcd1a69aae6d53e609a758e34d2869b4d798e13cc@%3Cissues.drill.apache.org%3E",
+      "https://seclists.org/bugtraq/2019/May/18",
+      "https://security.netapp.com/advisory/ntap-20210108-0004/",
+      "https://snyk.io/vuln/npm:jquery:20150627",
+      "https://sw.aveva.com/hubfs/assets-2018/pdf/security-bulletin/SecurityBulletin_LFSec126.pdf",
+      "https://www.oracle.com/security-alerts/cpuapr2020.html",
+      "https://www.oracle.com/security-alerts/cpujan2020.html",
+      "https://www.oracle.com/security-alerts/cpujul2020.html",
+      "https://www.oracle.com/security-alerts/cpuoct2020.html",
+      "https://www.oracle.com/technetwork/security-advisory/cpuapr2019-5072813.html",
+      "https://www.oracle.com/technetwork/security-advisory/cpujan2019-5072801.html",
+      "https://www.oracle.com/technetwork/security-advisory/cpujul2019-5072835.html",
+      "https://www.oracle.com/technetwork/security-advisory/cpuoct2019-5072832.html",
+      "https://www.tenable.com/security/tns-2019-08",
+      "http://lists.opensuse.org/opensuse-security-announce/2020-03/msg00041.html",
+      "http://packetstormsecurity.com/files/152787/dotCMS-5.1.1-Vulnerable-Dependencies.html",
+      "http://packetstormsecurity.com/files/153237/RetireJS-CORS-Issue-Script-Execution.html",
+      "http://packetstormsecurity.com/files/156743/OctoberCMS-Insecure-Dependencies.html",
+      "http://seclists.org/fulldisclosure/2019/May/10",
+      "http://seclists.org/fulldisclosure/2019/May/11",
+      "http://seclists.org/fulldisclosure/2019/May/13",
+      "http://www.oracle.com/technetwork/security-advisory/cpuoct2018-4428296.html",
+      "https://security.snyk.io/vuln/SNYK-DOTNET-JQUERY-450227",
+      "https://github.com/jquery/jquery/issues/2432#issuecomment-403761229",
+      "https://github.com/rails/jquery-rails/blob/master/CHANGELOG.md#420",
+      "https://github.com/rails/jquery-rails/blob/v4.2.0/vendor/assets/javascripts/jquery3.js#L9377",
+      "https://web.archive.org/web/20200227030101/http://www.securityfocus.com/bid/105658",
+      "https://github.com/rails/jquery-rails/releases/tag/v4.2.0",
+      "https://github.com/rubysec/ruby-advisory-db/blob/master/gems/jquery-rails/CVE-2015-9251.yml",
+      "https://github.com/advisories/GHSA-rmxg-73gg-4p98"
+    ],
+    "published_at": "2018-01-22T13:32:06Z",
+    "updated_at": "2023-09-25T23:28:12Z",
+    "github_reviewed_at": "2020-06-16T21:55:10Z",
+    "nvd_published_at": "2018-01-18T23:29:00Z",
+    "withdrawn_at": null,
+    "vulnerabilities": [
+      {
+        "package": {
+          "ecosystem": "nuget",
+          "name": "jQuery"
+        },
+        "vulnerable_version_range": "< 1.12.2",
+        "first_patched_version": "1.12.2",
+        "vulnerable_functions": [
+
+        ]
+      },
+      {
+        "package": {
+          "ecosystem": "nuget",
+          "name": "jQuery"
+        },
+        "vulnerable_version_range": ">= 1.12.3, < 3.0.0",
+        "first_patched_version": "3.0.0",
+        "vulnerable_functions": [
+
+        ]
+      },
+      {
+        "package": {
+          "ecosystem": "npm",
+          "name": "jquery"
+        },
+        "vulnerable_version_range": "< 1.12.2",
+        "first_patched_version": "1.12.2",
+        "vulnerable_functions": [
+
+        ]
+      },
+      {
+        "package": {
+          "ecosystem": "npm",
+          "name": "jquery"
+        },
+        "vulnerable_version_range": ">= 1.12.3, < 3.0.0",
+        "first_patched_version": "3.0.0",
+        "vulnerable_functions": [
+
+        ]
+      },
+      {
+        "package": {
+          "ecosystem": "rubygems",
+          "name": "jquery-rails"
+        },
+        "vulnerable_version_range": "< 4.2.0",
+        "first_patched_version": "4.2.0",
+        "vulnerable_functions": [
+
+        ]
+      },
+      {
+        "package": {
+          "ecosystem": "maven",
+          "name": "org.webjars.npm:jquery"
+        },
+        "vulnerable_version_range": "< 1.12.2",
+        "first_patched_version": "1.12.2",
+        "vulnerable_functions": [
+
+        ]
+      },
+      {
+        "package": {
+          "ecosystem": "maven",
+          "name": "org.webjars.npm:jquery"
+        },
+        "vulnerable_version_range": ">= 1.12.3, < 3.0.0",
+        "first_patched_version": "3.0.0",
+        "vulnerable_functions": [
+
+        ]
+      }
+    ],
+    "cvss_severities": {
+      "cvss_v3": {
+        "vector_string": "CVSS:3.0/AV:N/AC:L/PR:N/UI:R/S:C/C:L/I:L/A:N",
+        "score": 6.1
+      },
+      "cvss_v4": {
+        "vector_string": null,
+        "score": 0.0
+      }
+    },
+    "cwes": [
+      {
+        "cwe_id": "CWE-79",
+        "name": "Improper Neutralization of Input During Web Page Generation"
+      }
+    ],
+    "credits": [
+      {
+        "user": {
+          "login": "klaudialax",
+          "id": 24222665,
+          "node_id": "MDQ6VXNlcjI0MjIyNjY1",
+          "avatar_url": "https://avatars.githubusercontent.com/u/24222665?v=4",
+          "gravatar_id": "",
+          "url": "https://api.github.com/users/klaudialax",
+          "html_url": "https://github.com/klaudialax",
+          "followers_url": "https://api.github.com/users/klaudialax/followers",
+          "following_url": "https://api.github.com/users/klaudialax/following{/other_user}",
+          "gists_url": "https://api.github.com/users/klaudialax/gists{/gist_id}",
+          "starred_url": "https://api.github.com/users/klaudialax/starred{/owner}{/repo}",
+          "subscriptions_url": "https://api.github.com/users/klaudialax/subscriptions",
+          "organizations_url": "https://api.github.com/users/klaudialax/orgs",
+          "repos_url": "https://api.github.com/users/klaudialax/repos",
+          "events_url": "https://api.github.com/users/klaudialax/events{/privacy}",
+          "received_events_url": "https://api.github.com/users/klaudialax/received_events",
+          "type": "User",
+          "user_view_type": "public",
+          "site_admin": false
+        },
+        "type": "analyst"
+      }
+    ],
+    "comments": 0,
+    "cvss": {
+      "vector_string": "CVSS:3.0/AV:N/AC:L/PR:N/UI:R/S:C/C:L/I:L/A:N",
+      "score": 6.1
+    },
+    "epss": {
+      "percentage": 0.29726,
+      "percentile": 0.98113
+    }
+  }
+]

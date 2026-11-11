@@ -1,0 +1,36 @@
+# Builds the binaries when a release is published in the GitHub web UI
+# (Releases → Draft a new release → Publish release) and attaches them to it.
+# See docs/RELEASING.md.
+name: Release
+
+on:
+  release:
+    types: [published]
+
+# The automatic token may only write this repository's releases.
+permissions:
+  contents: write
+
+jobs:
+  binaries:
+    runs-on: ubuntu-latest
+    steps:
+      # Actions are pinned to exact commits (version in the comment).
+      - name: Check out the tagged code
+        uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          fetch-depth: 0 # GoReleaser needs the tags and history
+
+      - name: Install Go (version from go.mod)
+        uses: actions/setup-go@b7ad1dad31e06c5925ef5d2fc7ad053ef454303e # v7.0.0
+        with:
+          go-version-file: go.mod
+
+      - name: Test, build and attach the binaries
+        uses: goreleaser/goreleaser-action@a4f02ab5355a589de60d917a659ce617ed19b3de # v7.3.0
+        with:
+          distribution: goreleaser
+          version: "~> v2"
+          args: release --clean
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
